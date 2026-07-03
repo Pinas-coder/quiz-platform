@@ -1,0 +1,611 @@
+{
+  "meta": {
+    "corso": "Tecnico per la Valorizzazione dei Beni Culturali con Tecnologie Digitali",
+    "ente": "ANAP Sardegna",
+    "sigla": "IFTS"
+  },
+  "materie": [
+    {
+      "key": "tecnologie_digitali",
+      "label": "Tecnologie digitali per l'innovazione"
+    },
+    {
+      "key": "statistica",
+      "label": "Statistica e analisi dei dati"
+    },
+    {
+      "key": "web_mobile",
+      "label": "Web e mobile app per la cultura"
+    },
+    {
+      "key": "sicurezza_lavoro",
+      "label": "Sicurezza sui luoghi di lavoro"
+    },
+    {
+      "key": "progettazione_multimediale",
+      "label": "Progettazione multimediale"
+    },
+    {
+      "key": "project_management",
+      "label": "Project management per progetti culturali"
+    },
+    {
+      "key": "ai_cultura",
+      "label": "AI per la cultura"
+    },
+    {
+      "key": "primo_soccorso",
+      "label": "Primo Soccorso"
+    },
+    {
+      "key": "marketing_culturale",
+      "label": "Marketing culturale e comunicazione digitale"
+    },
+    {
+      "key": "grafica_ux",
+      "label": "Grafica e UX design"
+    },
+    {
+      "key": "iot",
+      "label": "IoT e sistemi interattivi"
+    },
+    {
+      "key": "inglese_tecnico",
+      "label": "Inglese tecnico per il settore ICT"
+    },
+    {
+      "key": "sicurezza_informatica",
+      "label": "Sicurezza dei sistemi informatici"
+    },
+    {
+      "key": "database",
+      "label": "Database e archiviazione digitale"
+    },
+    {
+      "key": "cultura_digitale",
+      "label": "Cultura digitale e beni culturali"
+    },
+    {
+      "key": "storia_sardegna",
+      "label": "Storia, monumenti e patrimonio culturale della Sardegna"
+    }
+  ],
+  "domande": [
+    {
+      "m": "sicurezza_informatica",
+      "diff": "base",
+      "q": "Qual è la differenza fondamentale tra Safety e Security?",
+      "opts": [
+        "La safety protegge da atti dolosi, la security da incidenti accidentali",
+        "La safety previene danni accidentali o non intenzionali, la security protegge da danni intenzionali causati da fattori esterni",
+        "Sono sinonimi e indicano lo stesso concetto di protezione",
+        "La safety riguarda solo i sistemi informatici, la security le persone fisiche"
+      ],
+      "ans": 1,
+      "exp": "La differenza fondamentale risiede nell'intenzionalità: la safety previene danni accidentali (incidenti, guasti), mentre la security protegge da danni intenzionali causati da fattori esterni come furti, attacchi informatici o atti dolosi."
+    },
+    {
+      "m": "sicurezza_informatica",
+      "diff": "base",
+      "q": "Cosa rappresenta la sigla CIA nella cybersecurity?",
+      "opts": [
+        "Cyber Intelligence Agency",
+        "Control, Integrity, Access",
+        "Confidenzialità, Integrità, Disponibilità",
+        "Confidentiality, Investigation, Availability"
+      ],
+      "ans": 2,
+      "exp": "La Triade CIA rappresenta i tre obiettivi primari della sicurezza informatica: Confidenzialità (Confidentiality), Integrità (Integrity) e Disponibilità (Availability). È il cuore della cybersecurity."
+    },
+    {
+      "m": "sicurezza_informatica",
+      "diff": "base",
+      "q": "Cosa garantisce la Confidenzialità (Confidentiality) nella Triade CIA?",
+      "opts": [
+        "Che i sistemi siano sempre operativi e accessibili",
+        "Che i dati siano modificati solo in modo autorizzato",
+        "Che le informazioni siano accessibili solo a chi è autorizzato",
+        "Che i backup siano eseguiti regolarmente"
+      ],
+      "ans": 2,
+      "exp": "La Confidenzialità garantisce che le informazioni private o confidenziali non siano rese disponibili o divulgate a individui non autorizzati. Include il concetto di Privacy, ovvero il controllo delle informazioni personali."
+    },
+    {
+      "m": "sicurezza_informatica",
+      "diff": "base",
+      "q": "Cosa garantisce la Disponibilità (Availability) nella Triade CIA?",
+      "opts": [
+        "Che le informazioni siano segrete",
+        "Che i dati non vengano alterati",
+        "Che i sistemi funzionino prontamente e il servizio non sia negato agli utenti autorizzati",
+        "Che ogni accesso venga registrato"
+      ],
+      "ans": 2,
+      "exp": "La Disponibilità garantisce che i sistemi funzionino prontamente e che il servizio non sia negato agli utenti, e in particolare a quelli autorizzati. Si mantiene tramite sistemi ridondanti, backup e disaster recovery."
+    },
+    {
+      "m": "sicurezza_informatica",
+      "diff": "base",
+      "q": "In cybersecurity, cos'è un Asset?",
+      "opts": [
+        "Un tipo di attacco informatico",
+        "Qualsiasi risorsa (tangibile o intangibile) che ha valore per l'organizzazione e deve essere protetta",
+        "Un software antivirus",
+        "Un protocollo di sicurezza di rete"
+      ],
+      "ans": 1,
+      "exp": "Un asset è qualsiasi risorsa, tangibile o intangibile, che ha valore per l'organizzazione. In sintesi è tutto ciò che, se danneggiato, rubato, esfiltrato o reso inaccessibile, può arrecare un danno economico, operativo o di reputazione."
+    },
+    {
+      "m": "sicurezza_informatica",
+      "diff": "base",
+      "q": "Quale tra le seguenti è la formula corretta per calcolare il Rischio in cybersecurity?",
+      "opts": [
+        "R = Minaccia + Vulnerabilità",
+        "R = Asset / Attacco",
+        "R = P × D (Probabilità per Danno)",
+        "R = Confidenzialità - Disponibilità"
+      ],
+      "ans": 2,
+      "exp": "Il Rischio è definito come il prodotto tra la probabilità P che un evento dannoso si verifichi e la gravità D del danno stesso: R = P × D. È una valutazione quantitativa della misura in cui un'entità è minacciata."
+    },
+    {
+      "m": "sicurezza_informatica",
+      "diff": "base",
+      "q": "Cosa si intende per Vulnerabilità in cybersecurity?",
+      "opts": [
+        "Un attacco informatico riuscito",
+        "Una debolezza o configurazione inadeguata in un sistema che può essere sfruttata da un attore malevolo",
+        "Un tipo di malware che cifra i dati",
+        "La perdita intenzionale di dati aziendali"
+      ],
+      "ans": 1,
+      "exp": "Una vulnerabilità è una debolezza, errore o configurazione inadeguata presente in un sistema informatico, software, hardware, rete o processo organizzativo, che può essere sfruttata da un attore malevolo per compromettere la Triade CIA."
+    },
+    {
+      "m": "sicurezza_informatica",
+      "diff": "medio",
+      "q": "Qual è la principale normativa europea sulla protezione dei dati personali entrata in vigore nel 2018?",
+      "opts": [
+        "Direttiva ePrivacy 2002/58/CE",
+        "D.Lgs. 196/2003 Codice Privacy",
+        "GDPR - Regolamento UE 2016/679",
+        "Direttiva 2016/680 Polizia e Giustizia"
+      ],
+      "ans": 2,
+      "exp": "Il GDPR (General Data Protection Regulation) - Regolamento UE 2016/679 è la normativa fondamentale a livello europeo sulla protezione dei dati personali, entrata in vigore nel 2018."
+    },
+    {
+      "m": "sicurezza_informatica",
+      "diff": "medio",
+      "q": "Cosa sono gli Asset Fisici in cybersecurity?",
+      "opts": [
+        "I dati dei clienti e la proprietà intellettuale",
+        "I dispositivi fisici dell'infrastruttura IT: server, endpoint, apparati di rete e dispositivi IoT",
+        "Le credenziali e le password degli utenti",
+        "Le macchine virtuali e i container cloud"
+      ],
+      "ans": 1,
+      "exp": "Gli asset fisici (Hardware) sono i dispositivi fisici che compongono l'infrastruttura IT: Server e Data Center, End-point (laptop, desktop, smartphone), Apparati di Rete (router, switch, firewall) e Dispositivi IoT (telecamere, sensori, stampanti di rete)."
+    },
+    {
+      "m": "sicurezza_informatica",
+      "diff": "medio",
+      "q": "Cosa si intende per Shadow IT?",
+      "opts": [
+        "Un tipo di attacco informatico che opera in modo nascosto",
+        "Un sistema di backup non autorizzato",
+        "Applicazioni SaaS usate dai dipendenti senza approvazione formale dell'IT ma che contengono dati aziendali",
+        "Il monitoraggio notturno dei sistemi informatici"
+      ],
+      "ans": 2,
+      "exp": "Lo Shadow IT indica le applicazioni SaaS (Software as a Service) utilizzate dai dipendenti senza l'approvazione formale del reparto IT, ma che contengono dati aziendali. Rappresenta un rischio per la sicurezza perché sfugge ai controlli ufficiali."
+    },
+    {
+      "m": "sicurezza_informatica",
+      "diff": "medio",
+      "q": "Cosa sono le credenziali Privileged Access?",
+      "opts": [
+        "Password condivise tra tutti i dipendenti",
+        "Account di amministratori di sistema che permettono il controllo totale del sistema, i più ambiti dagli attaccanti",
+        "Certificati digitali per siti web pubblici",
+        "Token di autenticazione monouso"
+      ],
+      "ans": 1,
+      "exp": "Il Privileged Access indica gli account di amministratori di sistema che permettono il controllo totale del sistema. Sono gli asset di accesso più ambiti dagli attaccanti perché consentono di operare senza restrizioni sull'intera infrastruttura."
+    },
+    {
+      "m": "sicurezza_informatica",
+      "diff": "medio",
+      "q": "Cos'è il Phishing?",
+      "opts": [
+        "Un malware che cifra i file del sistema",
+        "Una tecnica che usa email, SMS o chiamate false per rubare credenziali o dati bancari",
+        "Un attacco che satura le risorse di rete",
+        "Un software per il controllo remoto dei computer"
+      ],
+      "ans": 1,
+      "exp": "Il Phishing è la forma più comune di Social Engineering: utilizza email, SMS o chiamate false per rubare credenziali o dati bancari. I messaggi sembrano provenire da fonti affidabili e inducono la vittima a cliccare su link malevoli o inserire credenziali su siti falsi."
+    },
+    {
+      "m": "sicurezza_informatica",
+      "diff": "medio",
+      "q": "Qual è la differenza tra Phishing e Spear Phishing?",
+      "opts": [
+        "Il Phishing usa email, lo Spear Phishing usa SMS",
+        "Il Phishing è generico e di massa, lo Spear Phishing è mirato e personalizzato verso individui specifici",
+        "Lo Spear Phishing è sempre più pericoloso perché usa malware",
+        "Non c'è differenza, sono sinonimi"
+      ],
+      "ans": 1,
+      "exp": "Il Phishing è un attacco generico e di massa che invia messaggi fraudolenti a molti destinatari. Lo Spear Phishing è invece un attacco mirato e personalizzato contro individui specifici, risultando più efficace perché sfrutta informazioni personali della vittima."
+    },
+    {
+      "m": "sicurezza_informatica",
+      "diff": "medio",
+      "q": "Cos'è il Vishing?",
+      "opts": [
+        "Un attacco di phishing via email",
+        "Una truffa via telefono in cui il truffatore finge di essere un operatore bancario o autorità",
+        "Un malware che registra i tasti premuti",
+        "Un attacco che satura i server con traffico falso"
+      ],
+      "ans": 1,
+      "exp": "Il Vishing è una truffa via telefono (Voice Phishing). Il truffatore chiama fingendosi un operatore bancario, antifrode o polizia postale, e chiede codici OTP, autorizzazioni a bonifici o l'installazione di app di controllo remoto. Le banche non chiedono mai OTP per telefono."
+    },
+    {
+      "m": "sicurezza_informatica",
+      "diff": "medio",
+      "q": "Cos'è lo Smishing?",
+      "opts": [
+        "Un attacco che compromette le reti Wi-Fi",
+        "Una variante del phishing via SMS o WhatsApp con link a pagine false",
+        "Un tipo di malware bancario per Android",
+        "Una tecnica di cifratura dei messaggi"
+      ],
+      "ans": 1,
+      "exp": "Lo Smishing è una variante del phishing via SMS o WhatsApp. La vittima riceve un messaggio che sembra provenire dalla banca con un link a una pagina falsa. Tecnica avanzata: gli attaccanti usano SMS spoofing per far apparire il messaggio nella stessa conversazione della banca vera."
+    },
+    {
+      "m": "sicurezza_informatica",
+      "diff": "medio",
+      "q": "Cos'è un attacco DoS e come si differenzia dal DDoS?",
+      "opts": [
+        "DoS cifra i dati, DDoS li cancella",
+        "DoS usa una singola macchina per saturare le risorse, DDoS sfrutta una botnet di migliaia di dispositivi compromessi",
+        "Sono identici, cambia solo l'obiettivo dell'attacco",
+        "DoS attacca i dati, DDoS attacca le credenziali"
+      ],
+      "ans": 1,
+      "exp": "Il DoS (Denial of Service) usa una singola macchina per rendere un servizio inaccessibile saturando le risorse. Il DDoS (Distributed DoS) sfrutta una botnet di migliaia di dispositivi compromessi simultaneamente, rendendolo molto più difficile da bloccare."
+    },
+    {
+      "m": "sicurezza_informatica",
+      "diff": "medio",
+      "q": "Cos'è una Botnet?",
+      "opts": [
+        "Un software antivirus distribuito",
+        "Una rete di robot industriali connessi",
+        "Una rete di dispositivi compromessi controllati da un attaccante tramite un server C&C",
+        "Un protocollo di comunicazione sicura"
+      ],
+      "ans": 2,
+      "exp": "Una Botnet (robot network) è una rete di dispositivi compromessi controllati da un attaccante tramite un server C&C (Command and Control). Viene usata principalmente per lanciare attacchi DDoS, distribuire spam o eseguire altre attività malevole su larga scala."
+    },
+    {
+      "m": "sicurezza_informatica",
+      "diff": "medio",
+      "q": "Cos'è il Ransomware?",
+      "opts": [
+        "Un software per il backup dei dati",
+        "Un malware che cifra i dati del sistema rendendoli inaccessibili fino al pagamento di un riscatto",
+        "Un tipo di phishing via email",
+        "Un attacco che ruba le credenziali di accesso"
+      ],
+      "ans": 1,
+      "exp": "Il Ransomware è un malware che cifra i dati di un sistema rendendoli inaccessibili fino al pagamento di un riscatto. Impatta sulla Disponibilità e l'Integrità dei dati. Le varianti più avanzate usano la doppia estorsione: esfiltrano i dati prima di cifrarli, minacciando anche la Confidenzialità."
+    },
+    {
+      "m": "sicurezza_informatica",
+      "diff": "avanzato",
+      "q": "Cosa si intende per 'doppia estorsione' negli attacchi Ransomware?",
+      "opts": [
+        "Cifrare i dati due volte con algoritmi diversi",
+        "Chiedere il riscatto sia alla vittima che alla sua banca",
+        "Esfiltrare i dati prima della cifratura e minacciare di pubblicarli oltre a chiedere il riscatto per la decifrazione",
+        "Attaccare contemporaneamente due organizzazioni diverse"
+      ],
+      "ans": 2,
+      "exp": "La doppia estorsione è una tecnica avanzata di ransomware: gli attaccanti prima infiltrano e copiano i dati sensibili, poi li cifrano. Questo crea due leve di ricatto: il riscatto per la decifrazione e la minaccia di pubblicare i dati rubati, compromettendo anche la Confidenzialità."
+    },
+    {
+      "m": "sicurezza_informatica",
+      "diff": "avanzato",
+      "q": "Cos'è un attacco SIM Swap?",
+      "opts": [
+        "Un attacco che sostituisce il chip di un computer",
+        "Una truffa in cui i criminali convincono l'operatore telefonico a trasferire il numero della vittima su una nuova SIM, per ricevere gli OTP",
+        "Un malware che si diffonde via Bluetooth",
+        "Una tecnica per clonare carte di credito contactless"
+      ],
+      "ans": 1,
+      "exp": "Il SIM Swap è una delle truffe più pericolose: i criminali convincono l'operatore telefonico a trasferire il numero della vittima su una nuova SIM. Da quel momento ricevono tutti gli SMS OTP e codici di sicurezza, permettendo loro di accedere all'home banking. Segnali: improvvisa perdita di segnale."
+    },
+    {
+      "m": "sicurezza_informatica",
+      "diff": "avanzato",
+      "q": "Cos'è un attacco Zero-Day?",
+      "opts": [
+        "Un attacco sferrato alle ore 00:00",
+        "Un attacco che sfrutta una vulnerabilità non ancora nota al produttore del software, per cui non esiste ancora una patch",
+        "Un malware che si attiva dopo zero giorni dall'installazione",
+        "Un attacco che dura meno di un giorno"
+      ],
+      "ans": 1,
+      "exp": "Un attacco Zero-Day sfrutta una vulnerabilità non ancora nota al produttore del software (o nota ma non ancora corretta). Poiché non esiste ancora una patch, l'attacco è particolarmente pericoloso: le organizzazioni non hanno difese specifiche pronte."
+    },
+    {
+      "m": "sicurezza_informatica",
+      "diff": "avanzato",
+      "q": "Cos'è un attacco Watering Hole?",
+      "opts": [
+        "Un attacco che satura le risorse di un server web",
+        "Un attacco che compromette siti web legittimi frequentati dalle vittime target per distribuire malware",
+        "Un attacco che intercetta le comunicazioni su reti Wi-Fi pubbliche",
+        "Una tecnica di phishing tramite QR code"
+      ],
+      "ans": 1,
+      "exp": "Un attacco Watering Hole compromette siti legittimi frequentati dalle vittime (come abbeveratoi per gli animali). Chi visita il sito riceve un malware tramite Drive-by Download, installato silenziosamente senza azione esplicita dell'utente. Sono difficili da rilevare perché il sito sembra legittimo."
+    },
+    {
+      "m": "sicurezza_informatica",
+      "diff": "avanzato",
+      "q": "Cos'è la Privilege Escalation?",
+      "opts": [
+        "L'assegnazione di nuovi privilegi a un dipendente promosso",
+        "Il processo di autenticazione multi-fattore",
+        "L'ottenimento di privilegi superiori sfruttando vulnerabilità o configurazioni deboli di sistema",
+        "Un sistema di controllo accessi basato su ruoli"
+      ],
+      "ans": 2,
+      "exp": "La Privilege Escalation consiste nell'ottenere privilegi superiori sfruttando vulnerabilità e configurazioni di sistema deboli o controlli insufficienti. Permette a un attaccante di passare da utente normale ad amministratore, ottenendo il controllo totale del sistema."
+    },
+    {
+      "m": "sicurezza_informatica",
+      "diff": "avanzato",
+      "q": "Cosa si intende per Supply Chain Attack?",
+      "opts": [
+        "Un attacco ai sistemi di e-commerce",
+        "Un attacco che colpisce la logistica fisica di un'azienda",
+        "Un attacco che compromette un fornitore o componente software della filiera per colpire indirettamente le organizzazioni bersaglio",
+        "Un malware che attacca i database di fornitori"
+      ],
+      "ans": 2,
+      "exp": "Un Supply Chain Attack colpisce un fornitore di software, hardware o servizi fidato per poi raggiungere indirettamente le organizzazioni bersaglio. È particolarmente efficace perché le vittime finali si fidano del fornitore compromesso e spesso non riescono a rilevare l'attacco."
+    },
+    {
+      "m": "sicurezza_informatica",
+      "diff": "avanzato",
+      "q": "Cos'è il Social Engineering?",
+      "opts": [
+        "Un metodo di sviluppo software collaborativo",
+        "Una tecnica di manipolazione psicologica che sfrutta l'ingenuità umana per indurre le persone a rivelare informazioni o compiere azioni dannose",
+        "Un sistema di gestione delle identità digitali",
+        "Un protocollo di sicurezza per le reti sociali"
+      ],
+      "ans": 1,
+      "exp": "Il Social Engineering è una tecnica di manipolazione psicologica che sfrutta l'ingenuità umana, anziché le vulnerabilità tecniche, per indurre le persone a rivelare informazioni riservate o compiere azioni dannose. I criminali creano scenari falsi (pretexting), fingendosi colleghi, fornitori o autorità, facendo leva su paura, urgenza o curiosità."
+    },
+    {
+      "m": "sicurezza_informatica",
+      "diff": "medio",
+      "q": "Quali sono i dati considerati 'sensibili' secondo la normativa sulla privacy?",
+      "opts": [
+        "Dati finanziari, contratti e bilanci aziendali",
+        "Dati sanitari, politici, sessuali e religiosi",
+        "Credenziali di accesso e password",
+        "Indirizzi email e numeri di telefono"
+      ],
+      "ans": 1,
+      "exp": "I dati sensibili sono categorie particolari di dati personali che richiedono una protezione rafforzata: dati sanitari, dati politici (orientamento politico), dati sessuali (vita sessuale o orientamento) e dati religiosi (convinzioni religiose o filosofiche)."
+    },
+    {
+      "m": "sicurezza_informatica",
+      "diff": "medio",
+      "q": "Cos'è un Malware Banking Trojan?",
+      "opts": [
+        "Un software legittimo per il banking online",
+        "Un malware che può intercettare password, leggere SMS OTP e modificare IBAN nei bonifici",
+        "Un virus che colpisce solo i server bancari",
+        "Un programma antivirus specializzato per banche"
+      ],
+      "ans": 1,
+      "exp": "Un Banking Trojan è un tipo di malware specificamente progettato per colpire l'home banking. Può intercettare password, leggere SMS con codici OTP, e persino modificare l'IBAN nei bonifici (screen overlay). Si installa tramite allegati email, app false o siti compromessi."
+    },
+    {
+      "m": "sicurezza_informatica",
+      "diff": "base",
+      "q": "Quale regola fondamentale vale per difendersi dalle truffe bancarie via telefono?",
+      "opts": [
+        "Fornire il codice OTP solo se il chiamante conosce il tuo nome",
+        "La banca non chiede mai codici OTP per telefono — riagganciare e chiamare il numero ufficiale",
+        "Installare l'app indicata dall'operatore per verificare l'identità",
+        "Trasferire i fondi su un conto 'sicuro' indicato dall'operatore"
+      ],
+      "ans": 1,
+      "exp": "La regola d'oro è che la banca non chiede mai OTP per telefono. In caso di chiamata sospetta, riagganciare e richiamare il numero ufficiale della banca (trovato sul sito o sul retro della carta). Mai fornire codici, PIN o autorizzare bonifici su richiesta telefonica."
+    },
+    {
+      "m": "sicurezza_informatica",
+      "diff": "medio",
+      "q": "Cos'è la truffa CEO Fraud (Bonifico urgente)?",
+      "opts": [
+        "Un ransomware che colpisce i CEO aziendali",
+        "Una truffa in cui si riceve una richiesta urgente di pagamento da qualcuno che finge di essere una persona fidata (capo, figlio, fornitore)",
+        "Un attacco DDoS verso i siti delle grandi aziende",
+        "Un malware installato tramite email di phishing ai dirigenti"
+      ],
+      "ans": 1,
+      "exp": "La CEO Fraud o truffa del bonifico urgente sfrutta l'urgenza e la fiducia: si riceve una richiesta di pagamento da qualcuno che finge di essere il capo, un familiare in difficoltà o un fornitore. Esempio classico: 'Sono tuo figlio, ho perso il telefono, ho urgente bisogno di 1800€.' Verificare sempre con una chiamata diretta."
+    },
+    {
+      "m": "sicurezza_informatica",
+      "diff": "avanzato",
+      "q": "Cosa si intende per Insider Threat?",
+      "opts": [
+        "Un attacco proveniente da hacker stranieri",
+        "Una minaccia interna proveniente da dipendenti, collaboratori o ex-dipendenti con accesso ai sistemi",
+        "Un malware nascosto all'interno di un software legittimo",
+        "Un attacco che sfrutta le vulnerabilità del firmware"
+      ],
+      "ans": 1,
+      "exp": "L'Insider Threat (minaccia interna) indica il rischio proveniente da persone all'interno dell'organizzazione — dipendenti, collaboratori o ex-dipendenti — che hanno o hanno avuto accesso legittimo ai sistemi e possono usarlo per compiere azioni dannose, intenzionalmente o per negligenza."
+    },
+    {
+      "m": "sicurezza_informatica",
+      "diff": "avanzato",
+      "q": "Cos'è la tecnica di SQL Injection?",
+      "opts": [
+        "Un tipo di attacco fisico ai server database",
+        "Una tecnica che inserisce codice SQL malevolo in un campo di input per manipolare o estrarre dati dal database",
+        "Un malware che corrompe i file SQL di un sistema",
+        "Un protocollo di backup dei database"
+      ],
+      "ans": 1,
+      "exp": "La SQL Injection è un attacco in cui l'attaccante inserisce codice SQL malevolo in un campo di input (es. form di login). Il web server trasmette la query al database che la esegue, permettendo all'attaccante di estrarre dati, modificarli o ottenere accesso non autorizzato. Si basa sul paradigma Client-Server: il client interroga il web che interroga il DB tramite SQL."
+    }
+  ],
+  "teoria": {
+    "tecnologie_digitali": {
+      "desc": "Contenuti teorici in arrivo.",
+      "html": "<div class=\"empty-state\"><div class=\"empty-icon\">📝</div><div class=\"empty-title\">Contenuti in arrivo</div><div class=\"empty-sub\">Il materiale per questa materia verrà inserito nelle prossime sessioni.</div></div>"
+    },
+    "statistica": {
+      "desc": "Contenuti teorici in arrivo.",
+      "html": "<div class=\"empty-state\"><div class=\"empty-icon\">📝</div><div class=\"empty-title\">Contenuti in arrivo</div><div class=\"empty-sub\">Il materiale per questa materia verrà inserito nelle prossime sessioni.</div></div>"
+    },
+    "web_mobile": {
+      "desc": "Contenuti teorici in arrivo.",
+      "html": "<div class=\"empty-state\"><div class=\"empty-icon\">📝</div><div class=\"empty-title\">Contenuti in arrivo</div><div class=\"empty-sub\">Il materiale per questa materia verrà inserito nelle prossime sessioni.</div></div>"
+    },
+    "sicurezza_lavoro": {
+      "desc": "Contenuti teorici in arrivo.",
+      "html": "<div class=\"empty-state\"><div class=\"empty-icon\">📝</div><div class=\"empty-title\">Contenuti in arrivo</div><div class=\"empty-sub\">Il materiale per questa materia verrà inserito nelle prossime sessioni.</div></div>"
+    },
+    "progettazione_multimediale": {
+      "desc": "Contenuti teorici in arrivo.",
+      "html": "<div class=\"empty-state\"><div class=\"empty-icon\">📝</div><div class=\"empty-title\">Contenuti in arrivo</div><div class=\"empty-sub\">Il materiale per questa materia verrà inserito nelle prossime sessioni.</div></div>"
+    },
+    "project_management": {
+      "desc": "Contenuti teorici in arrivo.",
+      "html": "<div class=\"empty-state\"><div class=\"empty-icon\">📝</div><div class=\"empty-title\">Contenuti in arrivo</div><div class=\"empty-sub\">Il materiale per questa materia verrà inserito nelle prossime sessioni.</div></div>"
+    },
+    "ai_cultura": {
+      "desc": "Contenuti teorici in arrivo.",
+      "html": "<div class=\"empty-state\"><div class=\"empty-icon\">📝</div><div class=\"empty-title\">Contenuti in arrivo</div><div class=\"empty-sub\">Il materiale per questa materia verrà inserito nelle prossime sessioni.</div></div>"
+    },
+    "primo_soccorso": {
+      "desc": "Contenuti teorici in arrivo.",
+      "html": "<div class=\"empty-state\"><div class=\"empty-icon\">📝</div><div class=\"empty-title\">Contenuti in arrivo</div><div class=\"empty-sub\">Il materiale per questa materia verrà inserito nelle prossime sessioni.</div></div>"
+    },
+    "marketing_culturale": {
+      "desc": "Contenuti teorici in arrivo.",
+      "html": "<div class=\"empty-state\"><div class=\"empty-icon\">📝</div><div class=\"empty-title\">Contenuti in arrivo</div><div class=\"empty-sub\">Il materiale per questa materia verrà inserito nelle prossime sessioni.</div></div>"
+    },
+    "grafica_ux": {
+      "desc": "Contenuti teorici in arrivo.",
+      "html": "<div class=\"empty-state\"><div class=\"empty-icon\">📝</div><div class=\"empty-title\">Contenuti in arrivo</div><div class=\"empty-sub\">Il materiale per questa materia verrà inserito nelle prossime sessioni.</div></div>"
+    },
+    "iot": {
+      "desc": "Contenuti teorici in arrivo.",
+      "html": "<div class=\"empty-state\"><div class=\"empty-icon\">📝</div><div class=\"empty-title\">Contenuti in arrivo</div><div class=\"empty-sub\">Il materiale per questa materia verrà inserito nelle prossime sessioni.</div></div>"
+    },
+    "inglese_tecnico": {
+      "desc": "Contenuti teorici in arrivo.",
+      "html": "<div class=\"empty-state\"><div class=\"empty-icon\">📝</div><div class=\"empty-title\">Contenuti in arrivo</div><div class=\"empty-sub\">Il materiale per questa materia verrà inserito nelle prossime sessioni.</div></div>"
+    },
+    "sicurezza_informatica": {
+      "desc": "Contenuti teorici in arrivo.",
+      "html": "<div class=\"empty-state\"><div class=\"empty-icon\">📝</div><div class=\"empty-title\">Contenuti in arrivo</div><div class=\"empty-sub\">Il materiale per questa materia verrà inserito nelle prossime sessioni.</div></div>"
+    },
+    "database": {
+      "desc": "Contenuti teorici in arrivo.",
+      "html": "<div class=\"empty-state\"><div class=\"empty-icon\">📝</div><div class=\"empty-title\">Contenuti in arrivo</div><div class=\"empty-sub\">Il materiale per questa materia verrà inserito nelle prossime sessioni.</div></div>"
+    },
+    "cultura_digitale": {
+      "desc": "Contenuti teorici in arrivo.",
+      "html": "<div class=\"empty-state\"><div class=\"empty-icon\">📝</div><div class=\"empty-title\">Contenuti in arrivo</div><div class=\"empty-sub\">Il materiale per questa materia verrà inserito nelle prossime sessioni.</div></div>"
+    },
+    "storia_sardegna": {
+      "desc": "Percorso cronologico attraverso la storia, i monumenti e il patrimonio culturale della Sardegna.",
+      "html": "<div class=\"timeline-container\"><div class=\"timeline-intro\"><h3>🗺️ Percorso cronologico</h3><p>I moduli verranno inseriti in ordine cronologico mano a mano che i materiali dei docenti saranno disponibili.</p></div><div class=\"empty-state\"><div class=\"empty-icon\">⏳</div><div class=\"empty-title\">Linea temporale in costruzione</div><div class=\"empty-sub\">I moduli storici verranno inseriti in ordine cronologico: Preistoria → Età antica → Alto Medioevo → Regni medievali → Età moderna → Età contemporanea.</div></div></div>"
+    }
+  },
+  "documentazione": {
+    "tecnologie_digitali": {
+      "desc": "Documentazione completa dal materiale ufficiale del docente.",
+      "html": "<div class=\"empty-state\"><div class=\"empty-icon\">📂</div><div class=\"empty-title\">Documentazione in arrivo</div><div class=\"empty-sub\">Il materiale per questa materia verrà inserito nelle prossime sessioni.</div></div>"
+    },
+    "statistica": {
+      "desc": "Documentazione completa dal materiale ufficiale del docente.",
+      "html": "<div class=\"empty-state\"><div class=\"empty-icon\">📂</div><div class=\"empty-title\">Documentazione in arrivo</div><div class=\"empty-sub\">Il materiale per questa materia verrà inserito nelle prossime sessioni.</div></div>"
+    },
+    "web_mobile": {
+      "desc": "Documentazione completa dal materiale ufficiale del docente.",
+      "html": "<div class=\"empty-state\"><div class=\"empty-icon\">📂</div><div class=\"empty-title\">Documentazione in arrivo</div><div class=\"empty-sub\">Il materiale per questa materia verrà inserito nelle prossime sessioni.</div></div>"
+    },
+    "sicurezza_lavoro": {
+      "desc": "Documentazione completa dal materiale ufficiale del docente.",
+      "html": "<div class=\"empty-state\"><div class=\"empty-icon\">📂</div><div class=\"empty-title\">Documentazione in arrivo</div><div class=\"empty-sub\">Il materiale per questa materia verrà inserito nelle prossime sessioni.</div></div>"
+    },
+    "progettazione_multimediale": {
+      "desc": "Documentazione completa dal materiale ufficiale del docente.",
+      "html": "<div class=\"empty-state\"><div class=\"empty-icon\">📂</div><div class=\"empty-title\">Documentazione in arrivo</div><div class=\"empty-sub\">Il materiale per questa materia verrà inserito nelle prossime sessioni.</div></div>"
+    },
+    "project_management": {
+      "desc": "Documentazione completa dal materiale ufficiale del docente.",
+      "html": "<div class=\"empty-state\"><div class=\"empty-icon\">📂</div><div class=\"empty-title\">Documentazione in arrivo</div><div class=\"empty-sub\">Il materiale per questa materia verrà inserito nelle prossime sessioni.</div></div>"
+    },
+    "ai_cultura": {
+      "desc": "Documentazione completa dal materiale ufficiale del docente.",
+      "html": "<div class=\"empty-state\"><div class=\"empty-icon\">📂</div><div class=\"empty-title\">Documentazione in arrivo</div><div class=\"empty-sub\">Il materiale per questa materia verrà inserito nelle prossime sessioni.</div></div>"
+    },
+    "primo_soccorso": {
+      "desc": "Documentazione completa dal materiale ufficiale del docente.",
+      "html": "<div class=\"empty-state\"><div class=\"empty-icon\">📂</div><div class=\"empty-title\">Documentazione in arrivo</div><div class=\"empty-sub\">Il materiale per questa materia verrà inserito nelle prossime sessioni.</div></div>"
+    },
+    "marketing_culturale": {
+      "desc": "Documentazione completa dal materiale ufficiale del docente.",
+      "html": "<div class=\"empty-state\"><div class=\"empty-icon\">📂</div><div class=\"empty-title\">Documentazione in arrivo</div><div class=\"empty-sub\">Il materiale per questa materia verrà inserito nelle prossime sessioni.</div></div>"
+    },
+    "grafica_ux": {
+      "desc": "Documentazione completa dal materiale ufficiale del docente.",
+      "html": "<div class=\"empty-state\"><div class=\"empty-icon\">📂</div><div class=\"empty-title\">Documentazione in arrivo</div><div class=\"empty-sub\">Il materiale per questa materia verrà inserito nelle prossime sessioni.</div></div>"
+    },
+    "iot": {
+      "desc": "Documentazione completa dal materiale ufficiale del docente.",
+      "html": "<div class=\"empty-state\"><div class=\"empty-icon\">📂</div><div class=\"empty-title\">Documentazione in arrivo</div><div class=\"empty-sub\">Il materiale per questa materia verrà inserito nelle prossime sessioni.</div></div>"
+    },
+    "inglese_tecnico": {
+      "desc": "Documentazione completa dal materiale ufficiale del docente.",
+      "html": "<div class=\"empty-state\"><div class=\"empty-icon\">📂</div><div class=\"empty-title\">Documentazione in arrivo</div><div class=\"empty-sub\">Il materiale per questa materia verrà inserito nelle prossime sessioni.</div></div>"
+    },
+    "sicurezza_informatica": {
+      "desc": "Fondamenti di Cybersecurity: Triade CIA, asset, minacce, vulnerabilità, attacchi, truffe bancarie e difese pratiche. Materiale delle lezioni del docente.",
+      "html": "\n<div class=\"doc-card\">\n  <h3>📘 Lezione 1 — Safety, Security e Fondamenti di Cybersecurity</h3>\n\n  <h4>Safety vs Security</h4>\n  <p>La differenza fondamentale tra <strong>Safety</strong> e <strong>Security</strong> risiede nell'intenzionalità dell'evento dannoso.</p>\n  <ul>\n    <li><strong>Safety (Sicurezza passiva / incolumità):</strong> previene danni accidentali o non intenzionali — incidenti, guasti tecnici, disastri naturali. Esempi: DPI, caschi, cinture di sicurezza, sistemi antincendio, procedure di sicurezza sul lavoro.</li>\n    <li><strong>Security (Sicurezza attiva / protezione):</strong> protegge da danni intenzionali causati da fattori esterni — furti, attacchi informatici, atti dolosi, sabotaggi, terrorismo. Esempi: videosorveglianza, guardie giurate, controllo accessi, firewall informatici.</li>\n  </ul>\n  <p>In sintesi: la safety mira a proteggere \"da te stesso o dagli incidenti\", mentre la security mira a proteggere persone e cose \"dagli altri\". Entrambe sono necessarie per la gestione del rischio complessivo.</p>\n\n  <h4>Definizione di Cybersecurity</h4>\n  <p>La sicurezza informatica è la <strong>protezione delle informazioni memorizzate, trasmesse o elaborate in sistemi in rete</strong>, inclusi computer e dispositivi digitali. Il termine deriva dalla <em>cibernetica</em> — la scienza che integra matematica, ingegneria, biologia e neurologia per progettare sistemi di controllo dell'informazione (Norbert Wiener, 1948).</p>\n\n  <h4>La Triade CIA</h4>\n  <p>La Triade CIA è il cuore della sicurezza informatica e si articola in tre obiettivi primari:</p>\n  <ul>\n    <li><strong>Confidenzialità (Confidentiality):</strong> garantisce che le informazioni siano accessibili solo a chi è autorizzato. Include il concetto di Privacy — il controllo delle informazioni personali e chi può accedervi.</li>\n    <li><strong>Integrità (Integrity):</strong> assicura che dati e programmi siano modificati solo in modo specificato e autorizzato. Si divide in: integrità dei dati (accuratezza dei bit) e integrità del sistema (funzionamento non manipolato). Si mantiene tramite hashing, firme digitali e controllo delle versioni.</li>\n    <li><strong>Disponibilità (Availability):</strong> garantisce che i sistemi funzionino prontamente e il servizio non sia negato agli utenti autorizzati. Si mantiene tramite sistemi ridondanti, backup e disaster recovery planning.</li>\n  </ul>\n\n  <h4>Privacy e normativa</h4>\n  <p>La <strong>Privacy</strong> è il diritto fondamentale di ogni individuo a controllare il trattamento delle proprie informazioni personali. Le principali normative vigenti in Italia ed Europa:</p>\n  <ul>\n    <li><strong>GDPR — Regolamento UE 2016/679:</strong> normativa fondamentale europea, entrata in vigore nel 2018.</li>\n    <li><strong>D.Lgs. 196/2003</strong> — Codice in materia di protezione dei dati personali (Codice Privacy).</li>\n    <li><strong>D.Lgs. 101/2018</strong> — Decreto di adeguamento al GDPR.</li>\n    <li><strong>Direttiva ePrivacy (2002/58/CE):</strong> disciplina la privacy nelle comunicazioni elettroniche, cookie, messaggistica e marketing.</li>\n    <li><strong>Direttiva 2016/680:</strong> regola il trattamento dei dati da parte delle autorità per prevenzione e perseguimento di reati.</li>\n  </ul>\n  <p><strong>Dati sensibili</strong> (categorie che richiedono protezione rafforzata): dati sanitari, dati politici, dati sessuali, dati religiosi.</p>\n</div>\n\n<div class=\"doc-card\">\n  <h3>🔑 Lezione 1 — Concetti Chiave: Asset, Minaccia, Vulnerabilità, Rischio, Attacco</h3>\n\n  <h4>Asset</h4>\n  <p>Un <strong>asset</strong> è qualsiasi risorsa (tangibile o intangibile) che ha valore per l'organizzazione e deve essere protetta. In sintesi: tutto ciò che, se danneggiato, rubato, esfiltrato o reso inaccessibile, può arrecare un danno economico, operativo o di reputazione.</p>\n\n  <h4>Tipologie di Asset</h4>\n  <ul>\n    <li><strong>Asset Fisici (Hardware):</strong> Server e Data Center, End-point (laptop, desktop, smartphone, tablet), Apparati di Rete (router, switch, firewall, access point Wi-Fi), Dispositivi IoT (telecamere, sensori industriali, smart TV, stampanti di rete).</li>\n    <li><strong>Asset Digitali (Software e Applicazioni):</strong> Applicazioni aziendali (ERP, CRM, posta elettronica), Sistemi operativi (Windows, Linux, macOS, Android, iOS), Software di sicurezza (antivirus, EDR, backup), Shadow IT (app SaaS usate senza approvazione IT).</li>\n    <li><strong>Asset Informativi (Dati):</strong> Spesso i più preziosi. Dati dei clienti, proprietà intellettuale (algoritmi, brevetti, segreti industriali), dati finanziari, documentazione interna (NDA, contratti, email confidenziali).</li>\n    <li><strong>Asset di Accesso (Identità e Credenziali):</strong> Account utente (username e password), Privileged Access (account amministratori — i più ambiti dagli attaccanti), Certificati digitali (chiavi crittografiche).</li>\n    <li><strong>Asset Virtuali (Cloud):</strong> Virtual Machines (VM su AWS, Azure, Google Cloud), Storage Cloud (bucket S3), Container (Docker).</li>\n  </ul>\n\n  <h4>Minaccia</h4>\n  <p>Una <strong>minaccia</strong> è qualsiasi azione o evento intenzionale e malevolo che mira a compromettere la sicurezza, l'integrità, la riservatezza o la disponibilità di dati, sistemi o dispositivi digitali. Può provocare danni economici, furto di informazioni, interruzione delle operazioni o compromissione della reputazione.</p>\n\n  <h4>Vulnerabilità</h4>\n  <p>Una <strong>vulnerabilità</strong> è una debolezza, errore o configurazione inadeguata presente in un sistema informatico, software, hardware, rete o processo organizzativo, che può essere sfruttata da un attore malevolo per compromettere la Triade CIA.</p>\n\n  <h4>Rischio</h4>\n  <p>Il <strong>Rischio</strong> è una valutazione quantitativa della misura in cui un'entità è minacciata. Si calcola come:</p>\n  <p><strong>R = P × D</strong> (Probabilità che l'evento si verifichi × Gravità del Danno)</p>\n\n  <h4>Attacco</h4>\n  <p>Un <strong>attacco</strong> è qualsiasi attività malevola che tenti di acquisire dati o informazioni in modo non autorizzato, prevalentemente silente, orientata a sottrarre o distruggere dati o degradare le risorse del sistema per renderlo inaccessibile.</p>\n</div>\n\n<div class=\"doc-card\">\n  <h3>🎭 Lezione 2 — Social Engineering, Phishing e Truffe Bancarie</h3>\n\n  <h4>Social Engineering (Ingegneria Sociale)</h4>\n  <p>Il <strong>Social Engineering</strong> è una tecnica di manipolazione psicologica che sfrutta l'ingenuità umana, anziché le vulnerabilità tecniche, per indurre le persone a rivelare informazioni riservate o compiere azioni dannose. I criminali creano scenari falsi (<em>pretexting</em>), fingendosi colleghi, fornitori o autorità, facendo leva su emozioni come paura, urgenza o curiosità.</p>\n\n  <h4>Phishing e varianti</h4>\n  <ul>\n    <li><strong>Phishing:</strong> invio di messaggi fraudolenti di massa che sembrano provenire da fonti affidabili (banche, istituzioni, corrieri) per indurre a cliccare su link malevoli o scaricare malware.</li>\n    <li><strong>Spear Phishing:</strong> attacchi mirati e personalizzati contro individui specifici.</li>\n    <li><strong>Smishing:</strong> phishing via SMS o WhatsApp. Tecnica avanzata: SMS spoofing fa apparire il messaggio nella stessa conversazione della banca vera.</li>\n    <li><strong>Vishing:</strong> phishing vocale via telefono. Il truffatore finge di essere operatore bancario, antifrode o polizia postale e chiede codici OTP o autorizzazioni a bonifici.</li>\n  </ul>\n\n  <h4>Le 10 principali truffe bancarie</h4>\n  <ul>\n    <li><strong>1. Phishing (email):</strong> email falsa con link a sito clone della banca. Segnali: urgenza (\"conto bloccato entro 24 ore\"), link con indirizzi strani, errori grammaticali.</li>\n    <li><strong>2. Smishing (SMS):</strong> SMS con link a pagina falsa. Con SMS spoofing appare nella conversazione autentica della banca.</li>\n    <li><strong>3. Vishing (telefono):</strong> chiamata con spoofing del numero reale della banca. La banca non chiede mai OTP per telefono.</li>\n    <li><strong>4. Malware bancario:</strong> Banking Trojan, Keylogger, Screen Overlay (Android) installati tramite allegati email, app false o siti compromessi. Possono intercettare password, leggere OTP e modificare IBAN nei bonifici.</li>\n    <li><strong>5. App bancarie false:</strong> app che imitano la banca — verificare sempre sviluppatore e recensioni, scaricare solo dal sito ufficiale.</li>\n    <li><strong>6. CEO Fraud / Bonifico urgente:</strong> richiesta urgente da qualcuno che finge di essere il capo, un familiare o un fornitore. Verificare sempre con una chiamata diretta.</li>\n    <li><strong>7. SIM Swap:</strong> i criminali convincono l'operatore a trasferire il numero su una nuova SIM per ricevere gli OTP. Segnale: improvvisa perdita di segnale.</li>\n    <li><strong>8. Falso supporto tecnico:</strong> pop-up o chiamata \"il tuo computer è infetto — chiama subito\". Fanno installare AnyDesk o TeamViewer per accedere al conto.</li>\n    <li><strong>9. Investimenti online falsi:</strong> promesse di profitti in criptovalute o trading, con guadagni iniziali finti per convincere ad investire di più.</li>\n    <li><strong>10. Truffa IBAN modificato:</strong> hacker intercetta comunicazioni aziendali e invia \"abbiamo cambiato IBAN\". Verificare sempre l'IBAN con una telefonata diretta.</li>\n  </ul>\n\n  <h4>Regole d'oro per difendersi</h4>\n  <ul>\n    <li>Non comunicare mai password, PIN o codici OTP a nessuno.</li>\n    <li>La banca non chiede mai codici via telefono.</li>\n    <li>Non cliccare link in email o SMS — digitare sempre l'indirizzo manualmente.</li>\n    <li>Verificare sempre l'identità del mittente prima di agire.</li>\n    <li>Attivare notifiche dei movimenti e autenticazione a due fattori (2FA).</li>\n    <li>Ragionare un attimo prima di reagire d'istinto — l'urgenza è la prima leva delle truffe.</li>\n  </ul>\n</div>\n\n<div class=\"doc-card\">\n  <h3>⚠️ Lezione 3 — QR Code, Spam Telefonico e Difese Pratiche</h3>\n\n  <h4>QR Code come vettore di attacco</h4>\n  <p>I QR code possono essere usati come vettori di attacco in diversi modi:</p>\n  <ul>\n    <li><strong>QR Code + URL Shortener:</strong> l'URL reale viene mascherato da un link abbreviato (es. tinyurl.com), rendendo impossibile verificare la destinazione a colpo d'occhio.</li>\n    <li><strong>In-app Deep Linking:</strong> QR code strutturati per aprire app specifiche sul telefono e compiere azioni dannose senza il consenso esplicito dell'utente (aprire una chat, effettuare un pagamento).</li>\n    <li><strong>QR Code sostituiti fisicamente:</strong> adesivi malevoli posizionati sopra QR code legittimi in luoghi pubblici.</li>\n  </ul>\n\n  <h4>Regole d'oro per i QR code</h4>\n  <ul>\n    <li>Verificare la fonte: non scansionare QR code posizionati sopra altri adesivi o da email inaspettate.</li>\n    <li>Controllare l'URL nell'anteprima prima di aprire il sito.</li>\n    <li>Usare strumenti come VirusTotal per analizzare i link abbreviati.</li>\n    <li>Non inserire mai credenziali o dati bancari su siti raggiunti tramite QR code generici.</li>\n    <li>Aggiornare sempre browser e sistema operativo.</li>\n  </ul>\n\n  <h4>Spam e Vishing telefonico</h4>\n  <p>Le truffe telefoniche usano tecniche di <strong>caller ID spoofing</strong> (il prefisso #31# nasconde il numero reale del chiamante). App utili per la difesa:</p>\n  <ul>\n    <li><strong>Hiya</strong> (Android/iOS): identifica chiamanti sconosciuti e blocca spam automaticamente.</li>\n    <li><strong>Should I Answer?</strong> (Android/iOS): database spam aggiornato anche offline, blocco numeri negativi ed esteri.</li>\n    <li><strong>CallApp</strong> (Android): Caller ID completo, blocco spam e registrazione chiamate.</li>\n    <li><strong>RoboKiller</strong> (Android/iOS): specializzata nel bloccare robocalls, con Answer Bot automatici.</li>\n    <li><strong>Telefono di Google</strong> (Android): filtro antispam integrato con segnalazione in rosso delle chiamate sospette.</li>\n  </ul>\n  <p>⚠️ Attenzione: quasi tutte queste app caricano la rubrica telefonica — leggere sempre le informative sulla privacy prima di installarle.</p>\n\n  <h4>Malware — Tipologie principali</h4>\n  <ul>\n    <li><strong>Trojan:</strong> si maschera da software legittimo per installare backdoor o rubare dati.</li>\n    <li><strong>Spyware:</strong> monitora l'attività dell'utente e trasmette i dati all'attaccante.</li>\n    <li><strong>Keylogger:</strong> registra ogni tasto premuto per catturare password e dati sensibili.</li>\n    <li><strong>Ransomware:</strong> cifra i dati e chiede un riscatto. La doppia estorsione aggiunge la minaccia di pubblicare i dati.</li>\n    <li><strong>Backdoor:</strong> crea un accesso nascosto e persistente al sistema.</li>\n  </ul>\n\n  <h4>Attacchi avanzati</h4>\n  <ul>\n    <li><strong>DDoS (Distributed Denial of Service):</strong> una botnet di migliaia di dispositivi compromessi satura le risorse di un server rendendolo inaccessibile. Il DoS usa una singola macchina, il DDoS una rete (botnet) controllata via C&C (Command and Control).</li>\n    <li><strong>Privilege Escalation:</strong> ottenere privilegi superiori sfruttando vulnerabilità o configurazioni deboli per passare da utente normale ad amministratore.</li>\n    <li><strong>Zero-Day:</strong> attacco che sfrutta una vulnerabilità non ancora nota al produttore o non ancora corretta con una patch.</li>\n    <li><strong>Watering Hole + Drive-by Download:</strong> compromissione di siti legittimi frequentati dalle vittime; il malware si installa silenziosamente alla visita del sito.</li>\n    <li><strong>SQL Injection:</strong> inserimento di codice SQL malevolo in un campo di input per manipolare il database. Il paradigma Client→Web→DB (architettura LAMP: Linux, Apache, MySQL, PHP/Python) è il vettore tipico.</li>\n    <li><strong>Supply Chain Attack:</strong> compromissione di un fornitore fidato per colpire indirettamente le organizzazioni bersaglio.</li>\n    <li><strong>Insider Threat:</strong> minaccia interna da dipendenti, collaboratori o ex-dipendenti con accesso ai sistemi.</li>\n    <li><strong>Lateral Movement:</strong> dopo l'accesso iniziale, l'attaccante si sposta lateralmente nella rete per raggiungere sistemi più preziosi.</li>\n    <li><strong>Data Exfiltration:</strong> esfiltrazione non autorizzata di dati sensibili verso server controllati dall'attaccante.</li>\n  </ul>\n\n  <h4>La sicurezza è un processo</h4>\n  <ul>\n    <li>È un processo continuo, non un prodotto da installare una volta.</li>\n    <li>Non è un costo ma un investimento.</li>\n    <li>È una mentalità e un approccio preventivo e proattivo al rischio.</li>\n    <li>Nessun singolo strumento è sufficiente: serve una difesa a più livelli.</li>\n  </ul>\n</div>\n"
+    },
+    "database": {
+      "desc": "Documentazione completa dal materiale ufficiale del docente.",
+      "html": "<div class=\"empty-state\"><div class=\"empty-icon\">📂</div><div class=\"empty-title\">Documentazione in arrivo</div><div class=\"empty-sub\">Il materiale per questa materia verrà inserito nelle prossime sessioni.</div></div>"
+    },
+    "cultura_digitale": {
+      "desc": "Documentazione completa dal materiale ufficiale del docente.",
+      "html": "<div class=\"empty-state\"><div class=\"empty-icon\">📂</div><div class=\"empty-title\">Documentazione in arrivo</div><div class=\"empty-sub\">Il materiale per questa materia verrà inserito nelle prossime sessioni.</div></div>"
+    },
+    "storia_sardegna": {
+      "desc": "Documentazione completa dal materiale ufficiale dei docenti.",
+      "html": "<div class=\"empty-state\"><div class=\"empty-icon\">📂</div><div class=\"empty-title\">Documentazione in arrivo</div><div class=\"empty-sub\">I materiali dei docenti verranno inseriti in ordine cronologico nelle prossime sessioni.</div></div>"
+    }
+  },
+  "quiz_reale": {}
+}
