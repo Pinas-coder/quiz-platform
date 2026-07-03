@@ -12,6 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
+  <script src="theme.js"></script>
 </head>
 <body>
 
@@ -48,10 +49,19 @@
 
     <div class="logo">
       <!-- ⚠️ Modifica: branding sidebar -->
-      <span class="logo-kicker">[Tecnologie per la valorizzazione dei Beni Culturali] · [ANAP]</span>
-      <div class="logo-name">[Tecnologie per la valorizzazione dei Beni Culturali]</div>
+      <span class="logo-kicker">[Quiz] · [ANAP]</span>
+      <div class="logo-name">[IFTS Tecnologie per la valorizzazione dei Beni Culturali]</div>
       <div class="logo-sub">📚 Piattaforma di studio e quiz</div>
     </div>
+
+    <!-- Torna alla Home (pagina esterna) -->
+    <div class="sidebar-section">
+      <a class="nav-item" href="home.html" style="text-decoration:none">
+        <span class="material-symbols-outlined" style="font-size:19px">arrow_back</span>Torna alla Home
+      </a>
+    </div>
+
+    <div class="sidebar-divider"></div>
 
     <!-- Quiz per materia -->
     <div class="sidebar-section">
@@ -342,64 +352,18 @@
 </div><!-- /app -->
 
 <!-- ════════════════════════════════════════════════════════════
-     BOTTOM NAV MOBILE
+     Navigazione mobile: gestita interamente dalla sidebar
+     (hamburger in topbar → drawer laterale con overlay).
+     Nessun bottom nav: tutte le voci (Home, Quiz, Esame,
+     Teoria, Documentazione, Statistiche) vivono nella sidebar.
 ════════════════════════════════════════════════════════════ -->
-<nav class="bottom-nav" id="bottom-nav">
-  <div class="bottom-nav-inner">
-
-    <button class="bn-btn active" id="bn-quiz" onclick="bnQuiz()">
-      <span class="material-symbols-outlined">quiz</span>
-      Quiz
-    </button>
-
-    <button class="bn-btn" id="bn-esame" onclick="bnEsame()">
-      <span class="material-symbols-outlined">history_edu</span>
-      Esame
-    </button>
-
-    <button class="bn-btn" id="bn-teoria" onclick="bnTeoria()">
-      <span class="material-symbols-outlined">menu_book</span>
-      Teoria
-    </button>
-
-    <button class="bn-btn" id="bn-doc" onclick="bnDoc()">
-      <span class="material-symbols-outlined">description</span>
-      Documenti
-    </button>
-
-    <button class="bn-btn" id="bn-stats" onclick="bnStats()">
-      <span class="material-symbols-outlined">bar_chart</span>
-      Statistiche
-    </button>
-
-  </div>
-</nav>
 
 <!-- ════════════════════════════════════════════════════════════
-     MODAL STATISTICHE (mobile)
+     THEME TOGGLE
 ════════════════════════════════════════════════════════════ -->
-<div id="stats-modal"
-  style="display:none;position:fixed;inset:0;z-index:400;background:rgba(17,28,45,.6);align-items:flex-end"
-  onclick="if(event.target===this)closeStats()">
-  <div style="background:var(--surface-lowest);border-radius:24px 24px 0 0;padding:1.5rem;width:100%;border-top:1px solid var(--outline-var)">
-    <div style="width:36px;height:4px;background:var(--outline-var);border-radius:2px;margin:0 auto 1.25rem"></div>
-    <span class="stats-label" style="display:block;margin-bottom:12px">Statistiche sessione</span>
-    <div class="stat-row"><span class="stat-row-label">Domande</span><span class="stat-row-val v-tot" id="ms-tot">0</span></div>
-    <div class="stat-row"><span class="stat-row-label">Corrette</span><span class="stat-row-val v-ok" id="ms-ok">0</span></div>
-    <div class="stat-row"><span class="stat-row-label">Errate</span><span class="stat-row-val v-ko" id="ms-ko">0</span></div>
-    <div class="stat-row"><span class="stat-row-label">Successo</span><span class="stat-row-val v-pct" id="ms-pct">—</span></div>
-    <div class="prog-track" style="margin-top:14px">
-      <div class="prog-fill" id="ms-bar" style="width:0%"></div>
-    </div>
-    <div class="prog-lbl"><span id="ms-pl">0/0</span><span id="ms-pr">0%</span></div>
-    <button onclick="closeStats()"
-      style="margin-top:1.25rem;width:100%;padding:14px;background:var(--surface-low);
-             border:1px solid var(--outline-var);border-radius:var(--r-xl);
-             color:var(--on-surface-var);font-family:var(--font);font-size:14px;font-weight:600;cursor:pointer">
-      Chiudi
-    </button>
-  </div>
-</div>
+<button class="theme-toggle" id="theme-toggle" aria-label="Cambia tema" title="Cambia tema chiaro/scuro">
+  <span class="material-symbols-outlined">dark_mode</span>
+</button>
 
 <!-- ════════════════════════════════════════════════════════════
      SCRIPT

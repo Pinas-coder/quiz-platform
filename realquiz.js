@@ -16,7 +16,7 @@ function startRealQuiz(subject, el) {
   showSection('realquiz-view');
 
   const m = MATERIE.find(x => x.key === subject);
-  document.getElementById('rq-title').textContent = `Quiz reali — ${m?.label || subject}`;
+  document.getElementById('rq-title').textContent = `Quiz reale — ${m?.label || subject}`;
 
   document.getElementById('rq-intro').style.display = 'block';
   document.getElementById('rq-area').style.display  = 'none';
@@ -42,7 +42,7 @@ function launchRealQuiz() {
       <div class="empty-state">
         <div class="empty-icon">⚠️</div>
         <div class="empty-title">Nessuna domanda disponibile</div>
-        <div class="empty-sub">I quiz reali per questa materia non sono ancora stati inseriti in db.json.</div>
+        <div class="empty-sub">Il quiz reale per questa materia non è ancora stato inserito in db.json.</div>
       </div>`;
     return;
   }
@@ -53,7 +53,7 @@ function launchRealQuiz() {
     html += `
       <div class="q-card" id="rq-q-${qi}" style="margin-bottom:1rem">
         <div class="q-top">
-          <span class="q-materia">${mLabel} — Quiz reali</span>
+          <span class="q-materia">${mLabel} — Quiz reale</span>
           <div class="q-meta">
             <span class="q-counter">Dom. ${q.n || qi + 1} / ${questions.length}</span>
           </div>

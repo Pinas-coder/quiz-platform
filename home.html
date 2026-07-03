@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Piattaforma Quiz</title>
+  <!-- ⚠️ Modifica il titolo qui sopra con il nome del tuo corso -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="theme.js"></script>
+  <style>
+    /* Stili esclusivi della home — non toccano le viste dell'app */
+    .home-header {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: var(--sp-lg) var(--sp-2xl);
+      border-bottom: 1px solid var(--outline-var);
+    }
+    .home-header .brand { display: flex; flex-direction: column; }
+    .home-header .brand .kicker {
+      font-size: 10px; font-weight: 700; color: var(--primary);
+      letter-spacing: .1em; text-transform: uppercase;
+    }
+    .home-header .brand .name { font-size: 16px; font-weight: 800; color: var(--on-surface); }
+    .home-hero {
+      background: radial-gradient(circle at top right, var(--primary-fixed) 0%, var(--background) 70%);
+      padding: var(--sp-2xl);
+    }
+    .home-hero-inner {
+      max-width: var(--container-max); margin: 0 auto;
+      display: grid; grid-template-columns: 1.1fr .9fr; gap: var(--sp-2xl); align-items: center;
+    }
+    .home-hero h1 { font-size: 42px; font-weight: 800; letter-spacing: -.02em; color: var(--on-surface); margin-bottom: var(--sp-md); max-width: 560px; }
+    .home-hero p  { font-size: 15.5px; color: var(--on-surface-var); max-width: 480px; margin-bottom: var(--sp-lg); line-height: 1.7; }
+    .home-hero-visual {
+      background: var(--surface-lowest); border: 1px solid var(--outline-var);
+      border-radius: var(--r-xl); box-shadow: var(--shadow-xl);
+      padding: var(--sp-xl); display: flex; flex-direction: column; gap: var(--sp-md);
+    }
+    .home-hero-visual .big-icon { font-size: 56px; color: var(--primary); }
+    .home-hero-stat { display: flex; align-items: center; gap: var(--sp-md); }
+    .home-hero-stat .num { font-size: 30px; font-weight: 800; color: var(--on-surface); }
+    .home-hero-stat .lbl { font-size: 11.5px; color: var(--outline); font-weight: 600; text-transform: uppercase; letter-spacing: .04em; }
+
+    .home-main { max-width: var(--container-max); margin: 0 auto; padding: var(--sp-2xl); }
+    .home-section-title { font-size: 22px; font-weight: 800; color: var(--on-surface); margin-bottom: var(--sp-lg); }
+
+    .home-bento {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--sp-md); margin-bottom: var(--sp-2xl);
+    }
+    .home-card {
+      display: block; text-decoration: none;
+      background: var(--surface-lowest); border: 1px solid var(--outline-var);
+      border-radius: var(--r-xl); padding: var(--sp-xl);
+      box-shadow: var(--shadow-sm); transition: box-shadow .18s, transform .18s;
+    }
+    .home-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-3px); }
+    .home-card .icon-wrap {
+      width: 52px; height: 52px; border-radius: var(--r-lg);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: var(--sp-md);
+    }
+    .home-card h3 { font-size: 17px; font-weight: 800; color: var(--on-surface); margin-bottom: 6px; }
+    .home-card p  { font-size: 13.5px; color: var(--on-surface-var); line-height: 1.65; margin-bottom: var(--sp-md); }
+    .home-card .go {
+      display: inline-flex; align-items: center; gap: 4px;
+      font-size: 12.5px; font-weight: 700; color: var(--primary);
+    }
+
+    .home-footer-note {
+      text-align: center; font-size: 12.5px; color: var(--outline); padding: var(--sp-lg) 0 var(--sp-2xl);
+    }
+
+    @media (max-width: 900px) {
+      .home-hero-inner { grid-template-columns: 1fr; }
+      .home-hero h1 { font-size: 30px; }
+      .home-bento { grid-template-columns: 1fr; }
+      .home-header, .home-hero, .home-main { padding-left: var(--sp-md); padding-right: var(--sp-md); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── HEADER ────────────────────────────────────────────────── -->
+  <header class="home-header">
+    <div class="brand">
+      <!-- ⚠️ Modifica: sigla ente / corso -->
+      <span class="kicker">[Quiz] · [ANAP]</span>
+      <span class="name">[IFTS Tecnologie per la valorizzazione dei Beni Culturali]</span>
+    </div>
+    <a href="index.html" class="btn-restart" style="text-decoration:none;margin-right:0">
+      Vai alla piattaforma
+      <span class="material-symbols-outlined" style="font-size:18px">arrow_forward</span>
+    </a>
+  </header>
+
+  <!-- ── HERO ──────────────────────────────────────────────────── -->
+  <section class="home-hero">
+    <div class="home-hero-inner">
+      <div>
+        <span class="section-badge">Progetto di fine corso</span>
+        <!-- ⚠️ Modifica: claim principale -->
+        <h1>Documentazione, quiz e modalità apprendimento in un unico posto</h1>
+        <p>
+          Consulta la documentazione ufficiale, allenati con i quiz per materia o misti,
+          e ripassa in modalità apprendimento con la spiegazione di ogni errore a schermo.
+        </p>
+        <a href="index.html?start=20" class="btn-restart" style="text-decoration:none">
+          Inizia un quiz rapido
+          <span class="material-symbols-outlined" style="font-size:18px">bolt</span>
+        </a>
+        <a href="index.html" class="btn-restart-sec" style="text-decoration:none">
+          Esplora la piattaforma
+        </a>
+      </div>
+
+      <div class="home-hero-visual">
+        <span class="material-symbols-outlined big-icon">school</span>
+        <div class="home-hero-stat">
+          <span class="num" id="home-stat-materie">0</span>
+          <span class="lbl">Materie disponibili</span>
+        </div>
+        <div class="home-hero-stat">
+          <span class="num" id="home-stat-domande">0</span>
+          <span class="lbl">Domande nel database</span>
+        </div>
+        <div class="home-hero-stat">
+          <span class="num" id="home-stat-reali">0</span>
+          <span class="lbl">Quiz reali disponibili</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── MAIN ──────────────────────────────────────────────────── -->
+  <main class="home-main">
+    <h2 class="home-section-title">Cosa puoi fare</h2>
+
+    <div class="home-bento">
+
+      <a href="index.html" class="home-card">
+        <div class="icon-wrap" style="background:var(--primary-fixed)">
+          <span class="material-symbols-outlined" style="color:var(--primary)">menu_book</span>
+        </div>
+        <h3>Quiz per materia</h3>
+        <p>Scegli una materia specifica del corso e allenati con domande dedicate, a tre livelli di difficoltà.</p>
+        <span class="go">Vai ai quiz <span class="material-symbols-outlined" style="font-size:16px">arrow_forward</span></span>
+      </a>
+
+      <a href="index.html?start=20" class="home-card">
+        <div class="icon-wrap" style="background:var(--secondary-container)">
+          <span class="material-symbols-outlined" style="color:var(--on-secondary-container)">bolt</span>
+        </div>
+        <h3>Quiz misto rapido</h3>
+        <p>Domande da tutte le materie mescolate insieme. Ideale per un ripasso veloce e trasversale.</p>
+        <span class="go">Inizia subito <span class="material-symbols-outlined" style="font-size:16px">arrow_forward</span></span>
+      </a>
+
+      <a href="index.html#esame" class="home-card">
+        <div class="icon-wrap" style="background:var(--tertiary-fixed)">
+          <span class="material-symbols-outlined" style="color:var(--tertiary)">history_edu</span>
+        </div>
+        <h3>Modalità Esame</h3>
+        <p>Simulazione senza limiti di tempo, domande miste e casuali. Soglia di superamento 70%.</p>
+        <span class="go">Avvia l'esame <span class="material-symbols-outlined" style="font-size:16px">arrow_forward</span></span>
+      </a>
+
+      <a href="index.html#teoria" class="home-card">
+        <div class="icon-wrap" style="background:var(--primary-fixed)">
+          <span class="material-symbols-outlined" style="color:var(--primary)">lightbulb</span>
+        </div>
+        <h3>Teoria</h3>
+        <p>Sintesi teoriche per materia, pensate per un ripasso rapido prima del quiz o dell'esame.</p>
+        <span class="go">Studia la teoria <span class="material-symbols-outlined" style="font-size:16px">arrow_forward</span></span>
+      </a>
+
+      <a href="index.html#doc" class="home-card">
+        <div class="icon-wrap" style="background:var(--secondary-container)">
+          <span class="material-symbols-outlined" style="color:var(--on-secondary-container)">description</span>
+        </div>
+        <h3>Documentazione</h3>
+        <p>Il materiale ufficiale dei docenti, integrale e organizzato per materia.</p>
+        <span class="go">Apri la documentazione <span class="material-symbols-outlined" style="font-size:16px">arrow_forward</span></span>
+      </a>
+
+      <a href="index.html" class="home-card" id="home-card-reale">
+        <div class="icon-wrap" style="background:var(--tertiary-fixed)">
+          <span class="material-symbols-outlined" style="color:var(--tertiary)">verified</span>
+        </div>
+        <h3>Quiz reale</h3>
+        <p>Le domande ufficiali dei docenti, in versione esame con revisione finale dettagliata.</p>
+        <span class="go">Vai al quiz reale <span class="material-symbols-outlined" style="font-size:16px">arrow_forward</span></span>
+      </a>
+
+    </div>
+
+    <p class="home-footer-note">
+      Modalità apprendimento con spiegazione dell'errore a schermo · Quiz per materia e misti · Documentazione ufficiale
+    </p>
+    <p class="home-footer-note">
+      "Tutti i diritti di riproduzione sono riservati ai rispettivi proprietari. Il seguente materiale è qui riprodotto per fini di critica, discussione e insegnamento, ai sensi dell'art. 70 della Legge 633/1941."
+    </p>
+  </main>
+
+  <button class="theme-toggle" id="theme-toggle" aria-label="Cambia tema" title="Cambia tema chiaro/scuro">
+    <span class="material-symbols-outlined">dark_mode</span>
+  </button>
+
+  <script>
+    // Statistiche reali lette da db.json (nessun dato finto)
+    fetch('db.json')
+      .then(r => r.ok ? r.json() : Promise.reject(new Error('db.json non trovato')))
+      .then(data => {
+        const materie   = data.materie        || [];
+        const domande   = data.domande        || [];
+        const realQuiz  = data.quiz_reale     || {};
+        const totReali  = Object.values(realQuiz)
+          .filter(v => Array.isArray(v))
+          .reduce((sum, arr) => sum + arr.length, 0);
+
+        document.getElementById('home-stat-materie').textContent = materie.length;
+        document.getElementById('home-stat-domande').textContent = domande.length;
+        document.getElementById('home-stat-reali').textContent   = totReali;
+      })
+      .catch(() => {
+        // Se db.json non è raggiungibile (es. apertura senza Live Server), lascia gli zeri di default.
+      });
+  </script>
+
+</body>
+</html>

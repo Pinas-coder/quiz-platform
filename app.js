@@ -1,6 +1,5 @@
 // ═══════════════════════════════════════════════════════════════════
 // app.js — Logica principale
-// IFTS Quiz · ANAP Sardegna
 // I dati vengono caricati da db.json via fetch()
 // ═══════════════════════════════════════════════════════════════════
 
@@ -29,6 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return r.json();
     })
     .then(data => {
+      // Mappa i campi JSON nelle variabili globali usate dall'app
       MATERIE   = data.materie        || [];
       DB        = data.domande        || [];
       TEORIA    = data.teoria         || {};
@@ -40,6 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (k.startsWith('_')) delete REAL_QUIZ[k];
       });
 
+      // Avvia l'app
       init();
     })
     .catch(err => {
@@ -62,8 +63,34 @@ function init() {
   updateCounts();
   showSection('quiz-view');
   showQuizSelector();
-  const firstNav = document.querySelector('.nav-item');
+  const firstNav = document.querySelector('.nav-item[onclick*="setQuiz(\'all\'"]');
   if (firstNav) firstNav.classList.add('active');
+
+  // Deep-link da home.html: ?start=20 avvia subito un quiz misto,
+  // #esame / #teoria / #doc aprono direttamente quella sezione.
+  handleEntryParams();
+}
+
+function handleEntryParams() {
+  const params = new URLSearchParams(window.location.search);
+  const start  = params.get('start');
+  if (start && !isNaN(parseInt(start, 10))) {
+    quizLength = parseInt(start, 10);
+    document.querySelectorAll('#quiz-selector .btn-mode').forEach(b => b.classList.remove('selected'));
+    startQuiz();
+    return;
+  }
+  const hash = window.location.hash.replace('#', '');
+  if (hash === 'esame') { startExam(null); }
+  else if (hash === 'teoria') {
+    showSection('theory-view');
+    const first = document.querySelector('.theory-section');
+    if (first) first.classList.add('active');
+  } else if (hash === 'doc') {
+    showSection('doc-view');
+    const first = document.querySelector('.doc-section');
+    if (first) first.classList.add('active');
+  }
 }
 
 // ── COSTRUZIONE DINAMICA SIDEBAR ───────────────────────────────────
@@ -80,19 +107,15 @@ function buildSidebar() {
         <span class="nav-count" id="cnt-${m.key}">0</span>
       </div>`;
 
-    // Storia Sardegna usa icona linea temporale nella sidebar teoria
-    const theoriaIcon = m.key === 'storia_sardegna' ? '🗺️ ' : '';
     theorList.innerHTML += `
       <div class="nav-item" onclick="setTheory('${m.key}', this)">
-        <span class="nav-dot"></span>${theoriaIcon}${m.label}
+        <span class="nav-dot"></span>${m.label}
       </div>`;
 
-    if (DOC[m.key]) {
-      docList.innerHTML += `
-        <div class="nav-item" onclick="setDoc('${m.key}', this)">
-          <span class="nav-dot"></span>${m.label}
-        </div>`;
-    }
+    docList.innerHTML += `
+      <div class="nav-item" onclick="setDoc('${m.key}', this)">
+        <span class="nav-dot"></span>${m.label}
+      </div>`;
   });
 
   // Quiz reale — solo materie con dati
@@ -118,18 +141,12 @@ function buildTheorySections() {
   const container = document.getElementById('theory-view');
   MATERIE.forEach(m => {
     const t    = TEORIA[m.key];
-    const html = t ? t.html : '<div class="empty-state"><div class="empty-icon">📝</div><div class="empty-title">Contenuti in arrivo</div><div class="empty-sub">Il materiale per questa materia verrà inserito nelle prossime sessioni.</div></div>';
+    const html = t ? t.html : '<div class="empty-state"><div class="empty-icon">📝</div><div class="empty-title">Contenuti in arrivo</div></div>';
     const desc = t ? t.desc : '';
-
-    // Badge speciale per Storia Sardegna
-    const badge = m.key === 'storia_sardegna'
-      ? '<span class="section-badge" style="color:var(--sand);background:var(--sand-dim);border-color:rgba(217,181,106,.2)">🗺️ STORIA &amp; TERRITORIO</span>'
-      : '<span class="section-badge">📖 TEORIA</span>';
-
     container.innerHTML += `
       <div class="theory-section" id="th-${m.key}">
         <div class="section-header">
-          ${badge}
+          <span class="section-badge">📖 TEORIA</span>
           <h1>${m.label}</h1>
           ${desc ? `<p>${desc}</p>` : ''}
         </div>
@@ -142,8 +159,7 @@ function buildDocSections() {
   const container = document.getElementById('doc-view');
   MATERIE.forEach(m => {
     const d    = DOC[m.key];
-    if (!d) return;
-    const html = d ? d.html : '<div class="empty-state"><div class="empty-icon">📂</div><div class="empty-title">Documentazione in arrivo</div><div class="empty-sub">Il materiale per questa materia verrà inserito nelle prossime sessioni.</div></div>';
+    const html = d ? d.html : '<div class="empty-state"><div class="empty-icon">📂</div><div class="empty-title">Documentazione in arrivo</div></div>';
     const desc = d ? d.desc : '';
     container.innerHTML += `
       <div class="doc-section" id="doc-${m.key}">
@@ -253,23 +269,16 @@ function renderQuestionHTML(q, containerId, isExam, qNum, qTotal) {
   q._correct     = indices.indexOf(q.ans);
   q._containerId = containerId;
 
-  const diffMap      = { base: 'diff-base', medio: 'diff-medio', avanzato: 'diff-avanzato' };
+  const diffMap     = { base: 'diff-base', medio: 'diff-medio', avanzato: 'diff-avanzato' };
   const materiaLabel = MATERIE.find(m => m.key === q.m)?.label || q.m;
   const nextLabel    = (isExam ? examIdx : idx) < (isExam ? examPool.length : pool.length)
     ? 'Prossima →' : 'Vedi risultati →';
 
-  const pct = Math.round((qNum / qTotal) * 100);
-
   return `
-    <div class="quiz-progress-wrap">
-      <div class="quiz-progress-bar">
-        <div class="quiz-progress-fill" style="width:${pct}%"></div>
-      </div>
-      <span class="quiz-progress-label">${qNum} / ${qTotal}</span>
-    </div>
     <div class="q-top">
       <span class="q-materia">${materiaLabel}</span>
       <div class="q-meta">
+        <span class="q-counter">${qNum} / ${qTotal}</span>
         ${q.diff ? `<span class="q-diff ${diffMap[q.diff] || ''}">${q.diff}</span>` : ''}
       </div>
     </div>
@@ -303,7 +312,7 @@ function choose(i, containerId, isExam) {
 
   document.querySelectorAll(`#${containerId} .opt`).forEach((b, j) => {
     b.disabled = true;
-    if (j === correct)         b.classList.add(i === j ? 'correct' : 'show-c');
+    if (j === correct)       b.classList.add(i === j ? 'correct' : 'show-c');
     else if (j === i && !isOk) b.classList.add('wrong');
   });
 
@@ -313,7 +322,7 @@ function choose(i, containerId, isExam) {
       fb.style.display = 'block';
       fb.className     = 'feedback ' + (isOk ? 'ok' : 'ko');
       fb.innerHTML     = `
-        <div class="fb-title">${isOk ? '✅ Esatto!' : '❌ Risposta errata'}</div>
+        <div class="fb-title">${isOk ? '✓ Esatto!' : '✗ Risposta errata'}</div>
         <div class="fb-exp">${q.exp}</div>`;
     }
     updateStats();
@@ -407,9 +416,9 @@ function setDoc(key, el) {
 function startExam(el) {
   if (el?.classList) { setAllNavInactive(); el.classList.add('active'); }
   showSection('exam-view');
-  document.getElementById('exam-intro').style.display     = 'block';
+  document.getElementById('exam-intro').style.display    = 'block';
   document.getElementById('exam-quiz-area').style.display = 'none';
-  document.getElementById('exam-end').style.display       = 'none';
+  document.getElementById('exam-end').style.display      = 'none';
   setBottomNav('esame');
   closeSidebar();
 }
@@ -421,9 +430,9 @@ function selectExamLen(n, btn) {
 }
 
 function launchExam() {
-  document.getElementById('exam-intro').style.display     = 'none';
+  document.getElementById('exam-intro').style.display    = 'none';
   document.getElementById('exam-quiz-area').style.display = 'block';
-  document.getElementById('exam-end').style.display       = 'none';
+  document.getElementById('exam-end').style.display      = 'none';
 
   let src = [...DB];
   for (let i = src.length - 1; i > 0; i--) {
@@ -469,9 +478,9 @@ function showExamEnd() {
 }
 
 function resetExam() {
-  document.getElementById('exam-intro').style.display     = 'block';
+  document.getElementById('exam-intro').style.display    = 'block';
   document.getElementById('exam-quiz-area').style.display = 'none';
-  document.getElementById('exam-end').style.display       = 'none';
+  document.getElementById('exam-end').style.display      = 'none';
 }
 
 // ── MOBILE: SIDEBAR ─────────────────────────────────────────────────
