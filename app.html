@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz — Piattaforma di studio</title>
+  <!-- ⚠️ Modifica il titolo qui sopra con il nome del tuo corso -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="theme.js"></script>
+</head>
+<body>
+
+<!-- ════════════════════════════════════════════════════════════
+     TOPBAR MOBILE
+════════════════════════════════════════════════════════════ -->
+<header class="topbar" id="topbar">
+  <button class="btn-hamburger" id="btn-hamburger"
+    onclick="toggleSidebar()" aria-label="Apri menu">
+    <span class="material-symbols-outlined">menu</span>
+  </button>
+  <div class="topbar-brand">
+    <span class="topbar-kicker">
+      <!-- ⚠️ Modifica: sigla ente / corso -->
+      [Quiz] · [ANAP]
+    </span>
+    <div class="topbar-title">
+      <!-- ⚠️ Modifica: titolo breve corso -->
+      [IFTS Tecnologie per la valorizzazione dei Beni Culturali]
+    </div>
+  </div>
+</header>
+
+<!-- overlay per chiudere la sidebar su mobile -->
+<div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+
+<!-- ════════════════════════════════════════════════════════════
+     LAYOUT PRINCIPALE
+════════════════════════════════════════════════════════════ -->
+<div class="app">
+
+  <!-- ── SIDEBAR ─────────────────────────────────────────────── -->
+  <aside class="sidebar" id="sidebar">
+
+    <div class="logo">
+      <!-- ⚠️ Modifica: branding sidebar -->
+      <span class="logo-kicker">[Quiz] · [ANAP]</span>
+      <div class="logo-name">[IFTS Tecnologie per la valorizzazione dei Beni Culturali]</div>
+      <div class="logo-sub">📚 Piattaforma di studio e quiz</div>
+    </div>
+
+    <!-- Torna alla Home (pagina esterna) -->
+    <div class="sidebar-section">
+      <a class="nav-item" href="index.html" style="text-decoration:none">
+        <span class="material-symbols-outlined" style="font-size:19px">arrow_back</span>Torna alla Home
+      </a>
+    </div>
+
+    <div class="sidebar-divider"></div>
+
+    <!-- Quiz per materia -->
+    <div class="sidebar-section">
+      <span class="sidebar-label">Quiz per materia</span>
+      <div class="nav-item active" onclick="setQuiz('all', this)">
+        <span class="nav-dot"></span>Tutte le materie
+        <span class="nav-count" id="cnt-all">0</span>
+      </div>
+      <div id="sidebar-quiz-list"></div>
+    </div>
+
+    <div class="sidebar-divider"></div>
+
+    <!-- Modalità speciali -->
+    <div class="sidebar-section">
+      <span class="sidebar-label">Modalità speciali</span>
+      <div class="nav-item" onclick="startExam(this)">
+        <span class="nav-dot" style="background:var(--tertiary)"></span>Modalità Esame
+      </div>
+    </div>
+
+    <!-- Quiz reale (visibile solo se REAL_QUIZ ha dati) -->
+    <div id="sidebar-real-section" style="display:none">
+      <div class="sidebar-divider"></div>
+      <div class="sidebar-section">
+        <span class="sidebar-label">Quiz reale</span>
+        <div id="sidebar-real-list"></div>
+      </div>
+    </div>
+
+    <div class="sidebar-divider"></div>
+
+    <!-- Teoria -->
+    <div class="sidebar-section">
+      <span class="sidebar-label">Teoria</span>
+      <div id="sidebar-theory-list"></div>
+    </div>
+
+    <div class="sidebar-divider"></div>
+
+    <!-- Documentazione -->
+    <div class="sidebar-section">
+      <span class="sidebar-label">Documentazione</span>
+      <div id="sidebar-doc-list"></div>
+    </div>
+
+    <!-- Statistiche sessione -->
+    <div class="sidebar-stats">
+      <span class="stats-label">Statistiche sessione</span>
+      <div class="stat-row">
+        <span class="stat-row-label">Domande</span>
+        <span class="stat-row-val v-tot" id="st-tot">0</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-row-label">Corrette</span>
+        <span class="stat-row-val v-ok" id="st-ok">0</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-row-label">Errate</span>
+        <span class="stat-row-val v-ko" id="st-ko">0</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-row-label">Successo</span>
+        <span class="stat-row-val v-pct" id="st-pct">—</span>
+      </div>
+      <div class="prog-track">
+        <div class="prog-fill" id="st-bar" style="width:0%"></div>
+      </div>
+      <div class="prog-lbl">
+        <span id="st-pl">0/0</span>
+        <span id="st-pr">0%</span>
+      </div>
+    </div>
+
+  </aside><!-- /sidebar -->
+
+  <!-- ── MAIN ────────────────────────────────────────────────── -->
+  <main class="main">
+
+    <!-- ══ QUIZ VIEW ══════════════════════════════════════════ -->
+    <div id="quiz-view" style="display:block">
+
+      <div class="section-header">
+        <span class="section-badge">Quiz</span>
+        <h1 id="quiz-title">Tutte le materie</h1>
+        <p>Scegli la modalità, poi seleziona una risposta — leggi la spiegazione dopo ogni domanda.</p>
+      </div>
+
+      <!-- Selettore lunghezza quiz -->
+      <div id="quiz-selector" style="display:block">
+        <div class="quiz-mode-selector">
+          <button class="btn-mode selected" onclick="selectLen(20, this)">
+            <span class="material-symbols-outlined btn-mode-icon">bolt</span>
+            <span class="btn-mode-label">Quiz rapido</span>
+            <span class="btn-mode-sub">20 domande</span>
+          </button>
+          <button class="btn-mode" onclick="selectLen(40, this)">
+            <span class="material-symbols-outlined btn-mode-icon">menu_book</span>
+            <span class="btn-mode-label">Quiz medio</span>
+            <span class="btn-mode-sub">40 domande</span>
+          </button>
+          <button class="btn-mode" onclick="selectLen(60, this)">
+            <span class="material-symbols-outlined btn-mode-icon">emoji_events</span>
+            <span class="btn-mode-label">Quiz completo</span>
+            <span class="btn-mode-sub">60 domande</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Card domanda (generata da JS) -->
+      <div id="q-card" class="q-card" style="display:none"></div>
+
+      <!-- End card -->
+      <div class="end-card" id="end-card">
+        <div class="end-score" id="end-score">—</div>
+        <div class="end-sub" id="end-sub"></div>
+        <div class="end-msg" id="end-msg"></div>
+        <div class="end-grid">
+          <div class="end-stat">
+            <div class="end-stat-v v-ok" id="ef-ok">0</div>
+            <div class="end-stat-l">Corrette</div>
+          </div>
+          <div class="end-stat">
+            <div class="end-stat-v v-ko" id="ef-ko">0</div>
+            <div class="end-stat-l">Errate</div>
+          </div>
+          <div class="end-stat">
+            <div class="end-stat-v v-tot" id="ef-tot">0</div>
+            <div class="end-stat-l">Totale</div>
+          </div>
+        </div>
+        <button class="btn-restart" onclick="restartQuiz()">Ricomincia
+          <span class="material-symbols-outlined" style="font-size:18px">refresh</span>
+        </button>
+        <button class="btn-restart-sec" onclick="backToSelector()">Cambia modalità</button>
+      </div>
+
+    </div><!-- /quiz-view -->
+
+    <!-- ══ ESAME VIEW ═════════════════════════════════════════ -->
+    <div id="exam-view" style="display:none">
+
+      <div class="section-header">
+        <span class="section-badge" style="color:var(--tertiary);background:var(--tertiary-fixed)">
+          Esame
+        </span>
+        <h1>Modalità Esame</h1>
+        <p>Domande da tutte le materie in ordine casuale. Nessun limite di tempo.</p>
+      </div>
+
+      <div id="exam-intro" class="intro-card">
+        <div class="warn-banner">
+          <span class="material-symbols-outlined">warning</span>
+          <div>
+            <div class="warn-banner-title">Simulazione d'esame</div>
+            <div class="warn-banner-text">Le domande vengono estratte casualmente da tutte le materie e mescolate. La soglia di superamento è 70%.</div>
+          </div>
+        </div>
+        <h2>Seleziona la modalità esame</h2>
+        <div class="quiz-mode-selector" style="margin-top:1.25rem">
+          <button class="btn-mode selected" onclick="selectExamLen(20, this)">
+            <span class="material-symbols-outlined btn-mode-icon">bolt</span>
+            <span class="btn-mode-label">Rapido</span>
+            <span class="btn-mode-sub">20 domande</span>
+          </button>
+          <button class="btn-mode" onclick="selectExamLen(40, this)">
+            <span class="material-symbols-outlined btn-mode-icon">menu_book</span>
+            <span class="btn-mode-label">Medio</span>
+            <span class="btn-mode-sub">40 domande</span>
+          </button>
+          <button class="btn-mode" onclick="selectExamLen(60, this)">
+            <span class="material-symbols-outlined btn-mode-icon">emoji_events</span>
+            <span class="btn-mode-label">Completo</span>
+            <span class="btn-mode-sub">60 domande</span>
+          </button>
+        </div>
+        <button class="btn-restart" onclick="launchExam()"
+          style="background:var(--tertiary);margin-top:1.5rem">
+          Inizia esame
+          <span class="material-symbols-outlined" style="font-size:18px">arrow_forward</span>
+        </button>
+      </div>
+
+      <div id="exam-quiz-area" style="display:none"></div>
+
+      <div class="end-card" id="exam-end" style="display:none">
+        <div class="end-score" id="ex-score">—</div>
+        <div class="end-sub" id="ex-sub"></div>
+        <div class="end-msg" id="ex-msg"></div>
+        <div class="end-grid">
+          <div class="end-stat">
+            <div class="end-stat-v v-ok" id="ex-ok">0</div>
+            <div class="end-stat-l">Corrette</div>
+          </div>
+          <div class="end-stat">
+            <div class="end-stat-v v-ko" id="ex-ko">0</div>
+            <div class="end-stat-l">Errate</div>
+          </div>
+          <div class="end-stat">
+            <div class="end-stat-v v-tot" id="ex-tot">0</div>
+            <div class="end-stat-l">Totale</div>
+          </div>
+        </div>
+        <button class="btn-restart" onclick="resetExam()"
+          style="background:var(--tertiary)">
+          Rifai esame
+          <span class="material-symbols-outlined" style="font-size:18px">refresh</span>
+        </button>
+        <button class="btn-restart-sec"
+          onclick="showSection('quiz-view');setBottomNav('quiz')">
+          Torna ai quiz
+        </button>
+      </div>
+
+    </div><!-- /exam-view -->
+
+    <!-- ══ TEORIA VIEW ════════════════════════════════════════ -->
+    <!-- Le sezioni vengono generate dinamicamente da app.js -->
+    <div id="theory-view" style="display:none"></div>
+
+    <!-- ══ DOC VIEW ═══════════════════════════════════════════ -->
+    <!-- Le sezioni vengono generate dinamicamente da app.js -->
+    <div id="doc-view" style="display:none"></div>
+
+    <!-- ══ QUIZ REALE VIEW ════════════════════════════════════ -->
+    <div id="realquiz-view" style="display:none">
+
+      <div class="section-header">
+        <span class="section-badge"
+          style="color:var(--secondary);background:var(--secondary-container)">
+          Quiz reale
+        </span>
+        <h1 id="rq-title">Quiz reale</h1>
+        <p id="rq-sub">Esame ufficiale con le domande del docente. Rispondi a tutto e poi consegna.</p>
+      </div>
+
+      <div id="rq-intro" class="intro-card">
+        <h2>Simulazione esame ufficiale</h2>
+        <p>
+          Le domande sono tratte direttamente dal documento ufficiale del docente.
+          Rispondi a tutte, poi clicca <strong>Consegna</strong> per vedere il risultato
+          e la spiegazione di ogni errore.
+        </p>
+        <button class="btn-restart"
+          style="background:var(--secondary)"
+          onclick="launchRealQuiz()">
+          Inizia quiz reale
+          <span class="material-symbols-outlined" style="font-size:18px">arrow_forward</span>
+        </button>
+      </div>
+
+      <div id="rq-area" style="display:none"></div>
+
+      <div class="end-card" id="rq-end" style="display:none">
+        <div class="end-score" id="rq-score">—</div>
+        <div class="end-sub" id="rq-sub2"></div>
+        <div class="end-msg" id="rq-msg"></div>
+        <div class="end-grid">
+          <div class="end-stat">
+            <div class="end-stat-v v-ok" id="rq-ok">0</div>
+            <div class="end-stat-l">Corrette</div>
+          </div>
+          <div class="end-stat">
+            <div class="end-stat-v v-ko" id="rq-ko">0</div>
+            <div class="end-stat-l">Errate</div>
+          </div>
+          <div class="end-stat">
+            <div class="end-stat-v v-tot" id="rq-tot">0</div>
+            <div class="end-stat-l">Totale</div>
+          </div>
+        </div>
+        <div id="rq-review"></div>
+        <button class="btn-restart"
+          style="background:var(--secondary);margin-top:1.5rem"
+          onclick="launchRealQuiz()">
+          Rifai quiz
+          <span class="material-symbols-outlined" style="font-size:18px">refresh</span>
+        </button>
+        <button class="btn-restart-sec"
+          onclick="showSection('quiz-view');setBottomNav('quiz')">
+          Torna ai quiz
+        </button>
+      </div>
+
+    </div><!-- /realquiz-view -->
+
+  </main><!-- /main -->
+</div><!-- /app -->
+
+<!-- ════════════════════════════════════════════════════════════
+     Navigazione mobile: gestita interamente dalla sidebar
+     (hamburger in topbar → drawer laterale con overlay).
+     Nessun bottom nav: tutte le voci (Home, Quiz, Esame,
+     Teoria, Documentazione, Statistiche) vivono nella sidebar.
+════════════════════════════════════════════════════════════ -->
+
+<!-- ════════════════════════════════════════════════════════════
+     THEME TOGGLE
+════════════════════════════════════════════════════════════ -->
+<button class="theme-toggle" id="theme-toggle" aria-label="Cambia tema" title="Cambia tema chiaro/scuro">
+  <span class="material-symbols-outlined">dark_mode</span>
+</button>
+
+<!-- ════════════════════════════════════════════════════════════
+     SCRIPT
+     Ordine: app.js (carica db.json via fetch e avvia tutto),
+             poi realquiz.js (usa le variabili globali di app.js)
+     ⚠️ Aprire con Live Server in VS Code, non con doppio clic.
+════════════════════════════════════════════════════════════ -->
+<script src="app.js"></script>
+<script src="realquiz.js"></script>
+
+</body>
+</html>

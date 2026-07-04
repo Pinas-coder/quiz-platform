@@ -775,3 +775,86 @@ body {
   .main { padding-left: var(--sp-sm); padding-right: var(--sp-sm); }
   .q-card { padding: var(--sp-md); }
 }
+
+/* ── PAGINA HOME (home.html) ────────────────────────────────────── */
+.home-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: var(--sp-lg) var(--sp-2xl);
+  border-bottom: 1px solid var(--outline-var);
+}
+.home-header .brand { display: flex; flex-direction: column; }
+.home-header .brand .kicker {
+  font-size: 10px; font-weight: 700; color: var(--primary);
+  letter-spacing: .1em; text-transform: uppercase;
+}
+.home-header .brand .name { font-size: 16px; font-weight: 800; color: var(--on-surface); }
+
+.home-hero {
+  background: radial-gradient(circle at top right, var(--primary-fixed) 0%, var(--background) 70%);
+  padding: var(--sp-2xl);
+}
+.home-hero-inner {
+  max-width: var(--container-max); margin: 0 auto;
+  display: grid; grid-template-columns: 1.1fr .9fr; gap: var(--sp-2xl); align-items: center;
+}
+.home-hero h1 { font-size: 42px; font-weight: 800; letter-spacing: -.02em; color: var(--on-surface); margin-bottom: var(--sp-md); max-width: 560px; }
+.home-hero p  { font-size: 15.5px; color: var(--on-surface-var); max-width: 480px; margin-bottom: var(--sp-lg); line-height: 1.7; }
+.home-hero-visual {
+  background: var(--surface-lowest); border: 1px solid var(--outline-var);
+  border-radius: var(--r-xl); box-shadow: var(--shadow-xl);
+  padding: var(--sp-xl); display: flex; flex-direction: column; gap: var(--sp-md);
+}
+.home-hero-visual .big-icon { font-size: 56px; color: var(--primary); }
+.home-hero-stat { display: flex; align-items: center; gap: var(--sp-md); }
+.home-hero-stat .num { font-size: 30px; font-weight: 800; color: var(--on-surface); }
+.home-hero-stat .lbl { font-size: 11.5px; color: var(--outline); font-weight: 600; text-transform: uppercase; letter-spacing: .04em; }
+
+.home-main { max-width: var(--container-max); margin: 0 auto; padding: var(--sp-2xl); }
+.home-section-title { font-size: 22px; font-weight: 800; color: var(--on-surface); margin-bottom: var(--sp-lg); }
+
+.home-bento {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--sp-md); margin-bottom: var(--sp-2xl);
+}
+.home-card {
+  display: block; text-decoration: none;
+  background: var(--surface-lowest); border: 1px solid var(--outline-var);
+  border-radius: var(--r-xl); padding: var(--sp-xl);
+  box-shadow: var(--shadow-sm); transition: box-shadow .18s, transform .18s;
+}
+.home-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-3px); }
+.home-card .icon-wrap {
+  width: 52px; height: 52px; border-radius: var(--r-lg);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: var(--sp-md);
+}
+.home-card h3 { font-size: 17px; font-weight: 800; color: var(--on-surface); margin-bottom: 6px; }
+.home-card p  { font-size: 13.5px; color: var(--on-surface-var); line-height: 1.65; margin-bottom: var(--sp-md); }
+.home-card .go {
+  display: inline-flex; align-items: center; gap: 4px;
+  font-size: 12.5px; font-weight: 700; color: var(--primary);
+}
+
+.home-footer-note {
+  text-align: center; font-size: 12.5px; color: var(--outline); padding: var(--sp-lg) 0 var(--sp-2xl);
+}
+
+/* Link stilizzati come pulsanti */
+.home-link-btn { text-decoration: none; margin-right: 0; }
+.home-link-btn.spaced { margin-right: 8px; }
+.icon-sm { font-size: 18px; }
+.icon-xs { font-size: 16px; }
+
+/* Varianti colore per l'icona delle card bento */
+.icon-wrap.tone-primary   { background: var(--primary-fixed); }
+.icon-wrap.tone-primary   .material-symbols-outlined { color: var(--primary); }
+.icon-wrap.tone-secondary { background: var(--secondary-container); }
+.icon-wrap.tone-secondary .material-symbols-outlined { color: var(--on-secondary-container); }
+.icon-wrap.tone-tertiary  { background: var(--tertiary-fixed); }
+.icon-wrap.tone-tertiary  .material-symbols-outlined { color: var(--tertiary); }
+
+@media (max-width: 900px) {
+  .home-hero-inner { grid-template-columns: 1fr; }
+  .home-hero h1 { font-size: 30px; }
+  .home-bento { grid-template-columns: 1fr; }
+  .home-header, .home-hero, .home-main { padding-left: var(--sp-md); padding-right: var(--sp-md); }
+}
