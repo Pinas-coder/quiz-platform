@@ -1,0 +1,10 @@
+# Cartelle generate automaticamente e cache di Python
+__pycache__/
+
+# Cartelle del progetto da non tracciare
+Markdown/
+
+# Script JavaScript specifici per gli update
+update_cybersecurity_section.js
+update_ia_per_la_cultura.js
+convert_pdfs_to_md.js
