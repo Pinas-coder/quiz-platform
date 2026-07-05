@@ -3515,6 +3515,916 @@
       ],
       "ans": 1,
       "exp": "Una Buyer Persona completa include: nome di fantasia, età, lavoro, obiettivi, dolori/problemi, canali digitali che usa, comportamento d'acquisto e messaggi efficaci per colpirla. Esempio dal corso: Marco Putzu, 45 anni, commercialista, cerca affidabilità, odia perdere tempo, usa Facebook e YouTube, acquista solo se indispensabile."
+    },
+    {
+      "m": "Sicurezza_dei_sistemi_informatici",
+      "diff": "medio",
+      "q": "Che differenza c'è tra Safety e Security?",
+      "opts": [
+        "Non c'è alcuna differenza, sono sinonimi.",
+        "La Safety riguarda la protezione da eventi accidentali e guasti; la Security riguarda la protezione da minacce intenzionali e dolose.",
+        "La Safety si applica solo all'hardware; la Security si applica solo al software.",
+        "La Safety protegge i dati sensibili; la Security protegge l'incolumità fisica degli operatori."
+      ],
+      "ans": 1,
+      "exp": "La Safety riguarda la protezione da eventi accidentali e guasti; la Security riguarda la protezione da minacce intenzionali e dolose."
+    },
+    {
+      "m": "Sicurezza_dei_sistemi_informatici",
+      "diff": "base",
+      "q": "Cosa è un acronimo?",
+      "opts": [
+        "Una parola formata dalle lettere o sillabe iniziali di più parole (es. RAM, CIA, OSI).",
+        "Un errore di programmazione derivato dalla sintassi di basso livello.",
+        "Un protocollo crittografico utilizzato per rendere sicure le pagine web.",
+        "Un tipo di attacco informatico basato sul dizionario."
+      ],
+      "ans": 0,
+      "exp": "Una parola formata dalle lettere o sillabe iniziali di più parole (es. RAM, CIA, OSI)."
+    },
+    {
+      "m": "Sicurezza_dei_sistemi_informatici",
+      "diff": "base",
+      "q": "Cosa si intende per triade della sicurezza informatica?",
+      "opts": [
+        "L'insieme composto da Hardware, Software e Utente.",
+        "I tre principali sistemi operativi: Windows, Linux e macOS.",
+        "I pilastri fondamentali della cybersecurity: Confidenzialità (Riservatezza), Integrità e Disponibilità.",
+        "I tre protocolli di rete: IP, TCP e UDP."
+      ],
+      "ans": 2,
+      "exp": "I pilastri fondamentali della cybersecurity: Confidenzialità (Riservatezza), Integrità e Disponibilità."
+    },
+    {
+      "m": "Sicurezza_dei_sistemi_informatici",
+      "diff": "medio",
+      "q": "Quali sono i concetti chiave della cybersecurity?",
+      "opts": [
+        "Riservatezza, Integrità, Disponibilità, Autenticazione e Non ripudio.",
+        "Velocità di banda, Latenza, Crittografia e Backup.",
+        "Firewall, Antivirus, Patching e Vulnerability Assessment.",
+        "Programmazione, Networking, Hardening e Monitoraggio."
+      ],
+      "ans": 0,
+      "exp": "Riservatezza, Integrità, Disponibilità, Autenticazione e Non ripudio."
+    },
+    {
+      "m": "Sicurezza_dei_sistemi_informatici",
+      "diff": "medio",
+      "q": "Elencare le principali tipologie di attacco in relazione alla triade della cybersecurity.",
+      "opts": [
+        "Attacchi via cavo, attacchi Wi-Fi e attacchi satellitari.",
+        "Intercettazione (mina la Riservatezza), Modifica/Falsificazione (mina l'Integrità), Interruzione/DoS (mina la Disponibilità).",
+        "Malware, Ransomware, Phishing e Trojan.",
+        "Attacchi locali, attacchi remoti e attacchi fisici."
+      ],
+      "ans": 1,
+      "exp": "Intercettazione (mina la Riservatezza), Modifica/Falsificazione (mina l'Integrità), Interruzione/DoS (mina la Disponibilità)."
+    },
+    {
+      "m": "Sicurezza_dei_sistemi_informatici",
+      "diff": "base",
+      "q": "Cosa significa Hardware?",
+      "opts": [
+        "L'insieme dei programmi memorizzati su un computer.",
+        "Il codice sorgente non ancora compilato.",
+        "La componente fisica, tangibile e strutturale di un sistema informatico.",
+        "La logica matematica interna al processore."
+      ],
+      "ans": 2,
+      "exp": "La componente fisica, tangibile e strutturale di un sistema informatico."
+    },
+    {
+      "m": "Sicurezza_dei_sistemi_informatici",
+      "diff": "base",
+      "q": "Cosa Significa Software?",
+      "opts": [
+        "L'insieme dei programmi, dei dati e delle istruzioni che dicono all'hardware cosa fare.",
+        "I componenti interni flessibili come i cavi di rete.",
+        "La memoria volatile di un computer (RAM).",
+        "Il sistema di raffreddamento a liquido di un server."
+      ],
+      "ans": 0,
+      "exp": "L'insieme dei programmi, dei dati e delle istruzioni che dicono all'hardware cosa fare."
+    },
+    {
+      "m": "Sicurezza_dei_sistemi_informatici",
+      "diff": "base",
+      "q": "Cosa significa DoS?",
+      "opts": [
+        "Disk Operating System, il vecchio sistema operativo Microsoft.",
+        "Denial of Service (Negazione del Servizio), un attacco volto a rendere indisponibile una risorsa di rete.",
+        "Data over Storage, un protocollo di memorizzazione di massa.",
+        "Distributed Operational System, una rete di computer coordinati."
+      ],
+      "ans": 1,
+      "exp": "Denial of Service (Negazione del Servizio), un attacco volto a rendere indisponibile una risorsa di rete."
+    },
+    {
+      "m": "Sicurezza_dei_sistemi_informatici",
+      "diff": "base",
+      "q": "Cosa è la tabella ASCII?",
+      "opts": [
+        "Una mappa delle topologie di rete standardizzate dall'IEEE.",
+        "Un sistema di codifica dei caratteri che associa un valore numerico (da 0 a 127) a lettere, cifre e simboli.",
+        "Una lista di porte logiche utilizzate dai server web.",
+        "L'indice delle vulnerabilità software note a livello globale."
+      ],
+      "ans": 1,
+      "exp": "Un sistema di codifica dei caratteri che associa un valore numerico (da 0 a 127) a lettere, cifre e simboli."
+    },
+    {
+      "m": "Sicurezza_dei_sistemi_informatici",
+      "diff": "medio",
+      "q": "Come posso scrivere in Microsoft Windows un carattere conoscendo il suo valore numerico ASCII?",
+      "opts": [
+        "Premendo `Ctrl` + `Alt` seguito dal codice numerico.",
+        "Digitando il codice sulla tastiera alfanumerica standard e premendo `Invio`.",
+        "Tenendo premuto il tasto `Alt` e digitando il codice numerico sul tastierino numerico.",
+        "Premendo `Windows` + `R` e inserendo il valore nella barra di ricerca."
+      ],
+      "ans": 2,
+      "exp": "Tenendo premuto il tasto `Alt` e digitando il codice numerico sul tastierino numerico."
+    },
+    {
+      "m": "Sicurezza_dei_sistemi_informatici",
+      "diff": "base",
+      "q": "Cosa significa protocollo connection-oriented? Fai un esempio.",
+      "opts": [
+        "Un protocollo che stabilisce una sessione/connessione prima di inviare i dati, garantendone la consegna. Es: TCP.",
+        "Un protocollo che richiede cavi fisici per funzionare. Es: Ethernet.",
+        "Un protocollo che invia dati senza accertarsi che il destinatario sia pronto. Es: UDP.",
+        "Un protocollo di instradamento dinamico. Es: OSPF."
+      ],
+      "ans": 0,
+      "exp": "Un protocollo che stabilisce una sessione/connessione prima di inviare i dati, garantendone la consegna. Es: TCP."
+    },
+    {
+      "m": "Sicurezza_dei_sistemi_informatici",
+      "diff": "base",
+      "q": "Cosa significa protocollo connectionless? Fai un esempio.",
+      "opts": [
+        "Un protocollo che funziona solo in modalità wireless (senza fili). Es: Wi-Fi.",
+        "Un protocollo che necessita di una sincronizzazione iniziale (handshake). Es: TCP.",
+        "Un protocollo che invia pacchetti in modo indipendente senza stabilire una connessione preventiva. Es: UDP.",
+        "Un protocollo isolato dal resto della rete internet. Es: Intranet."
+      ],
+      "ans": 2,
+      "exp": "Un protocollo che invia pacchetti in modo indipendente senza stabilire una connessione preventiva. Es: UDP."
+    },
+    {
+      "m": "Sicurezza_dei_sistemi_informatici",
+      "diff": "medio",
+      "q": "Descrivi le caratteristiche principali dell'architettura o paradigma Client-Server.",
+      "opts": [
+        "Tutti i computer della rete hanno lo stesso ruolo e condividono file tra loro in modo paritario.",
+        "Un dispositivo (Client) richiede risorse o servizi e un dispositivo centralizzato (Server) risponde fornendoli.",
+        "Un sistema in cui l'hardware controlla direttamente il software senza intermediari.",
+        "Un tipo di connessione punto-punto interamente cifrata."
+      ],
+      "ans": 1,
+      "exp": "Un dispositivo (Client) richiede risorse o servizi e un dispositivo centralizzato (Server) risponde fornendoli."
+    },
+    {
+      "m": "Sicurezza_dei_sistemi_informatici",
+      "diff": "base",
+      "q": "Cosa si intende per CIA?",
+      "opts": [
+        "L'agenzia di intelligence statunitense applicata alla difesa cyber.",
+        "L'acronimo di Confidentiality, Integrity, Availability (Riservatezza, Integrità, Disponibilità).",
+        "Centralized Information Architecture, un modello di rete gerarchico.",
+        "Connection Internet Access, lo standard per i fornitori di connettività."
+      ],
+      "ans": 1,
+      "exp": "L'acronimo di Confidentiality, Integrity, Availability (Riservatezza, Integrità, Disponibilità)."
+    },
+    {
+      "m": "Sicurezza_dei_sistemi_informatici",
+      "diff": "medio",
+      "q": "In riferimento ad un protocollo cosa si intende per porta? Fai qualche esempio.",
+      "opts": [
+        "Un connettore fisico sul retro del PC (es. USB, HDMI).",
+        "Un punto di accesso logico identificato da un numero usato per instradare i dati al processo corretto. Es: 80 (HTTP), 443 (HTTPS).",
+        "L'indirizzo fisico univoco della scheda di rete. Es: MAC address.",
+        "Il varco di sicurezza presidiato da una guardia giurata in un data center."
+      ],
+      "ans": 1,
+      "exp": "Un punto di accesso logico identificato da un numero usato per instradare i dati al processo corretto. Es: 80 (HTTP), 443 (HTTPS)."
+    },
+    {
+      "m": "Sicurezza_dei_sistemi_informatici",
+      "diff": "medio",
+      "q": "Cosa sono le Well Known Ports?",
+      "opts": [
+        "Le porte logiche da 0 a 1023, riservate ai servizi di rete standard e di sistema più comuni.",
+        "Le porte fisiche più utilizzate nei router domestici.",
+        "Le porte dinamiche assegnate temporaneamente dal sistema operativo ai client (da 49152 a 65535).",
+        "Le porte vulnerabili che i firewall lasciano sempre aperte per impostazione predefinita."
+      ],
+      "ans": 0,
+      "exp": "Le porte logiche da 0 a 1023, riservate ai servizi di rete standard e di sistema più comuni."
+    },
+    {
+      "m": "Sicurezza_dei_sistemi_informatici",
+      "diff": "base",
+      "q": "Cosa è un exploit?",
+      "opts": [
+        "Un software antivirus di ultima generazione in grado di bloccare i malware.",
+        "Una patch rilasciata dal produttore per correggere un bug di sicurezza.",
+        "Un codice, un software o una tecnica che sfrutta una vulnerabilità per causare comportamenti imprevisti o violare un sistema.",
+        "Un test di performance eseguito su una rete locale sotto stress."
+      ],
+      "ans": 2,
+      "exp": "Un codice, un software o una tecnica che sfrutta una vulnerabilità per causare comportamenti imprevisti o violare un sistema."
+    },
+    {
+      "m": "Sicurezza_dei_sistemi_informatici",
+      "diff": "medio",
+      "q": "Cosa si intende con il termine Zero Day? In che contesto è utilizzato principalmente?",
+      "opts": [
+        "Il primo giorno di attivazione di una nuova rete aziendale.",
+        "Una vulnerabilità appena scoperta per la quale il produttore non ha ancora rilasciato una patch di sicurezza.",
+        "Il tempo massimo di ripristino di un server dopo un attacco ransomware.",
+        "Un attacco informatico che viene neutralizzato nello stesso istante in cui inizia."
+      ],
+      "ans": 1,
+      "exp": "Una vulnerabilità appena scoperta per la quale il produttore non ha ancora rilasciato una patch di sicurezza."
+    },
+    {
+      "m": "Sicurezza_dei_sistemi_informatici",
+      "diff": "base",
+      "q": "Cosa si intende per SQL Injection? Puoi descrivere come viene eseguito?",
+      "opts": [
+        "Un attacco in cui si inserisce codice SQL malevolo nei campi di input di un'app web per manipolare le query inviate al database.",
+        "L'iniezione di un virus all'interno del codice sorgente del server MySQL tramite una chiavetta USB.",
+        "Una tecnica di ottimizzazione per velocizzare le risposte di un database relazionale.",
+        "Un attacco DoS che satura la memoria del database inviando milioni di query legittime."
+      ],
+      "ans": 0,
+      "exp": "Un attacco in cui si inserisce codice SQL malevolo nei campi di input di un'app web per manipolare le query inviate al database."
+    },
+    {
+      "m": "Sicurezza_dei_sistemi_informatici",
+      "diff": "base",
+      "q": "Cosa è un malware?",
+      "opts": [
+        "Un malfunzionamento hardware dovuto all'usura dei componenti fisici.",
+        "Un termine generico (Malicious Software) che indica qualsiasi software creato appositamente per danneggiare o violare un sistema.",
+        "Un sistema operativo obsoleto non più supportato dagli aggiornamenti di sicurezza.",
+        "Un programma protetto da copyright scaricato illegalmente."
+      ],
+      "ans": 1,
+      "exp": "Un termine generico (Malicious Software) che indica qualsiasi software creato appositamente per danneggiare o violare un sistema."
+    },
+    {
+      "m": "Sicurezza_dei_sistemi_informatici",
+      "diff": "base",
+      "q": "Cosa significa DOS? (Riferito a sistema operativo storico)",
+      "opts": [
+        "Disk Operating System, una famiglia di sistemi operativi testuali molto diffusa negli anni '80 e '90.",
+        "Data Optimization System, un software per la deframmentazione dei dischi.",
+        "Distributed Open Source, la prima licenza software libera.",
+        "Digital Operating Security, un vecchio protocollo crittografico."
+      ],
+      "ans": 0,
+      "exp": "Disk Operating System, una famiglia di sistemi operativi testuali molto diffusa negli anni '80 e '90."
+    },
+    {
+      "m": "Sicurezza_dei_sistemi_informatici",
+      "diff": "base",
+      "q": "Cosa significa DDoS?",
+      "opts": [
+        "Dual Disk Operating System, un sistema di ridondanza per dischi rigidi.",
+        "Distributed Denial of Service, un attacco di negazione del servizio condotto simultaneamente da molteplici sorgenti distribuite (Botnet).",
+        "Data Encryption Decryption Standard, un algoritmo di cifratura simmetrica.",
+        "Direct Domain Name Server, un server DNS configurato in locale."
+      ],
+      "ans": 1,
+      "exp": "Distributed Denial of Service, un attacco di negazione del servizio condotto simultaneamente da molteplici sorgenti distribuite (Botnet)."
+    },
+    {
+      "m": "Sicurezza_dei_sistemi_informatici",
+      "diff": "base",
+      "q": "Che cosa è il protocollo FTP? A cosa serve?",
+      "opts": [
+        "Fast Transmission Protocol, serve per accelerare la navigazione web.",
+        "File Transfer Protocol, serve per il trasferimento affidabile di file tra un client e un server.",
+        "Firewall Traffic Protocol, serve per monitorare gli accessi non autorizzati.",
+        "Format Text Protocol, serve per la formattazione dei messaggi di posta elettronica."
+      ],
+      "ans": 1,
+      "exp": "File Transfer Protocol, serve per il trasferimento affidabile di file tra un client e un server."
+    },
+    {
+      "m": "Sicurezza_dei_sistemi_informatici",
+      "diff": "base",
+      "q": "Cosa è il protocollo TCP?",
+      "opts": [
+        "Transmission Control Protocol, un protocollo di livello di trasporto, affidabile e orientato alla connessione.",
+        "Telecommunication Connection Protocol, un protocollo di livello fisico per la gestione dei cavi in rame.",
+        "Traffic Control Path, un software utilizzato dagli amministratori per limitare la banda internet.",
+        "Transfer Cryptographic Protocol, un protocollo che cifra nativamente tutti i dati trasmessi in rete."
+      ],
+      "ans": 0,
+      "exp": "Transmission Control Protocol, un protocollo di livello di trasporto, affidabile e orientato alla connessione."
+    },
+    {
+      "m": "Sicurezza_dei_sistemi_informatici",
+      "diff": "base",
+      "q": "Cosa è il protocollo UDP?",
+      "opts": [
+        "Universal Data Protection, uno standard europeo per la privacy online.",
+        "User Datagram Protocol, un protocollo di livello di trasporto, connectionless, non affidabile ma molto veloce.",
+        "Unified Domain Protocol, un sistema per unificare i server DNS aziendali.",
+        "Unshielded Dual Path, una tipologia di architettura di rete ridondata."
+      ],
+      "ans": 1,
+      "exp": "User Datagram Protocol, un protocollo di livello di trasporto, connectionless, non affidabile ma molto veloce."
+    },
+    {
+      "m": "Sicurezza_dei_sistemi_informatici",
+      "diff": "base",
+      "q": "Cosa significa MAC? (In ambito networking)",
+      "opts": [
+        "Macintosh, la linea di computer personali prodotti da Apple.",
+        "Media Access Control, l'indirizzo fisico univoco assegnato dal produttore a una scheda di rete (Layer 2).",
+        "Maximum Allowed Connection, il numero massimo di dispositivi collegabili a un router.",
+        "Message Authentication Code, una firma digitale usata solo nei messaggi email."
+      ],
+      "ans": 1,
+      "exp": "Media Access Control, l'indirizzo fisico univoco assegnato dal produttore a una scheda di rete (Layer 2)."
+    },
+    {
+      "m": "Sicurezza_dei_sistemi_informatici",
+      "diff": "avanzato",
+      "q": "Cosa Significa OSI? Perché è stato introdotto?",
+      "opts": [
+        "Open Source Initiative, introdotto per promuovere il software libero.",
+        "Open Systems Interconnection, un modello di riferimento a 7 livelli introdotto dall'ISO per standardizzare la comunicazione tra reti diverse.",
+        "Operating System Integration, introdotto per far comunicare Windows e Linux.",
+        "Optimal Signal Information, introdotto per migliorare le frequenze radio del Wi-Fi."
+      ],
+      "ans": 1,
+      "exp": "Open Systems Interconnection, un modello di riferimento a 7 livelli introdotto dall'ISO per standardizzare la comunicazione tra reti diverse."
+    },
+    {
+      "m": "Sicurezza_dei_sistemi_informatici",
+      "diff": "medio",
+      "q": "Il termine KERNEL cosa significa? Generalmente che cosa è associato?",
+      "opts": [
+        "Significa \"nucleo\" ed è il nucleo centrale di un Sistema Operativo che gestisce l'interazione diretta tra hardware e software.",
+        "Significa \"guscio\" ed è l'interfaccia grafica con cui l'utente lancia le applicazioni.",
+        "È il chip della CPU adibito esclusivamente al calcolo in virgola mobile.",
+        "È la partizione nascosta del disco rigido in cui risiede il backup di fabbrica."
+      ],
+      "ans": 0,
+      "exp": "Significa \"nucleo\" ed è il nucleo centrale di un Sistema Operativo che gestisce l'interazione diretta tra hardware e software."
+    },
+    {
+      "m": "Sicurezza_dei_sistemi_informatici",
+      "diff": "base",
+      "q": "Cosa significa Sistema Operativo? Quanti sistemi operativi conosci? Fai un elenco e spiega le principali applicazioni o installazioni.",
+      "opts": [
+        "È un software applicativo per la videoscrittura e l'automazione d'ufficio.",
+        "È il software software di base che gestisce le risorse hardware e fornisce un'interfaccia per utenti e applicazioni (es. Windows per PC, Linux per Server, Android per Smartphone).",
+        "È la scheda madre del computer sulla quale vengono montati tutti i componenti fisici.",
+        "È la centrale elettrica di un data center che garantisce la continuità operativa."
+      ],
+      "ans": 1,
+      "exp": "È il software software di base che gestisce le risorse hardware e fornisce un'interfaccia per utenti e applicazioni (es. Windows per PC, Linux per Server, Android per Smartphone)."
+    },
+    {
+      "m": "Sicurezza_dei_sistemi_informatici",
+      "diff": "base",
+      "q": "Cosa è un Privilege Escalation?",
+      "opts": [
+        "L'acquisto di una licenza software più costosa per sbloccare nuove funzionalità.",
+        "Un attacco che rallenta la CPU portandola al 100% dell'utilizzo.",
+        "Un processo o attacco con cui un utente malintenzionato acquisisce permessi superiori (es. amministratore/root) rispetto a quelli assegnati.",
+        "L'aggiunta di memoria RAM a un server aziendale."
+      ],
+      "ans": 2,
+      "exp": "Un processo o attacco con cui un utente malintenzionato acquisisce permessi superiori (es. amministratore/root) rispetto a quelli assegnati."
+    },
+    {
+      "m": "Sicurezza_dei_sistemi_informatici",
+      "diff": "base",
+      "q": "Cosa è un Ransomware?",
+      "opts": [
+        "Un tipo di malware che cifra i file della vittima e richiede il pagamento di un riscatto (ransom) per sbloccarli.",
+        "Un software che spia le attività dell'utente registrando i tasti premuti sulla tastiera.",
+        "Un attacco che intercetta le credenziali bancarie mentre transitano sulla rete Wi-Fi.",
+        "Un programma antivirus finto che spaventa l'utente per fargli acquistare la versione completa."
+      ],
+      "ans": 0,
+      "exp": "Un tipo di malware che cifra i file della vittima e richiede il pagamento di un riscatto (ransom) per sbloccarli."
+    },
+    {
+      "m": "Sicurezza_dei_sistemi_informatici",
+      "diff": "base",
+      "q": "Cosa significa bias psicologico nella sicurezza informatica? Fai qualche esempio.",
+      "opts": [
+        "Un errore di programmazione causato dallo stress accumulato dagli sviluppatori.",
+        "Un pregiudizio cognitivo o una distorsione mentale che porta le persone a commettere errori di valutazione sulla sicurezza (es. eccesso di fiducia, bias dell'autorità).",
+        "Il panico che colpisce un amministratore di rete durante un attacco DDoS.",
+        "Una tecnica di crittografia basata su sequenze numeriche apparentemente casuali."
+      ],
+      "ans": 1,
+      "exp": "Un pregiudizio cognitivo o una distorsione mentale che porta le persone a commettere errori di valutazione sulla sicurezza (es. eccesso di fiducia, bias dell'autorità)."
+    },
+    {
+      "m": "Sicurezza_dei_sistemi_informatici",
+      "diff": "base",
+      "q": "Cosa si intende per Zombie? (In ambito cyber)",
+      "opts": [
+        "Un computer compromesso da un malware e controllato da remoto a insaputa del proprietario, spesso usato per lanciare attacchi DDoS.",
+        "Un server obsoleto che continua a funzionare anche se consuma troppa energia elettrica.",
+        "Un utente che tenta di indovinare le password provando continuamente codici a caso.",
+        "Un file di log che non viene cancellato e si espande fino a saturare il disco."
+      ],
+      "ans": 0,
+      "exp": "Un computer compromesso da un malware e controllato da remoto a insaputa del proprietario, spesso usato per lanciare attacchi DDoS."
+    },
+    {
+      "m": "Sicurezza_dei_sistemi_informatici",
+      "diff": "medio",
+      "q": "Puoi descrivere in cosa consiste il phishing? Descrivi la sequenza delle fasi in cui viene condotto questo tipo di attacco.",
+      "opts": [
+        "Un attacco hardware basato sull'intercettazione dei segnali radio dei mouse wireless.",
+        "L'inserimento di un database SQL falso all'interno di una rete aziendale per tracciare gli amministratori.",
+        "Una truffa basata sull'invio di email ingannevoli (esca) che imitano aziende reali per spingere la vittima a cliccare su un link malevolo e inserire dati sensibili.",
+        "Il blocco totale di un server tramite l'invio di milioni di email vuote in un secondo."
+      ],
+      "ans": 2,
+      "exp": "Una truffa basata sull'invio di email ingannevoli (esca) che imitano aziende reali per spingere la vittima a cliccare su un link malevolo e inserire dati sensibili."
+    },
+    {
+      "m": "Sicurezza_dei_sistemi_informatici",
+      "diff": "medio",
+      "q": "Puoi descrivere in cosa consiste il vishing?",
+      "opts": [
+        "Una variante del phishing condotta tramite chiamate telefoniche vocali (Voice Phishing) per manipolare l'utente.",
+        "Un attacco phishing focalizzato esclusivamente sui server video e di sorveglianza.",
+        "L'intercettazione delle onde radio prodotte dagli schermi dei computer.",
+        "L'invio di email ingannevoli contenenti esclusivamente allegati video MP4 infetti."
+      ],
+      "ans": 0,
+      "exp": "Una variante del phishing condotta tramite chiamate telefoniche vocali (Voice Phishing) per manipolare l'utente."
+    },
+    {
+      "m": "Sicurezza_dei_sistemi_informatici",
+      "diff": "medio",
+      "q": "Puoi descrivere in cosa consiste lo smishing?",
+      "opts": [
+        "Un attacco mirato a distruggere fisicamente i chip di memoria (Smart-mashing).",
+        "Un attacco phishing veicolato tramite i canali di assistenza delle Smart TV.",
+        "Una variante del phishing condotta tramite messaggi SMS inviati su telefoni cellulari contenenti link malevoli.",
+        "La clonazione delle smart card utilizzate per l'accesso agli uffici."
+      ],
+      "ans": 2,
+      "exp": "Una variante del phishing condotta tramite messaggi SMS inviati su telefoni cellulari contenenti link malevoli."
+    },
+    {
+      "m": "Sicurezza_dei_sistemi_informatici",
+      "diff": "medio",
+      "q": "In cosa consiste il ruolo del Money Mule?",
+      "opts": [
+        "È il server principale all'interno di una rete blockchain adibito al mining.",
+        "Una persona che, consapevolmente o meno, ricicla denaro di provenienza illecita trasferendo fondi illegali per conto di criminali informatici.",
+        "Un software automatico che confronta i prezzi delle criptovalute su diversi mercati.",
+        "L'investitore principale che finanzia una startup di sicurezza informatica."
+      ],
+      "ans": 1,
+      "exp": "Una persona che, consapevolmente o meno, ricicla denaro di provenienza illecita trasferendo fondi illegali per conto di criminali informatici."
+    },
+    {
+      "m": "Sicurezza_dei_sistemi_informatici",
+      "diff": "base",
+      "q": "Cosa è una BotNet C&C?",
+      "opts": [
+        "Una rete di computer infetti (Bot) controllati centralmente da un attaccante tramite un server di Command & Control (C&C).",
+        "Un protocollo di comunicazione ultraveloce utilizzato nelle chat aziendali crittografate.",
+        "Un'architettura di backup che copia i dati su più cloud contemporaneamente in modo cifrato.",
+        "Una tipologia di intelligenza artificiale addestrata a correggere bug nel codice sorgente."
+      ],
+      "ans": 0,
+      "exp": "Una rete di computer infetti (Bot) controllati centralmente da un attaccante tramite un server di Command & Control (C&C)."
+    },
+    {
+      "m": "Sicurezza_dei_sistemi_informatici",
+      "diff": "base",
+      "q": "Cosa è il Social Engineering?",
+      "opts": [
+        "Lo studio sociologico dell'evoluzione delle reti informatiche nel mondo del lavoro.",
+        "L'ottimizzazione degli algoritmi dei social media per aumentare il coinvolgimento degli utenti.",
+        "L'arte di manipolare psicologicamente le persone per spingerle a compiere azioni o rivelare informazioni riservate.",
+        "La configurazione di un firewall in base all'organigramma del personale aziendale."
+      ],
+      "ans": 2,
+      "exp": "L'arte di manipolare psicologicamente le persone per spingerle a compiere azioni o rivelare informazioni riservate."
+    },
+    {
+      "m": "Sicurezza_dei_sistemi_informatici",
+      "diff": "base",
+      "q": "Cosa significa QR code? È sempre sicuro utilizzarlo?",
+      "opts": [
+        "Quick Response code; non è sempre sicuro perché può essere contraffatto (Quishing) per reindirizzare l'utente a siti web malevoli.",
+        "Query Router code; è sempre sicuro perché basato su uno standard hardware immodificabile.",
+        "Quality Radian code; è sicuro solo se scannerizzato con dispositivi Apple.",
+        "Quantum Resource code; non è sicuro perché i computer quantistici possono leggerlo a distanza."
+      ],
+      "ans": 0,
+      "exp": "Quick Response code; non è sempre sicuro perché può essere contraffatto (Quishing) per reindirizzare l'utente a siti web malevoli."
+    },
+    {
+      "m": "Sicurezza_dei_sistemi_informatici",
+      "diff": "medio",
+      "q": "Descrivi la classificazione delle reti informatiche in base alla loro estensione geografica.",
+      "opts": [
+        "Reti in rame, reti in fibra ottica, reti wireless.",
+        "Reti Client-Server e reti Peer-to-Peer.",
+        "LAN (Locale), MAN (Metropolitana), WAN (Geografica), PAN (Personale).",
+        "Reti interne, reti esterne, DMZ."
+      ],
+      "ans": 2,
+      "exp": "LAN (Locale), MAN (Metropolitana), WAN (Geografica), PAN (Personale)."
+    },
+    {
+      "m": "Sicurezza_dei_sistemi_informatici",
+      "diff": "avanzato",
+      "q": "Descrivi la classificazione delle reti informatiche in base alla loro topologia.",
+      "opts": [
+        "A stella, a bus, a anello, a maglia (mesh), ad albero.",
+        "Lineare, spaziale, geografica, astronomica.",
+        "Cavo, Wireless, Fibra, Satellite.",
+        "Monolivello, Bilivello, Multilivello, Gerarchica."
+      ],
+      "ans": 0,
+      "exp": "A stella, a bus, a anello, a maglia (mesh), ad albero."
+    },
+    {
+      "m": "Sicurezza_dei_sistemi_informatici",
+      "diff": "avanzato",
+      "q": "Nella topologia di rete a stella, cosa succede se il nodo centrale (es. switch) si guasta?",
+      "opts": [
+        "La rete continua a funzionare normalmente tranne che per un solo PC.",
+        "L'intera rete smette di funzionare (Single Point of Failure).",
+        "I dati iniziano a circolare in senso inverso come in una rete ad anello.",
+        "I nodi periferici si collegano automaticamente tra loro via wireless."
+      ],
+      "ans": 1,
+      "exp": "L'intera rete smette di funzionare (Single Point of Failure)."
+    },
+    {
+      "m": "Sicurezza_dei_sistemi_informatici",
+      "diff": "base",
+      "q": "Cosa si intende per IEEE?",
+      "opts": [
+        "Un formato di compressione video per lo streaming in alta definizione.",
+        "Institute of Electrical and Electronics Engineers, un'associazione internazionale che definisce importanti standard elettrici ed elettronici (es. standard di rete).",
+        "L'organismo europeo che assegna gli indirizzi IP pubblici alle aziende.",
+        "Un protocollo di cifratura avanzata per le transazioni bancarie."
+      ],
+      "ans": 1,
+      "exp": "Institute of Electrical and Electronics Engineers, un'associazione internazionale che definisce importanti standard elettrici ed elettronici (es. standard di rete)."
+    },
+    {
+      "m": "Sicurezza_dei_sistemi_informatici",
+      "diff": "base",
+      "q": "Cosa è l'ISO?",
+      "opts": [
+        "L'algoritmo di misurazione della sensibilità alla luce nei sensori delle telecamere di sicurezza.",
+        "International Organization for Standardization, l'organismo internazionale che definisce gli standard industriali e commerciali a livello mondiale (es. Modello ISO/OSI).",
+        "Un sistema operativo open source derivato da Unix.",
+        "Una tipologia di file d'archivio usata esclusivamente per masterizzare DVD."
+      ],
+      "ans": 1,
+      "exp": "International Organization for Standardization, l'organismo internazionale che definisce gli standard industriali e commerciali a livello mondiale (es. Modello ISO/OSI)."
+    },
+    {
+      "m": "Sicurezza_dei_sistemi_informatici",
+      "diff": "medio",
+      "q": "Come si chiama lo standard IEEE 802.3?",
+      "opts": [
+        "Ethernet (definizione dello standard per reti locali cablate).",
+        "Wi-Fi (definizione dello standard per reti wireless).",
+        "Bluetooth (definizione dello standard perWPAN).",
+        "Token Ring (definizione dello standard per reti ad anello)."
+      ],
+      "ans": 0,
+      "exp": "Ethernet (definizione dello standard per reti locali cablate)."
+    },
+    {
+      "m": "Sicurezza_dei_sistemi_informatici",
+      "diff": "medio",
+      "q": "Che cosa sono gli standard IEEE 802.11a, 802.11b, 802.11g, 802.11n?",
+      "opts": [
+        "Le diverse categorie di cavi in rame a doppino intrecciato.",
+        "I protocolli usati per l'instradamento delle email su internet.",
+        "Le diverse evoluzioni e specifiche dello standard Wi-Fi per le reti locali wireless.",
+        "Gli standard di sicurezza per le smart card bancarie."
+      ],
+      "ans": 2,
+      "exp": "Le diverse evoluzioni e specifiche dello standard Wi-Fi per le reti locali wireless."
+    },
+    {
+      "m": "Sicurezza_dei_sistemi_informatici",
+      "diff": "avanzato",
+      "q": "Cosa si intende per EIA/TIA 568A?",
+      "opts": [
+        "Uno standard di cablaggio per i connettori RJ45 che definisce lo schema d'ordine dei colori dei fili all'interno del cavo Ethernet.",
+        "Un modello teorico per lo sviluppo di firewall hardware di livello enterprise.",
+        "Una legge internazionale sulla privacy e il trattamento dei dati elettronici.",
+        "Il protocollo di sincronizzazione dell'ora nei server di rete."
+      ],
+      "ans": 0,
+      "exp": "Uno standard di cablaggio per i connettori RJ45 che definisce lo schema d'ordine dei colori dei fili all'interno del cavo Ethernet."
+    },
+    {
+      "m": "Sicurezza_dei_sistemi_informatici",
+      "diff": "avanzato",
+      "q": "Che differenza c'è tra lo schema EIA/TIA 568A e 568B? In che contesto vengono combinati?",
+      "opts": [
+        "Lo schema 568A gestisce la fibra ottica, il 568B gestisce il rame.",
+        "Cambia la lunghezza massima del cavo consentita (100 metri contro 200 metri).",
+        "Cambia la disposizione delle coppie di fili (verde e arancione); se si usa 568A a un'estremità e 568B all'altra si ottiene un cavo incrociato (Crossover).",
+        "Non c'è alcuna differenza elettrica, cambia solo il materiale plastico protettivo esterno."
+      ],
+      "ans": 2,
+      "exp": "Cambia la disposizione delle coppie di fili (verde e arancione); se si usa 568A a un'estremità e 568B all'altra si ottiene un cavo incrociato (Crossover)."
+    },
+    {
+      "m": "Sicurezza_dei_sistemi_informatici",
+      "diff": "base",
+      "q": "Cosa è un patch panel?",
+      "opts": [
+        "Una schermata software usata per installare gli aggiornamenti di Windows.",
+        "Un componente hardware passivo contenente una serie di prese (jack) usato per organizzare e terminare i cavi di rete all'interno di un rack.",
+        "Un tipo di firewall economico pensato per i piccoli uffici.",
+        "Un pannello solare utilizzato per alimentare i nodi di rete isolati."
+      ],
+      "ans": 1,
+      "exp": "Un componente hardware passivo contenente una serie di prese (jack) usato per organizzare e terminare i cavi di rete all'interno di un rack."
+    },
+    {
+      "m": "Sicurezza_dei_sistemi_informatici",
+      "diff": "base",
+      "q": "Cosa è un rack dati?",
+      "opts": [
+        "Un attacco informatico mirato a distruggere i server di memorizzazione.",
+        "Un software per il monitoraggio della temperatura della CPU.",
+        "Un armadio metallico standardizzato (generalmente largo 19 pollici) progettato per ospitare server, switch, patch panel e apparati di rete.",
+        "La struttura logica in cui vengono catalogati i database SQL."
+      ],
+      "ans": 2,
+      "exp": "Un armadio metallico standardizzato (generalmente largo 19 pollici) progettato per ospitare server, switch, patch panel e apparati di rete."
+    },
+    {
+      "m": "Sicurezza_dei_sistemi_informatici",
+      "diff": "base",
+      "q": "Cosa è una patch cord?",
+      "opts": [
+        "Un cavo di rete flessibile di breve lunghezza utilizzato per collegare i dispositivi tra loro o al patch panel.",
+        "Una stringa di codice temporanea usata per correggere una vulnerabilità software.",
+        "La linea telefonica principale che collega l'edificio alla centrale del provider.",
+        "Una tipologia di antenna Wi-Fi direzionale a corto raggio."
+      ],
+      "ans": 0,
+      "exp": "Un cavo di rete flessibile di breve lunghezza utilizzato per collegare i dispositivi tra loro o al patch panel."
+    },
+    {
+      "m": "Sicurezza_dei_sistemi_informatici",
+      "diff": "medio",
+      "q": "Puoi descrivere il significato di plug e jack RJ45?",
+      "opts": [
+        "Il plug è la scheda di rete del PC, il jack è il sistema operativo che la controlla.",
+        "Sono i termini usati per definire i poli positivo e negativo nei cavi elettrici di alimentazione.",
+        "Il plug è il connettore maschio volante (posto alla fine del cavo), il jack è la presa femmina fissa (posta sul muro, sullo switch o sul PC).",
+        "Sono due protocolli software per la compressione dei pacchetti di rete."
+      ],
+      "ans": 2,
+      "exp": "Il plug è il connettore maschio volante (posto alla fine del cavo), il jack è la presa femmina fissa (posta sul muro, sullo switch o sul PC)."
+    },
+    {
+      "m": "Sicurezza_dei_sistemi_informatici",
+      "diff": "medio",
+      "q": "Quali sono i parametri IP essenziali per la connessione di un PC in una rete locale isolata?",
+      "opts": [
+        "Indirizzo IP e Subnet Mask (Maschera di sottorete).",
+        "Gateway Predefinito e Server DNS.",
+        "Indirizzo MAC e Nome del Computer.",
+        "URL e Numero di Porta."
+      ],
+      "ans": 0,
+      "exp": "Indirizzo IP e Subnet Mask (Maschera di sottorete)."
+    },
+    {
+      "m": "Sicurezza_dei_sistemi_informatici",
+      "diff": "medio",
+      "q": "Spiega quali sono i parametri IP necessari per consentire ad un PC di navigare su Internet o \"oltre\" la propria LAN.",
+      "opts": [
+        "Soltanto un Indirizzo IP statico di classe A.",
+        "La configurazione esclusiva dell'indirizzo MAC di loopback.",
+        "Indirizzo IP, Subnet Mask, Gateway Predefinito (Router) e Server DNS.",
+        "Un account utente amministratore e un browser aggiornato."
+      ],
+      "ans": 2,
+      "exp": "Indirizzo IP, Subnet Mask, Gateway Predefinito (Router) e Server DNS."
+    },
+    {
+      "m": "Sicurezza_dei_sistemi_informatici",
+      "diff": "avanzato",
+      "q": "Come funziona il protocollo ARP e quali elementi fondamentali utilizza?",
+      "opts": [
+        "Invia una richiesta in broadcast chiedendo l'indirizzo MAC associato a un IP e memorizza il risultato nella Tabella ARP.",
+        "Interroga un server centrale su internet per tradurre un nome di dominio in indirizzo IP.",
+        "Cifra i pacchetti IP trasformandoli in frame protetti prima di inoltrarli sullo switch.",
+        "Rileva le collisioni elettriche sul cavo Ethernet interrompendo momentaneamente la trasmissione."
+      ],
+      "ans": 0,
+      "exp": "Invia una richiesta in broadcast chiedendo l'indirizzo MAC associato a un IP e memorizza il risultato nella Tabella ARP."
+    },
+    {
+      "m": "Sicurezza_dei_sistemi_informatici",
+      "diff": "base",
+      "q": "Cosa significano HTTP e HTTPS? Quando e perché vengono utilizzate?",
+      "opts": [
+        "Sono protocolli per l'invio e la ricezione di email crittografate.",
+        "HyperText Transfer Protocol (standard e sicuro con crittografia SSL/TLS); si usano per il trasferimento delle pagine web.",
+        "Sistemi di formattazione del testo per i documenti Markdown ad alta sicurezza.",
+        "Protocolli di livello di trasporto alternativi al TCP e all'UDP per lo streaming."
+      ],
+      "ans": 1,
+      "exp": "HyperText Transfer Protocol (standard e sicuro con crittografia SSL/TLS); si usano per il trasferimento delle pagine web."
+    },
+    {
+      "m": "Sicurezza_dei_sistemi_informatici",
+      "diff": "base",
+      "q": "Che cosa è il protocollo TELNET?",
+      "opts": [
+        "Un moderno sistema di comunicazione VoIP in alta definizione.",
+        "Un vecchio protocollo di rete per l'accesso remoto a riga di comando, non sicuro perché trasmette i dati (incluse le password) in chiaro.",
+        "Un algoritmo di compressione dati per linee a banda ultralarga.",
+        "Il protocollo standard per l'assegnazione automatica degli indirizzi IP."
+      ],
+      "ans": 1,
+      "exp": "Un vecchio protocollo di rete per l'accesso remoto a riga di comando, non sicuro perché trasmette i dati (incluse le password) in chiaro."
+    },
+    {
+      "m": "Sicurezza_dei_sistemi_informatici",
+      "diff": "base",
+      "q": "Cosa significa URL Shortener? È sempre sicuro?",
+      "opts": [
+        "Un software per accorciare la lunghezza fisica dei cavi di rete; è sempre sicuro.",
+        "Un servizio che converte un link lungo in uno corto; non è intrinsecamente sicuro perché può nascondere la reale destinazione di un link malevolo.",
+        "Un protocollo che riduce le dimensioni delle immagini web; è sicuro al 100%.",
+        "Un comando da riga di comando per ridurre i tempi di risposta del ping; è sicuro."
+      ],
+      "ans": 1,
+      "exp": "Un servizio che converte un link lungo in uno corto; non è intrinsecamente sicuro perché può nascondere la reale destinazione di un link malevolo."
+    },
+    {
+      "m": "Sicurezza_dei_sistemi_informatici",
+      "diff": "medio",
+      "q": "Che comando si utilizza per stabilire se in una rete TCP/IP un host è configurato e raggiungibile?",
+      "opts": [
+        "Il comando `ping`, che invia pacchetti ICMP Echo Request e attende la risposta Echo Reply dall'host di destinazione.",
+        "Il comando `ipconfig`, che forza il PC remoto a rivelare la sua posizione geografica.",
+        "Il comando `netstat`, che cancella la cache dei DNS corrotti sul router.",
+        "Il comando `ssh`, che esegue una scansione di tutte le porte aperte sul PC target."
+      ],
+      "ans": 0,
+      "exp": "Il comando `ping`, che invia pacchetti ICMP Echo Request e attende la risposta Echo Reply dall'host di destinazione."
+    },
+    {
+      "m": "Sicurezza_dei_sistemi_informatici",
+      "diff": "base",
+      "q": "Cosa è il protocollo ICMP?",
+      "opts": [
+        "Internet Connection Management Protocol, usato per autenticare gli utenti sulla Wi-Fi.",
+        "Internet Control Message Protocol, usato per scopi diagnostici e di controllo (es. messaggi di errore e comando ping).",
+        "International Cipher Management Protocol, uno standard per la gestione delle chiavi di sicurezza.",
+        "Integrated Cable Management Protocol, una specifica tecnica per l'ordine dei rack."
+      ],
+      "ans": 1,
+      "exp": "Internet Control Message Protocol, usato per scopi diagnostici e di controllo (es. messaggi di errore e comando ping)."
+    },
+    {
+      "m": "Sicurezza_dei_sistemi_informatici",
+      "diff": "medio",
+      "q": "Quando un PC in rete è configurato correttamente a livello IP, è sempre raggiungibile tramite ping?",
+      "opts": [
+        "Sì, la configurazione IP corretta garantisce sempre la risposta al ping.",
+        "No, un firewall o le impostazioni di sicurezza del sistema operativo ospite potrebbero bloccare i pacchetti ICMP in ingresso.",
+        "No, il ping funziona solo se il PC sta navigando attivamente su una pagina web HTTPS.",
+        "Sì, a patto che il PC non stia utilizzando una scheda di rete Wi-Fi."
+      ],
+      "ans": 1,
+      "exp": "No, un firewall o le impostazioni di sicurezza del sistema operativo ospite potrebbero bloccare i pacchetti ICMP in ingresso."
+    },
+    {
+      "m": "Sicurezza_dei_sistemi_informatici",
+      "diff": "avanzato",
+      "q": "Cosa è il Modello ISO/OSI? Quanti livelli prevede?",
+      "opts": [
+        "Un sistema di certificazione aziendale basato su 3 livelli di sicurezza.",
+        "Un software di simulazione di rete a 5 livelli sviluppato da Cisco.",
+        "Un modello concettuale di riferimento per l'architettura di rete strutturato in 7 livelli logici.",
+        "Un protocollo di routing geografico a 10 livelli per grandi infrastrutture WAN."
+      ],
+      "ans": 2,
+      "exp": "Un modello concettuale di riferimento per l'architettura di rete strutturato in 7 livelli logici."
+    },
+    {
+      "m": "Sicurezza_dei_sistemi_informatici",
+      "diff": "avanzato",
+      "q": "Cosa è Cisco Packet Tracer? A cosa serve?",
+      "opts": [
+        "Un software di simulazione di rete interattivo utilizzato per progettare, configurare e testare reti virtuali e apparati Cisco.",
+        "Uno strumento hardware utilizzato dai tecnici per intercettare fisicamente i pacchetti sui cavi in rame.",
+        "Un malware di tipo trojan specializzato nel tracciamento dei pacchetti bancari.",
+        "Il sistema operativo preinstallato su tutti i router di ultima generazione."
+      ],
+      "ans": 0,
+      "exp": "Un software di simulazione di rete interattivo utilizzato per progettare, configurare e testare reti virtuali e apparati Cisco."
+    },
+    {
+      "m": "Sicurezza_dei_sistemi_informatici",
+      "diff": "base",
+      "q": "Cosa è uno switch?",
+      "opts": [
+        "Un dispositivo che collega reti diverse traducendo gli indirizzi IP (Layer 3).",
+        "Un dispositivo di rete intelligente (Layer 2) che inoltra i frame di dati selettivamente basandosi sugli indirizzi MAC dei destinatari.",
+        "Un interruttore elettrico di emergenza posizionato all'ingresso dei data center.",
+        "Un software per passare rapidamente da un'interfaccia grafica a una a riga di comando."
+      ],
+      "ans": 1,
+      "exp": "Un dispositivo di rete intelligente (Layer 2) che inoltra i frame di dati selettivamente basandosi sugli indirizzi MAC dei destinatari."
+    },
+    {
+      "m": "Sicurezza_dei_sistemi_informatici",
+      "diff": "avanzato",
+      "q": "Cosa è l'architettura LAMP?",
+      "opts": [
+        "Un sistema di illuminazione a LED a basso consumo per sale server.",
+        "Uno stack di software open source per lo sviluppo web composto da: Linux, Apache, MySQL/MariaDB, PHP/Python/Perl.",
+        "Un protocollo di cifratura militare basato sulla scomposizione dei pacchetti di rete.",
+        "Un tipo di topologia di rete ad anello con gestione centralizzata dei permessi."
+      ],
+      "ans": 1,
+      "exp": "Uno stack di software open source per lo sviluppo web composto da: Linux, Apache, MySQL/MariaDB, PHP/Python/Perl."
+    },
+    {
+      "m": "Sicurezza_dei_sistemi_informatici",
+      "diff": "base",
+      "q": "Cosa significa GUI?",
+      "opts": [
+        "Graphical User Interface (Interfaccia Grafica Utente), che consente l'interazione visiva tramite icone, finestre e puntatori.",
+        "General User Internet, lo standard d'accesso alla rete pubblica per utenti non registrati.",
+        "Gateway Unified Interface, il pannello di controllo software di un router aziendale.",
+        "Global Unique Identifier, il codice univoco assegnato a ogni sistema operativo Linux."
+      ],
+      "ans": 0,
+      "exp": "Graphical User Interface (Interfaccia Grafica Utente), che consente l'interazione visiva tramite icone, finestre e puntatori."
+    },
+    {
+      "m": "Sicurezza_dei_sistemi_informatici",
+      "diff": "base",
+      "q": "Cosa Significa CLI?",
+      "opts": [
+        "Cable Line Interface, la porta fisica usata per i collegamenti seriali dei router.",
+        "Command Line Interface (Interfaccia a Riga di Comando), basata sull'inserimento di comandi testuali tramite tastiera.",
+        "Client Local Internet, il protocollo di rete per le configurazioni LAN domestiche.",
+        "Cyber Law International, l'insieme delle normative globali contro gli attacchi hacker."
+      ],
+      "ans": 1,
+      "exp": "Command Line Interface (Interfaccia a Riga di Comando), basata sull'inserimento di comandi testuali tramite tastiera."
+    },
+    {
+      "m": "Sicurezza_dei_sistemi_informatici",
+      "diff": "base",
+      "q": "Cosa è un firewall?",
+      "opts": [
+        "Un sistema antincendio automatico installato nei pavimenti galleggianti dei data center.",
+        "Un dispositivo o software di sicurezza che monitora e filtra il traffico di rete in entrata e in uscita in base a regole predefinite.",
+        "Un virus che cancella i dati distruggendo logicamente i settori del disco rigido.",
+        "Un server proxy utilizzato esclusivamente per velocizzare il caricamento delle pagine web."
+      ],
+      "ans": 1,
+      "exp": "Un dispositivo o software di sicurezza che monitora e filtra il traffico di rete in entrata e in uscita in base a regole predefinite."
+    },
+    {
+      "m": "Sicurezza_dei_sistemi_informatici",
+      "diff": "medio",
+      "q": "Un firewall è un software o è un Hardware?",
+      "opts": [
+        "È esclusivamente un componente hardware dedicato.",
+        "È esclusivamente un'applicazione software installabile sui PC.",
+        "Può essere sia un software (es. integrato nel sistema operativo) sia un apparato hardware dedicato (es. appliance di rete).",
+        "Non è né hardware né software, si tratta di una policy comportamentale per gli utenti."
+      ],
+      "ans": 2,
+      "exp": "Può essere sia un software (es. integrato nel sistema operativo) sia un apparato hardware dedicato (es. appliance di rete)."
     }
   ],
   "teoria": {
@@ -5218,6 +6128,848 @@
         ],
         "ans": 1,
         "exp": "Bandwidth is the maximum amount of information that can be transmitted over an internet connection in a given time, usually measured in megabits per second (Mbps)."
+      }
+    ],
+    "Sicurezza_dei_sistemi_informatici": [
+      {
+        "n": 1,
+        "q": "Che differenza c'è tra Safety e Security?",
+        "opts": [
+          "Non c'è alcuna differenza, sono sinonimi.",
+          "La Safety riguarda la protezione da eventi accidentali e guasti; la Security riguarda la protezione da minacce intenzionali e dolose.",
+          "La Safety si applica solo all'hardware; la Security si applica solo al software.",
+          "La Safety protegge i dati sensibili; la Security protegge l'incolumità fisica degli operatori."
+        ],
+        "ans": 1,
+        "exp": "La Safety riguarda la protezione da eventi accidentali e guasti; la Security riguarda la protezione da minacce intenzionali e dolose."
+      },
+      {
+        "n": 2,
+        "q": "Cosa è un acronimo?",
+        "opts": [
+          "Una parola formata dalle lettere o sillabe iniziali di più parole (es. RAM, CIA, OSI).",
+          "Un errore di programmazione derivato dalla sintassi di basso livello.",
+          "Un protocollo crittografico utilizzato per rendere sicure le pagine web.",
+          "Un tipo di attacco informatico basato sul dizionario."
+        ],
+        "ans": 0,
+        "exp": "Una parola formata dalle lettere o sillabe iniziali di più parole (es. RAM, CIA, OSI)."
+      },
+      {
+        "n": 3,
+        "q": "Cosa si intende per triade della sicurezza informatica?",
+        "opts": [
+          "L'insieme composto da Hardware, Software e Utente.",
+          "I tre principali sistemi operativi: Windows, Linux e macOS.",
+          "I pilastri fondamentali della cybersecurity: Confidenzialità (Riservatezza), Integrità e Disponibilità.",
+          "I tre protocolli di rete: IP, TCP e UDP."
+        ],
+        "ans": 2,
+        "exp": "I pilastri fondamentali della cybersecurity: Confidenzialità (Riservatezza), Integrità e Disponibilità."
+      },
+      {
+        "n": 4,
+        "q": "Quali sono i concetti chiave della cybersecurity?",
+        "opts": [
+          "Riservatezza, Integrità, Disponibilità, Autenticazione e Non ripudio.",
+          "Velocità di banda, Latenza, Crittografia e Backup.",
+          "Firewall, Antivirus, Patching e Vulnerability Assessment.",
+          "Programmazione, Networking, Hardening e Monitoraggio."
+        ],
+        "ans": 0,
+        "exp": "Riservatezza, Integrità, Disponibilità, Autenticazione e Non ripudio."
+      },
+      {
+        "n": 5,
+        "q": "Elencare le principali tipologie di attacco in relazione alla triade della cybersecurity.",
+        "opts": [
+          "Attacchi via cavo, attacchi Wi-Fi e attacchi satellitari.",
+          "Intercettazione (mina la Riservatezza), Modifica/Falsificazione (mina l'Integrità), Interruzione/DoS (mina la Disponibilità).",
+          "Malware, Ransomware, Phishing e Trojan.",
+          "Attacchi locali, attacchi remoti e attacchi fisici."
+        ],
+        "ans": 1,
+        "exp": "Intercettazione (mina la Riservatezza), Modifica/Falsificazione (mina l'Integrità), Interruzione/DoS (mina la Disponibilità)."
+      },
+      {
+        "n": 6,
+        "q": "Cosa significa Hardware?",
+        "opts": [
+          "L'insieme dei programmi memorizzati su un computer.",
+          "Il codice sorgente non ancora compilato.",
+          "La componente fisica, tangibile e strutturale di un sistema informatico.",
+          "La logica matematica interna al processore."
+        ],
+        "ans": 2,
+        "exp": "La componente fisica, tangibile e strutturale di un sistema informatico."
+      },
+      {
+        "n": 7,
+        "q": "Cosa Significa Software?",
+        "opts": [
+          "L'insieme dei programmi, dei dati e delle istruzioni che dicono all'hardware cosa fare.",
+          "I componenti interni flessibili come i cavi di rete.",
+          "La memoria volatile di un computer (RAM).",
+          "Il sistema di raffreddamento a liquido di un server."
+        ],
+        "ans": 0,
+        "exp": "L'insieme dei programmi, dei dati e delle istruzioni che dicono all'hardware cosa fare."
+      },
+      {
+        "n": 8,
+        "q": "Cosa significa DoS?",
+        "opts": [
+          "Disk Operating System, il vecchio sistema operativo Microsoft.",
+          "Denial of Service (Negazione del Servizio), un attacco volto a rendere indisponibile una risorsa di rete.",
+          "Data over Storage, un protocollo di memorizzazione di massa.",
+          "Distributed Operational System, una rete di computer coordinati."
+        ],
+        "ans": 1,
+        "exp": "Denial of Service (Negazione del Servizio), un attacco volto a rendere indisponibile una risorsa di rete."
+      },
+      {
+        "n": 9,
+        "q": "Cosa è la tabella ASCII?",
+        "opts": [
+          "Una mappa delle topologie di rete standardizzate dall'IEEE.",
+          "Un sistema di codifica dei caratteri che associa un valore numerico (da 0 a 127) a lettere, cifre e simboli.",
+          "Una lista di porte logiche utilizzate dai server web.",
+          "L'indice delle vulnerabilità software note a livello globale."
+        ],
+        "ans": 1,
+        "exp": "Un sistema di codifica dei caratteri che associa un valore numerico (da 0 a 127) a lettere, cifre e simboli."
+      },
+      {
+        "n": 10,
+        "q": "Come posso scrivere in Microsoft Windows un carattere conoscendo il suo valore numerico ASCII?",
+        "opts": [
+          "Premendo `Ctrl` + `Alt` seguito dal codice numerico.",
+          "Digitando il codice sulla tastiera alfanumerica standard e premendo `Invio`.",
+          "Tenendo premuto il tasto `Alt` e digitando il codice numerico sul tastierino numerico.",
+          "Premendo `Windows` + `R` e inserendo il valore nella barra di ricerca."
+        ],
+        "ans": 2,
+        "exp": "Tenendo premuto il tasto `Alt` e digitando il codice numerico sul tastierino numerico."
+      },
+      {
+        "n": 11,
+        "q": "Cosa significa protocollo connection-oriented? Fai un esempio.",
+        "opts": [
+          "Un protocollo che stabilisce una sessione/connessione prima di inviare i dati, garantendone la consegna. Es: TCP.",
+          "Un protocollo che richiede cavi fisici per funzionare. Es: Ethernet.",
+          "Un protocollo che invia dati senza accertarsi che il destinatario sia pronto. Es: UDP.",
+          "Un protocollo di instradamento dinamico. Es: OSPF."
+        ],
+        "ans": 0,
+        "exp": "Un protocollo che stabilisce una sessione/connessione prima di inviare i dati, garantendone la consegna. Es: TCP."
+      },
+      {
+        "n": 12,
+        "q": "Cosa significa protocollo connectionless? Fai un esempio.",
+        "opts": [
+          "Un protocollo che funziona solo in modalità wireless (senza fili). Es: Wi-Fi.",
+          "Un protocollo che necessita di una sincronizzazione iniziale (handshake). Es: TCP.",
+          "Un protocollo che invia pacchetti in modo indipendente senza stabilire una connessione preventiva. Es: UDP.",
+          "Un protocollo isolato dal resto della rete internet. Es: Intranet."
+        ],
+        "ans": 2,
+        "exp": "Un protocollo che invia pacchetti in modo indipendente senza stabilire una connessione preventiva. Es: UDP."
+      },
+      {
+        "n": 13,
+        "q": "Descrivi le caratteristiche principali dell'architettura o paradigma Client-Server.",
+        "opts": [
+          "Tutti i computer della rete hanno lo stesso ruolo e condividono file tra loro in modo paritario.",
+          "Un dispositivo (Client) richiede risorse o servizi e un dispositivo centralizzato (Server) risponde fornendoli.",
+          "Un sistema in cui l'hardware controlla direttamente il software senza intermediari.",
+          "Un tipo di connessione punto-punto interamente cifrata."
+        ],
+        "ans": 1,
+        "exp": "Un dispositivo (Client) richiede risorse o servizi e un dispositivo centralizzato (Server) risponde fornendoli."
+      },
+      {
+        "n": 14,
+        "q": "Cosa si intende per CIA?",
+        "opts": [
+          "L'agenzia di intelligence statunitense applicata alla difesa cyber.",
+          "L'acronimo di Confidentiality, Integrity, Availability (Riservatezza, Integrità, Disponibilità).",
+          "Centralized Information Architecture, un modello di rete gerarchico.",
+          "Connection Internet Access, lo standard per i fornitori di connettività."
+        ],
+        "ans": 1,
+        "exp": "L'acronimo di Confidentiality, Integrity, Availability (Riservatezza, Integrità, Disponibilità)."
+      },
+      {
+        "n": 15,
+        "q": "In riferimento ad un protocollo cosa si intende per porta? Fai qualche esempio.",
+        "opts": [
+          "Un connettore fisico sul retro del PC (es. USB, HDMI).",
+          "Un punto di accesso logico identificato da un numero usato per instradare i dati al processo corretto. Es: 80 (HTTP), 443 (HTTPS).",
+          "L'indirizzo fisico univoco della scheda di rete. Es: MAC address.",
+          "Il varco di sicurezza presidiato da una guardia giurata in un data center."
+        ],
+        "ans": 1,
+        "exp": "Un punto di accesso logico identificato da un numero usato per instradare i dati al processo corretto. Es: 80 (HTTP), 443 (HTTPS)."
+      },
+      {
+        "n": 16,
+        "q": "Cosa sono le Well Known Ports?",
+        "opts": [
+          "Le porte logiche da 0 a 1023, riservate ai servizi di rete standard e di sistema più comuni.",
+          "Le porte fisiche più utilizzate nei router domestici.",
+          "Le porte dinamiche assegnate temporaneamente dal sistema operativo ai client (da 49152 a 65535).",
+          "Le porte vulnerabili che i firewall lasciano sempre aperte per impostazione predefinita."
+        ],
+        "ans": 0,
+        "exp": "Le porte logiche da 0 a 1023, riservate ai servizi di rete standard e di sistema più comuni."
+      },
+      {
+        "n": 17,
+        "q": "Cosa è un exploit?",
+        "opts": [
+          "Un software antivirus di ultima generazione in grado di bloccare i malware.",
+          "Una patch rilasciata dal produttore per correggere un bug di sicurezza.",
+          "Un codice, un software o una tecnica che sfrutta una vulnerabilità per causare comportamenti imprevisti o violare un sistema.",
+          "Un test di performance eseguito su una rete locale sotto stress."
+        ],
+        "ans": 2,
+        "exp": "Un codice, un software o una tecnica che sfrutta una vulnerabilità per causare comportamenti imprevisti o violare un sistema."
+      },
+      {
+        "n": 18,
+        "q": "Cosa si intende con il termine Zero Day? In che contesto è utilizzato principalmente?",
+        "opts": [
+          "Il primo giorno di attivazione di una nuova rete aziendale.",
+          "Una vulnerabilità appena scoperta per la quale il produttore non ha ancora rilasciato una patch di sicurezza.",
+          "Il tempo massimo di ripristino di un server dopo un attacco ransomware.",
+          "Un attacco informatico che viene neutralizzato nello stesso istante in cui inizia."
+        ],
+        "ans": 1,
+        "exp": "Una vulnerabilità appena scoperta per la quale il produttore non ha ancora rilasciato una patch di sicurezza."
+      },
+      {
+        "n": 19,
+        "q": "Cosa si intende per SQL Injection? Puoi descrivere come viene eseguito?",
+        "opts": [
+          "Un attacco in cui si inserisce codice SQL malevolo nei campi di input di un'app web per manipolare le query inviate al database.",
+          "L'iniezione di un virus all'interno del codice sorgente del server MySQL tramite una chiavetta USB.",
+          "Una tecnica di ottimizzazione per velocizzare le risposte di un database relazionale.",
+          "Un attacco DoS che satura la memoria del database inviando milioni di query legittime."
+        ],
+        "ans": 0,
+        "exp": "Un attacco in cui si inserisce codice SQL malevolo nei campi di input di un'app web per manipolare le query inviate al database."
+      },
+      {
+        "n": 20,
+        "q": "Cosa è un malware?",
+        "opts": [
+          "Un malfunzionamento hardware dovuto all'usura dei componenti fisici.",
+          "Un termine generico (Malicious Software) che indica qualsiasi software creato appositamente per danneggiare o violare un sistema.",
+          "Un sistema operativo obsoleto non più supportato dagli aggiornamenti di sicurezza.",
+          "Un programma protetto da copyright scaricato illegalmente."
+        ],
+        "ans": 1,
+        "exp": "Un termine generico (Malicious Software) che indica qualsiasi software creato appositamente per danneggiare o violare un sistema."
+      },
+      {
+        "n": 21,
+        "q": "Cosa significa DOS? (Riferito a sistema operativo storico)",
+        "opts": [
+          "Disk Operating System, una famiglia di sistemi operativi testuali molto diffusa negli anni '80 e '90.",
+          "Data Optimization System, un software per la deframmentazione dei dischi.",
+          "Distributed Open Source, la prima licenza software libera.",
+          "Digital Operating Security, un vecchio protocollo crittografico."
+        ],
+        "ans": 0,
+        "exp": "Disk Operating System, una famiglia di sistemi operativi testuali molto diffusa negli anni '80 e '90."
+      },
+      {
+        "n": 22,
+        "q": "Cosa significa DDoS?",
+        "opts": [
+          "Dual Disk Operating System, un sistema di ridondanza per dischi rigidi.",
+          "Distributed Denial of Service, un attacco di negazione del servizio condotto simultaneamente da molteplici sorgenti distribuite (Botnet).",
+          "Data Encryption Decryption Standard, un algoritmo di cifratura simmetrica.",
+          "Direct Domain Name Server, un server DNS configurato in locale."
+        ],
+        "ans": 1,
+        "exp": "Distributed Denial of Service, un attacco di negazione del servizio condotto simultaneamente da molteplici sorgenti distribuite (Botnet)."
+      },
+      {
+        "n": 23,
+        "q": "Che cosa è il protocollo FTP? A cosa serve?",
+        "opts": [
+          "Fast Transmission Protocol, serve per accelerare la navigazione web.",
+          "File Transfer Protocol, serve per il trasferimento affidabile di file tra un client e un server.",
+          "Firewall Traffic Protocol, serve per monitorare gli accessi non autorizzati.",
+          "Format Text Protocol, serve per la formattazione dei messaggi di posta elettronica."
+        ],
+        "ans": 1,
+        "exp": "File Transfer Protocol, serve per il trasferimento affidabile di file tra un client e un server."
+      },
+      {
+        "n": 24,
+        "q": "Cosa è il protocollo TCP?",
+        "opts": [
+          "Transmission Control Protocol, un protocollo di livello di trasporto, affidabile e orientato alla connessione.",
+          "Telecommunication Connection Protocol, un protocollo di livello fisico per la gestione dei cavi in rame.",
+          "Traffic Control Path, un software utilizzato dagli amministratori per limitare la banda internet.",
+          "Transfer Cryptographic Protocol, un protocollo che cifra nativamente tutti i dati trasmessi in rete."
+        ],
+        "ans": 0,
+        "exp": "Transmission Control Protocol, un protocollo di livello di trasporto, affidabile e orientato alla connessione."
+      },
+      {
+        "n": 25,
+        "q": "Cosa è il protocollo UDP?",
+        "opts": [
+          "Universal Data Protection, uno standard europeo per la privacy online.",
+          "User Datagram Protocol, un protocollo di livello di trasporto, connectionless, non affidabile ma molto veloce.",
+          "Unified Domain Protocol, un sistema per unificare i server DNS aziendali.",
+          "Unshielded Dual Path, una tipologia di architettura di rete ridondata."
+        ],
+        "ans": 1,
+        "exp": "User Datagram Protocol, un protocollo di livello di trasporto, connectionless, non affidabile ma molto veloce."
+      },
+      {
+        "n": 26,
+        "q": "Cosa significa MAC? (In ambito networking)",
+        "opts": [
+          "Macintosh, la linea di computer personali prodotti da Apple.",
+          "Media Access Control, l'indirizzo fisico univoco assegnato dal produttore a una scheda di rete (Layer 2).",
+          "Maximum Allowed Connection, il numero massimo di dispositivi collegabili a un router.",
+          "Message Authentication Code, una firma digitale usata solo nei messaggi email."
+        ],
+        "ans": 1,
+        "exp": "Media Access Control, l'indirizzo fisico univoco assegnato dal produttore a una scheda di rete (Layer 2)."
+      },
+      {
+        "n": 27,
+        "q": "Cosa Significa OSI? Perché è stato introdotto?",
+        "opts": [
+          "Open Source Initiative, introdotto per promuovere il software libero.",
+          "Open Systems Interconnection, un modello di riferimento a 7 livelli introdotto dall'ISO per standardizzare la comunicazione tra reti diverse.",
+          "Operating System Integration, introdotto per far comunicare Windows e Linux.",
+          "Optimal Signal Information, introdotto per migliorare le frequenze radio del Wi-Fi."
+        ],
+        "ans": 1,
+        "exp": "Open Systems Interconnection, un modello di riferimento a 7 livelli introdotto dall'ISO per standardizzare la comunicazione tra reti diverse."
+      },
+      {
+        "n": 28,
+        "q": "Il termine KERNEL cosa significa? Generalmente che cosa è associato?",
+        "opts": [
+          "Significa \"nucleo\" ed è il nucleo centrale di un Sistema Operativo che gestisce l'interazione diretta tra hardware e software.",
+          "Significa \"guscio\" ed è l'interfaccia grafica con cui l'utente lancia le applicazioni.",
+          "È il chip della CPU adibito esclusivamente al calcolo in virgola mobile.",
+          "È la partizione nascosta del disco rigido in cui risiede il backup di fabbrica."
+        ],
+        "ans": 0,
+        "exp": "Significa \"nucleo\" ed è il nucleo centrale di un Sistema Operativo che gestisce l'interazione diretta tra hardware e software."
+      },
+      {
+        "n": 29,
+        "q": "Cosa significa Sistema Operativo? Quanti sistemi operativi conosci? Fai un elenco e spiega le principali applicazioni o installazioni.",
+        "opts": [
+          "È un software applicativo per la videoscrittura e l'automazione d'ufficio.",
+          "È il software software di base che gestisce le risorse hardware e fornisce un'interfaccia per utenti e applicazioni (es. Windows per PC, Linux per Server, Android per Smartphone).",
+          "È la scheda madre del computer sulla quale vengono montati tutti i componenti fisici.",
+          "È la centrale elettrica di un data center che garantisce la continuità operativa."
+        ],
+        "ans": 1,
+        "exp": "È il software software di base che gestisce le risorse hardware e fornisce un'interfaccia per utenti e applicazioni (es. Windows per PC, Linux per Server, Android per Smartphone)."
+      },
+      {
+        "n": 30,
+        "q": "Cosa è un Privilege Escalation?",
+        "opts": [
+          "L'acquisto di una licenza software più costosa per sbloccare nuove funzionalità.",
+          "Un attacco che rallenta la CPU portandola al 100% dell'utilizzo.",
+          "Un processo o attacco con cui un utente malintenzionato acquisisce permessi superiori (es. amministratore/root) rispetto a quelli assegnati.",
+          "L'aggiunta di memoria RAM a un server aziendale."
+        ],
+        "ans": 2,
+        "exp": "Un processo o attacco con cui un utente malintenzionato acquisisce permessi superiori (es. amministratore/root) rispetto a quelli assegnati."
+      },
+      {
+        "n": 31,
+        "q": "Cosa è un Ransomware?",
+        "opts": [
+          "Un tipo di malware che cifra i file della vittima e richiede il pagamento di un riscatto (ransom) per sbloccarli.",
+          "Un software che spia le attività dell'utente registrando i tasti premuti sulla tastiera.",
+          "Un attacco che intercetta le credenziali bancarie mentre transitano sulla rete Wi-Fi.",
+          "Un programma antivirus finto che spaventa l'utente per fargli acquistare la versione completa."
+        ],
+        "ans": 0,
+        "exp": "Un tipo di malware che cifra i file della vittima e richiede il pagamento di un riscatto (ransom) per sbloccarli."
+      },
+      {
+        "n": 32,
+        "q": "Cosa significa bias psicologico nella sicurezza informatica? Fai qualche esempio.",
+        "opts": [
+          "Un errore di programmazione causato dallo stress accumulato dagli sviluppatori.",
+          "Un pregiudizio cognitivo o una distorsione mentale che porta le persone a commettere errori di valutazione sulla sicurezza (es. eccesso di fiducia, bias dell'autorità).",
+          "Il panico che colpisce un amministratore di rete durante un attacco DDoS.",
+          "Una tecnica di crittografia basata su sequenze numeriche apparentemente casuali."
+        ],
+        "ans": 1,
+        "exp": "Un pregiudizio cognitivo o una distorsione mentale che porta le persone a commettere errori di valutazione sulla sicurezza (es. eccesso di fiducia, bias dell'autorità)."
+      },
+      {
+        "n": 33,
+        "q": "Cosa si intende per Zombie? (In ambito cyber)",
+        "opts": [
+          "Un computer compromesso da un malware e controllato da remoto a insaputa del proprietario, spesso usato per lanciare attacchi DDoS.",
+          "Un server obsoleto che continua a funzionare anche se consuma troppa energia elettrica.",
+          "Un utente che tenta di indovinare le password provando continuamente codici a caso.",
+          "Un file di log che non viene cancellato e si espande fino a saturare il disco."
+        ],
+        "ans": 0,
+        "exp": "Un computer compromesso da un malware e controllato da remoto a insaputa del proprietario, spesso usato per lanciare attacchi DDoS."
+      },
+      {
+        "n": 34,
+        "q": "Puoi descrivere in cosa consiste il phishing? Descrivi la sequenza delle fasi in cui viene condotto questo tipo di attacco.",
+        "opts": [
+          "Un attacco hardware basato sull'intercettazione dei segnali radio dei mouse wireless.",
+          "L'inserimento di un database SQL falso all'interno di una rete aziendale per tracciare gli amministratori.",
+          "Una truffa basata sull'invio di email ingannevoli (esca) che imitano aziende reali per spingere la vittima a cliccare su un link malevolo e inserire dati sensibili.",
+          "Il blocco totale di un server tramite l'invio di milioni di email vuote in un secondo."
+        ],
+        "ans": 2,
+        "exp": "Una truffa basata sull'invio di email ingannevoli (esca) che imitano aziende reali per spingere la vittima a cliccare su un link malevolo e inserire dati sensibili."
+      },
+      {
+        "n": 35,
+        "q": "Puoi descrivere in cosa consiste il vishing?",
+        "opts": [
+          "Una variante del phishing condotta tramite chiamate telefoniche vocali (Voice Phishing) per manipolare l'utente.",
+          "Un attacco phishing focalizzato esclusivamente sui server video e di sorveglianza.",
+          "L'intercettazione delle onde radio prodotte dagli schermi dei computer.",
+          "L'invio di email ingannevoli contenenti esclusivamente allegati video MP4 infetti."
+        ],
+        "ans": 0,
+        "exp": "Una variante del phishing condotta tramite chiamate telefoniche vocali (Voice Phishing) per manipolare l'utente."
+      },
+      {
+        "n": 36,
+        "q": "Puoi descrivere in cosa consiste lo smishing?",
+        "opts": [
+          "Un attacco mirato a distruggere fisicamente i chip di memoria (Smart-mashing).",
+          "Un attacco phishing veicolato tramite i canali di assistenza delle Smart TV.",
+          "Una variante del phishing condotta tramite messaggi SMS inviati su telefoni cellulari contenenti link malevoli.",
+          "La clonazione delle smart card utilizzate per l'accesso agli uffici."
+        ],
+        "ans": 2,
+        "exp": "Una variante del phishing condotta tramite messaggi SMS inviati su telefoni cellulari contenenti link malevoli."
+      },
+      {
+        "n": 37,
+        "q": "In cosa consiste il ruolo del Money Mule?",
+        "opts": [
+          "È il server principale all'interno di una rete blockchain adibito al mining.",
+          "Una persona che, consapevolmente o meno, ricicla denaro di provenienza illecita trasferendo fondi illegali per conto di criminali informatici.",
+          "Un software automatico che confronta i prezzi delle criptovalute su diversi mercati.",
+          "L'investitore principale che finanzia una startup di sicurezza informatica."
+        ],
+        "ans": 1,
+        "exp": "Una persona che, consapevolmente o meno, ricicla denaro di provenienza illecita trasferendo fondi illegali per conto di criminali informatici."
+      },
+      {
+        "n": 38,
+        "q": "Cosa è una BotNet C&C?",
+        "opts": [
+          "Una rete di computer infetti (Bot) controllati centralmente da un attaccante tramite un server di Command & Control (C&C).",
+          "Un protocollo di comunicazione ultraveloce utilizzato nelle chat aziendali crittografate.",
+          "Un'architettura di backup che copia i dati su più cloud contemporaneamente in modo cifrato.",
+          "Una tipologia di intelligenza artificiale addestrata a correggere bug nel codice sorgente."
+        ],
+        "ans": 0,
+        "exp": "Una rete di computer infetti (Bot) controllati centralmente da un attaccante tramite un server di Command & Control (C&C)."
+      },
+      {
+        "n": 39,
+        "q": "Cosa è il Social Engineering?",
+        "opts": [
+          "Lo studio sociologico dell'evoluzione delle reti informatiche nel mondo del lavoro.",
+          "L'ottimizzazione degli algoritmi dei social media per aumentare il coinvolgimento degli utenti.",
+          "L'arte di manipolare psicologicamente le persone per spingerle a compiere azioni o rivelare informazioni riservate.",
+          "La configurazione di un firewall in base all'organigramma del personale aziendale."
+        ],
+        "ans": 2,
+        "exp": "L'arte di manipolare psicologicamente le persone per spingerle a compiere azioni o rivelare informazioni riservate."
+      },
+      {
+        "n": 40,
+        "q": "Cosa significa QR code? È sempre sicuro utilizzarlo?",
+        "opts": [
+          "Quick Response code; non è sempre sicuro perché può essere contraffatto (Quishing) per reindirizzare l'utente a siti web malevoli.",
+          "Query Router code; è sempre sicuro perché basato su uno standard hardware immodificabile.",
+          "Quality Radian code; è sicuro solo se scannerizzato con dispositivi Apple.",
+          "Quantum Resource code; non è sicuro perché i computer quantistici possono leggerlo a distanza."
+        ],
+        "ans": 0,
+        "exp": "Quick Response code; non è sempre sicuro perché può essere contraffatto (Quishing) per reindirizzare l'utente a siti web malevoli."
+      },
+      {
+        "n": 41,
+        "q": "Descrivi la classificazione delle reti informatiche in base alla loro estensione geografica.",
+        "opts": [
+          "Reti in rame, reti in fibra ottica, reti wireless.",
+          "Reti Client-Server e reti Peer-to-Peer.",
+          "LAN (Locale), MAN (Metropolitana), WAN (Geografica), PAN (Personale).",
+          "Reti interne, reti esterne, DMZ."
+        ],
+        "ans": 2,
+        "exp": "LAN (Locale), MAN (Metropolitana), WAN (Geografica), PAN (Personale)."
+      },
+      {
+        "n": 42,
+        "q": "Descrivi la classificazione delle reti informatiche in base alla loro topologia.",
+        "opts": [
+          "A stella, a bus, a anello, a maglia (mesh), ad albero.",
+          "Lineare, spaziale, geografica, astronomica.",
+          "Cavo, Wireless, Fibra, Satellite.",
+          "Monolivello, Bilivello, Multilivello, Gerarchica."
+        ],
+        "ans": 0,
+        "exp": "A stella, a bus, a anello, a maglia (mesh), ad albero."
+      },
+      {
+        "n": 43,
+        "q": "Nella topologia di rete a stella, cosa succede se il nodo centrale (es. switch) si guasta?",
+        "opts": [
+          "La rete continua a funzionare normalmente tranne che per un solo PC.",
+          "L'intera rete smette di funzionare (Single Point of Failure).",
+          "I dati iniziano a circolare in senso inverso come in una rete ad anello.",
+          "I nodi periferici si collegano automaticamente tra loro via wireless."
+        ],
+        "ans": 1,
+        "exp": "L'intera rete smette di funzionare (Single Point of Failure)."
+      },
+      {
+        "n": 44,
+        "q": "Cosa si intende per IEEE?",
+        "opts": [
+          "Un formato di compressione video per lo streaming in alta definizione.",
+          "Institute of Electrical and Electronics Engineers, un'associazione internazionale che definisce importanti standard elettrici ed elettronici (es. standard di rete).",
+          "L'organismo europeo che assegna gli indirizzi IP pubblici alle aziende.",
+          "Un protocollo di cifratura avanzata per le transazioni bancarie."
+        ],
+        "ans": 1,
+        "exp": "Institute of Electrical and Electronics Engineers, un'associazione internazionale che definisce importanti standard elettrici ed elettronici (es. standard di rete)."
+      },
+      {
+        "n": 45,
+        "q": "Cosa è l'ISO?",
+        "opts": [
+          "L'algoritmo di misurazione della sensibilità alla luce nei sensori delle telecamere di sicurezza.",
+          "International Organization for Standardization, l'organismo internazionale che definisce gli standard industriali e commerciali a livello mondiale (es. Modello ISO/OSI).",
+          "Un sistema operativo open source derivato da Unix.",
+          "Una tipologia di file d'archivio usata esclusivamente per masterizzare DVD."
+        ],
+        "ans": 1,
+        "exp": "International Organization for Standardization, l'organismo internazionale che definisce gli standard industriali e commerciali a livello mondiale (es. Modello ISO/OSI)."
+      },
+      {
+        "n": 46,
+        "q": "Come si chiama lo standard IEEE 802.3?",
+        "opts": [
+          "Ethernet (definizione dello standard per reti locali cablate).",
+          "Wi-Fi (definizione dello standard per reti wireless).",
+          "Bluetooth (definizione dello standard perWPAN).",
+          "Token Ring (definizione dello standard per reti ad anello)."
+        ],
+        "ans": 0,
+        "exp": "Ethernet (definizione dello standard per reti locali cablate)."
+      },
+      {
+        "n": 47,
+        "q": "Che cosa sono gli standard IEEE 802.11a, 802.11b, 802.11g, 802.11n?",
+        "opts": [
+          "Le diverse categorie di cavi in rame a doppino intrecciato.",
+          "I protocolli usati per l'instradamento delle email su internet.",
+          "Le diverse evoluzioni e specifiche dello standard Wi-Fi per le reti locali wireless.",
+          "Gli standard di sicurezza per le smart card bancarie."
+        ],
+        "ans": 2,
+        "exp": "Le diverse evoluzioni e specifiche dello standard Wi-Fi per le reti locali wireless."
+      },
+      {
+        "n": 48,
+        "q": "Cosa si intende per EIA/TIA 568A?",
+        "opts": [
+          "Uno standard di cablaggio per i connettori RJ45 che definisce lo schema d'ordine dei colori dei fili all'interno del cavo Ethernet.",
+          "Un modello teorico per lo sviluppo di firewall hardware di livello enterprise.",
+          "Una legge internazionale sulla privacy e il trattamento dei dati elettronici.",
+          "Il protocollo di sincronizzazione dell'ora nei server di rete."
+        ],
+        "ans": 0,
+        "exp": "Uno standard di cablaggio per i connettori RJ45 che definisce lo schema d'ordine dei colori dei fili all'interno del cavo Ethernet."
+      },
+      {
+        "n": 49,
+        "q": "Che differenza c'è tra lo schema EIA/TIA 568A e 568B? In che contesto vengono combinati?",
+        "opts": [
+          "Lo schema 568A gestisce la fibra ottica, il 568B gestisce il rame.",
+          "Cambia la lunghezza massima del cavo consentita (100 metri contro 200 metri).",
+          "Cambia la disposizione delle coppie di fili (verde e arancione); se si usa 568A a un'estremità e 568B all'altra si ottiene un cavo incrociato (Crossover).",
+          "Non c'è alcuna differenza elettrica, cambia solo il materiale plastico protettivo esterno."
+        ],
+        "ans": 2,
+        "exp": "Cambia la disposizione delle coppie di fili (verde e arancione); se si usa 568A a un'estremità e 568B all'altra si ottiene un cavo incrociato (Crossover)."
+      },
+      {
+        "n": 50,
+        "q": "Cosa è un patch panel?",
+        "opts": [
+          "Una schermata software usata per installare gli aggiornamenti di Windows.",
+          "Un componente hardware passivo contenente una serie di prese (jack) usato per organizzare e terminare i cavi di rete all'interno di un rack.",
+          "Un tipo di firewall economico pensato per i piccoli uffici.",
+          "Un pannello solare utilizzato per alimentare i nodi di rete isolati."
+        ],
+        "ans": 1,
+        "exp": "Un componente hardware passivo contenente una serie di prese (jack) usato per organizzare e terminare i cavi di rete all'interno di un rack."
+      },
+      {
+        "n": 51,
+        "q": "Cosa è un rack dati?",
+        "opts": [
+          "Un attacco informatico mirato a distruggere i server di memorizzazione.",
+          "Un software per il monitoraggio della temperatura della CPU.",
+          "Un armadio metallico standardizzato (generalmente largo 19 pollici) progettato per ospitare server, switch, patch panel e apparati di rete.",
+          "La struttura logica in cui vengono catalogati i database SQL."
+        ],
+        "ans": 2,
+        "exp": "Un armadio metallico standardizzato (generalmente largo 19 pollici) progettato per ospitare server, switch, patch panel e apparati di rete."
+      },
+      {
+        "n": 52,
+        "q": "Cosa è una patch cord?",
+        "opts": [
+          "Un cavo di rete flessibile di breve lunghezza utilizzato per collegare i dispositivi tra loro o al patch panel.",
+          "Una stringa di codice temporanea usata per correggere una vulnerabilità software.",
+          "La linea telefonica principale che collega l'edificio alla centrale del provider.",
+          "Una tipologia di antenna Wi-Fi direzionale a corto raggio."
+        ],
+        "ans": 0,
+        "exp": "Un cavo di rete flessibile di breve lunghezza utilizzato per collegare i dispositivi tra loro o al patch panel."
+      },
+      {
+        "n": 53,
+        "q": "Puoi descrivere il significato di plug e jack RJ45?",
+        "opts": [
+          "Il plug è la scheda di rete del PC, il jack è il sistema operativo che la controlla.",
+          "Sono i termini usati per definire i poli positivo e negativo nei cavi elettrici di alimentazione.",
+          "Il plug è il connettore maschio volante (posto alla fine del cavo), il jack è la presa femmina fissa (posta sul muro, sullo switch o sul PC).",
+          "Sono due protocolli software per la compressione dei pacchetti di rete."
+        ],
+        "ans": 2,
+        "exp": "Il plug è il connettore maschio volante (posto alla fine del cavo), il jack è la presa femmina fissa (posta sul muro, sullo switch o sul PC)."
+      },
+      {
+        "n": 54,
+        "q": "Quali sono i parametri IP essenziali per la connessione di un PC in una rete locale isolata?",
+        "opts": [
+          "Indirizzo IP e Subnet Mask (Maschera di sottorete).",
+          "Gateway Predefinito e Server DNS.",
+          "Indirizzo MAC e Nome del Computer.",
+          "URL e Numero di Porta."
+        ],
+        "ans": 0,
+        "exp": "Indirizzo IP e Subnet Mask (Maschera di sottorete)."
+      },
+      {
+        "n": 55,
+        "q": "Spiega quali sono i parametri IP necessari per consentire ad un PC di navigare su Internet o \"oltre\" la propria LAN.",
+        "opts": [
+          "Soltanto un Indirizzo IP statico di classe A.",
+          "La configurazione esclusiva dell'indirizzo MAC di loopback.",
+          "Indirizzo IP, Subnet Mask, Gateway Predefinito (Router) e Server DNS.",
+          "Un account utente amministratore e un browser aggiornato."
+        ],
+        "ans": 2,
+        "exp": "Indirizzo IP, Subnet Mask, Gateway Predefinito (Router) e Server DNS."
+      },
+      {
+        "n": 56,
+        "q": "Come funziona il protocollo ARP e quali elementi fondamentali utilizza?",
+        "opts": [
+          "Invia una richiesta in broadcast chiedendo l'indirizzo MAC associato a un IP e memorizza il risultato nella Tabella ARP.",
+          "Interroga un server centrale su internet per tradurre un nome di dominio in indirizzo IP.",
+          "Cifra i pacchetti IP trasformandoli in frame protetti prima di inoltrarli sullo switch.",
+          "Rileva le collisioni elettriche sul cavo Ethernet interrompendo momentaneamente la trasmissione."
+        ],
+        "ans": 0,
+        "exp": "Invia una richiesta in broadcast chiedendo l'indirizzo MAC associato a un IP e memorizza il risultato nella Tabella ARP."
+      },
+      {
+        "n": 57,
+        "q": "Cosa significano HTTP e HTTPS? Quando e perché vengono utilizzate?",
+        "opts": [
+          "Sono protocolli per l'invio e la ricezione di email crittografate.",
+          "HyperText Transfer Protocol (standard e sicuro con crittografia SSL/TLS); si usano per il trasferimento delle pagine web.",
+          "Sistemi di formattazione del testo per i documenti Markdown ad alta sicurezza.",
+          "Protocolli di livello di trasporto alternativi al TCP e all'UDP per lo streaming."
+        ],
+        "ans": 1,
+        "exp": "HyperText Transfer Protocol (standard e sicuro con crittografia SSL/TLS); si usano per il trasferimento delle pagine web."
+      },
+      {
+        "n": 58,
+        "q": "Che cosa è il protocollo TELNET?",
+        "opts": [
+          "Un moderno sistema di comunicazione VoIP in alta definizione.",
+          "Un vecchio protocollo di rete per l'accesso remoto a riga di comando, non sicuro perché trasmette i dati (incluse le password) in chiaro.",
+          "Un algoritmo di compressione dati per linee a banda ultralarga.",
+          "Il protocollo standard per l'assegnazione automatica degli indirizzi IP."
+        ],
+        "ans": 1,
+        "exp": "Un vecchio protocollo di rete per l'accesso remoto a riga di comando, non sicuro perché trasmette i dati (incluse le password) in chiaro."
+      },
+      {
+        "n": 59,
+        "q": "Cosa significa URL Shortener? È sempre sicuro?",
+        "opts": [
+          "Un software per accorciare la lunghezza fisica dei cavi di rete; è sempre sicuro.",
+          "Un servizio che converte un link lungo in uno corto; non è intrinsecamente sicuro perché può nascondere la reale destinazione di un link malevolo.",
+          "Un protocollo che riduce le dimensioni delle immagini web; è sicuro al 100%.",
+          "Un comando da riga di comando per ridurre i tempi di risposta del ping; è sicuro."
+        ],
+        "ans": 1,
+        "exp": "Un servizio che converte un link lungo in uno corto; non è intrinsecamente sicuro perché può nascondere la reale destinazione di un link malevolo."
+      },
+      {
+        "n": 60,
+        "q": "Che comando si utilizza per stabilire se in una rete TCP/IP un host è configurato e raggiungibile?",
+        "opts": [
+          "Il comando `ping`, che invia pacchetti ICMP Echo Request e attende la risposta Echo Reply dall'host di destinazione.",
+          "Il comando `ipconfig`, che forza il PC remoto a rivelare la sua posizione geografica.",
+          "Il comando `netstat`, che cancella la cache dei DNS corrotti sul router.",
+          "Il comando `ssh`, che esegue una scansione di tutte le porte aperte sul PC target."
+        ],
+        "ans": 0,
+        "exp": "Il comando `ping`, che invia pacchetti ICMP Echo Request e attende la risposta Echo Reply dall'host di destinazione."
+      },
+      {
+        "n": 61,
+        "q": "Cosa è il protocollo ICMP?",
+        "opts": [
+          "Internet Connection Management Protocol, usato per autenticare gli utenti sulla Wi-Fi.",
+          "Internet Control Message Protocol, usato per scopi diagnostici e di controllo (es. messaggi di errore e comando ping).",
+          "International Cipher Management Protocol, uno standard per la gestione delle chiavi di sicurezza.",
+          "Integrated Cable Management Protocol, una specifica tecnica per l'ordine dei rack."
+        ],
+        "ans": 1,
+        "exp": "Internet Control Message Protocol, usato per scopi diagnostici e di controllo (es. messaggi di errore e comando ping)."
+      },
+      {
+        "n": 62,
+        "q": "Quando un PC in rete è configurato correttamente a livello IP, è sempre raggiungibile tramite ping?",
+        "opts": [
+          "Sì, la configurazione IP corretta garantisce sempre la risposta al ping.",
+          "No, un firewall o le impostazioni di sicurezza del sistema operativo ospite potrebbero bloccare i pacchetti ICMP in ingresso.",
+          "No, il ping funziona solo se il PC sta navigando attivamente su una pagina web HTTPS.",
+          "Sì, a patto che il PC non stia utilizzando una scheda di rete Wi-Fi."
+        ],
+        "ans": 1,
+        "exp": "No, un firewall o le impostazioni di sicurezza del sistema operativo ospite potrebbero bloccare i pacchetti ICMP in ingresso."
+      },
+      {
+        "n": 63,
+        "q": "Cosa è il Modello ISO/OSI? Quanti livelli prevede?",
+        "opts": [
+          "Un sistema di certificazione aziendale basato su 3 livelli di sicurezza.",
+          "Un software di simulazione di rete a 5 livelli sviluppato da Cisco.",
+          "Un modello concettuale di riferimento per l'architettura di rete strutturato in 7 livelli logici.",
+          "Un protocollo di routing geografico a 10 livelli per grandi infrastrutture WAN."
+        ],
+        "ans": 2,
+        "exp": "Un modello concettuale di riferimento per l'architettura di rete strutturato in 7 livelli logici."
+      },
+      {
+        "n": 64,
+        "q": "Cosa è Cisco Packet Tracer? A cosa serve?",
+        "opts": [
+          "Un software di simulazione di rete interattivo utilizzato per progettare, configurare e testare reti virtuali e apparati Cisco.",
+          "Uno strumento hardware utilizzato dai tecnici per intercettare fisicamente i pacchetti sui cavi in rame.",
+          "Un malware di tipo trojan specializzato nel tracciamento dei pacchetti bancari.",
+          "Il sistema operativo preinstallato su tutti i router di ultima generazione."
+        ],
+        "ans": 0,
+        "exp": "Un software di simulazione di rete interattivo utilizzato per progettare, configurare e testare reti virtuali e apparati Cisco."
+      },
+      {
+        "n": 65,
+        "q": "Cosa è uno switch?",
+        "opts": [
+          "Un dispositivo che collega reti diverse traducendo gli indirizzi IP (Layer 3).",
+          "Un dispositivo di rete intelligente (Layer 2) che inoltra i frame di dati selettivamente basandosi sugli indirizzi MAC dei destinatari.",
+          "Un interruttore elettrico di emergenza posizionato all'ingresso dei data center.",
+          "Un software per passare rapidamente da un'interfaccia grafica a una a riga di comando."
+        ],
+        "ans": 1,
+        "exp": "Un dispositivo di rete intelligente (Layer 2) che inoltra i frame di dati selettivamente basandosi sugli indirizzi MAC dei destinatari."
+      },
+      {
+        "n": 66,
+        "q": "Cosa è l'architettura LAMP?",
+        "opts": [
+          "Un sistema di illuminazione a LED a basso consumo per sale server.",
+          "Uno stack di software open source per lo sviluppo web composto da: Linux, Apache, MySQL/MariaDB, PHP/Python/Perl.",
+          "Un protocollo di cifratura militare basato sulla scomposizione dei pacchetti di rete.",
+          "Un tipo di topologia di rete ad anello con gestione centralizzata dei permessi."
+        ],
+        "ans": 1,
+        "exp": "Uno stack di software open source per lo sviluppo web composto da: Linux, Apache, MySQL/MariaDB, PHP/Python/Perl."
+      },
+      {
+        "n": 67,
+        "q": "Cosa significa GUI?",
+        "opts": [
+          "Graphical User Interface (Interfaccia Grafica Utente), che consente l'interazione visiva tramite icone, finestre e puntatori.",
+          "General User Internet, lo standard d'accesso alla rete pubblica per utenti non registrati.",
+          "Gateway Unified Interface, il pannello di controllo software di un router aziendale.",
+          "Global Unique Identifier, il codice univoco assegnato a ogni sistema operativo Linux."
+        ],
+        "ans": 0,
+        "exp": "Graphical User Interface (Interfaccia Grafica Utente), che consente l'interazione visiva tramite icone, finestre e puntatori."
+      },
+      {
+        "n": 68,
+        "q": "Cosa Significa CLI?",
+        "opts": [
+          "Cable Line Interface, la porta fisica usata per i collegamenti seriali dei router.",
+          "Command Line Interface (Interfaccia a Riga di Comando), basata sull'inserimento di comandi testuali tramite tastiera.",
+          "Client Local Internet, il protocollo di rete per le configurazioni LAN domestiche.",
+          "Cyber Law International, l'insieme delle normative globali contro gli attacchi hacker."
+        ],
+        "ans": 1,
+        "exp": "Command Line Interface (Interfaccia a Riga di Comando), basata sull'inserimento di comandi testuali tramite tastiera."
+      },
+      {
+        "n": 69,
+        "q": "Cosa è un firewall?",
+        "opts": [
+          "Un sistema antincendio automatico installato nei pavimenti galleggianti dei data center.",
+          "Un dispositivo o software di sicurezza che monitora e filtra il traffico di rete in entrata e in uscita in base a regole predefinite.",
+          "Un virus che cancella i dati distruggendo logicamente i settori del disco rigido.",
+          "Un server proxy utilizzato esclusivamente per velocizzare il caricamento delle pagine web."
+        ],
+        "ans": 1,
+        "exp": "Un dispositivo o software di sicurezza che monitora e filtra il traffico di rete in entrata e in uscita in base a regole predefinite."
+      },
+      {
+        "n": 70,
+        "q": "Un firewall è un software o è un Hardware?",
+        "opts": [
+          "È esclusivamente un componente hardware dedicato.",
+          "È esclusivamente un'applicazione software installabile sui PC.",
+          "Può essere sia un software (es. integrato nel sistema operativo) sia un apparato hardware dedicato (es. appliance di rete).",
+          "Non è né hardware né software, si tratta di una policy comportamentale per gli utenti."
+        ],
+        "ans": 2,
+        "exp": "Può essere sia un software (es. integrato nel sistema operativo) sia un apparato hardware dedicato (es. appliance di rete)."
       }
     ]
   }
