@@ -3,14 +3,13 @@
 // I dati vengono caricati da db.json via fetch()
 // ═══════════════════════════════════════════════════════════════════
 
-// ── VARIABILI GLOBALI (riempite dopo il fetch) ──────────────────────
 let MATERIE    = [];
 let DB         = [];
 let TEORIA     = {};
 let DOC        = {};
 let REAL_QUIZ  = {};
+let PROGETTI   = [];
 
-// ── STATO APPLICAZIONE ─────────────────────────────────────────────
 const letters = ['A', 'B', 'C', 'D', 'E'];
 
 let currentFilter = 'all';
@@ -20,7 +19,6 @@ let quizLength = 20;
 
 let examPool = [], examIdx = 0, examOk = 0, examKo = 0, examLength = 20;
 
-// ── CARICAMENTO DB.JSON ────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   fetch('db.json')
     .then(r => {
@@ -28,19 +26,17 @@ document.addEventListener('DOMContentLoaded', () => {
       return r.json();
     })
     .then(data => {
-      // Mappa i campi JSON nelle variabili globali usate dall'app
       MATERIE   = data.materie        || [];
       DB        = data.domande        || [];
       TEORIA    = data.teoria         || {};
       DOC       = data.documentazione || {};
       REAL_QUIZ = data.quiz_reale     || {};
+      PROGETTI  = (data.progetti      || []).filter(p => !p._istruzioni);
 
-      // Rimuove eventuali chiavi di servizio (_istruzioni, _esempio)
       Object.keys(REAL_QUIZ).forEach(k => {
         if (k.startsWith('_')) delete REAL_QUIZ[k];
       });
 
-      // Avvia l'app
       init();
     })
     .catch(err => {
@@ -57,43 +53,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// ── INIZIALIZZAZIONE ───────────────────────────────────────────────
 function init() {
   buildSidebar();
   updateCounts();
   showSection('quiz-view');
   showQuizSelector();
-  const firstNav = document.querySelector('.nav-item[onclick*="setQuiz(\'all\'"]');
+  const firstNav = document.querySelector('.nav-item');
   if (firstNav) firstNav.classList.add('active');
-
-  // Deep-link da home.html: ?start=20 avvia subito un quiz misto,
-  // #esame / #teoria / #doc aprono direttamente quella sezione.
-  handleEntryParams();
 }
 
-function handleEntryParams() {
-  const params = new URLSearchParams(window.location.search);
-  const start  = params.get('start');
-  if (start && !isNaN(parseInt(start, 10))) {
-    quizLength = parseInt(start, 10);
-    document.querySelectorAll('#quiz-selector .btn-mode').forEach(b => b.classList.remove('selected'));
-    startQuiz();
-    return;
-  }
-  const hash = window.location.hash.replace('#', '');
-  if (hash === 'esame') { startExam(null); }
-  else if (hash === 'teoria') {
-    showSection('theory-view');
-    const first = document.querySelector('.theory-section');
-    if (first) first.classList.add('active');
-  } else if (hash === 'doc') {
-    showSection('doc-view');
-    const first = document.querySelector('.doc-section');
-    if (first) first.classList.add('active');
-  }
-}
-
-// ── COSTRUZIONE DINAMICA SIDEBAR ───────────────────────────────────
 function buildSidebar() {
   const quizList  = document.getElementById('sidebar-quiz-list');
   const theorList = document.getElementById('sidebar-theory-list');
@@ -118,8 +86,7 @@ function buildSidebar() {
       </div>`;
   });
 
-  // Quiz reale — solo materie con dati
-  const hasReal = Object.keys(REAL_QUIZ).filter(k => Array.isArray(REAL_QUIZ[k]));
+  const hasReal = Object.keys(REAL_QUIZ).filter(k => Array.isArray(REAL_QUIZ[k]) && REAL_QUIZ[k].length > 0);
   if (hasReal.length > 0 && realList) {
     document.getElementById('sidebar-real-section').style.display = 'block';
     hasReal.forEach(key => {
@@ -135,6 +102,7 @@ function buildSidebar() {
 
   buildTheorySections();
   buildDocSections();
+  buildProjectsSection();
 }
 
 function buildTheorySections() {
@@ -173,7 +141,41 @@ function buildDocSections() {
   });
 }
 
-// ── CONTATORI ──────────────────────────────────────────────────────
+// ── PROGETTI — sezione unica, lista indipendente dalle materie ─────
+function buildProjectsSection() {
+  const container = document.getElementById('projects-view');
+  if (!container) return;
+
+  container.innerHTML = `
+    <div class="section-header">
+      <span class="section-badge">🧩 PROGETTI</span>
+      <h1>Progetti</h1>
+      <p>Elenco dei progetti realizzati durante il corso.</p>
+    </div>
+    <div id="projects-list"></div>`;
+
+  const list = document.getElementById('projects-list');
+
+  if (!PROGETTI.length) {
+    list.innerHTML = `
+      <div class="empty-state">
+        <div class="empty-icon">🧩</div>
+        <div class="empty-title">Nessun progetto ancora inserito</div>
+        <div class="empty-sub">I progetti verranno aggiunti nelle prossime sessioni.</div>
+      </div>`;
+    return;
+  }
+
+  PROGETTI.forEach(p => {
+    list.innerHTML += `
+      <div class="project-card" id="proj-${p.key}">
+        <h3>${p.title}</h3>
+        ${p.desc ? `<p><em>${p.desc}</em></p>` : ''}
+        ${p.html || ''}
+      </div>`;
+  });
+}
+
 function updateCounts() {
   MATERIE.forEach(m => {
     const n  = DB.filter(q => q.m === m.key).length;
@@ -182,11 +184,13 @@ function updateCounts() {
   });
   const allEl = document.getElementById('cnt-all');
   if (allEl) allEl.textContent = DB.length;
+
+  const projEl = document.getElementById('cnt-progetti');
+  if (projEl) projEl.textContent = PROGETTI.length;
 }
 
-// ── NAVIGAZIONE ────────────────────────────────────────────────────
 function showSection(id) {
-  ['quiz-view', 'exam-view', 'theory-view', 'doc-view', 'realquiz-view'].forEach(s => {
+  ['quiz-view', 'exam-view', 'theory-view', 'doc-view', 'realquiz-view', 'projects-view'].forEach(s => {
     const el = document.getElementById(s);
     if (el) el.style.display = 'none';
   });
@@ -199,7 +203,6 @@ function setAllNavInactive() {
   document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
 }
 
-// ── QUIZ ───────────────────────────────────────────────────────────
 function setQuiz(filter, el) {
   setAllNavInactive();
   if (el) el.classList.add('active');
@@ -212,7 +215,6 @@ function setQuiz(filter, el) {
     ? 'Tutte le materie'
     : (MATERIE.find(m => m.key === filter)?.label || filter);
   document.getElementById('quiz-title').textContent = label;
-  setBottomNav('quiz');
   closeSidebar();
 }
 
@@ -334,26 +336,13 @@ function choose(i, containerId, isExam) {
 
 function updateStats() {
   const pct = tot > 0 ? Math.round(ok / tot * 100) : 0;
-  [['st-tot','ms-tot', tot], ['st-ok','ms-ok', ok], ['st-ko','ms-ko', ko]].forEach(([sid, mid, val]) => {
+  [['st-tot', tot], ['st-ok', ok], ['st-ko', ko]].forEach(([sid, val]) => {
     const se = document.getElementById(sid); if (se) se.textContent = val;
-    const me = document.getElementById(mid); if (me) me.textContent = val;
   });
-  [['st-pct','ms-pct'], ['st-bar','ms-bar'], ['st-pl','ms-pl'], ['st-pr','ms-pr']].forEach(([sid, mid]) => {
-    const pctStr = tot > 0 ? pct + '%' : '—';
-    if (sid.includes('pct')) {
-      const se = document.getElementById(sid); if (se) se.textContent = pctStr;
-      const me = document.getElementById(mid); if (me) me.textContent = pctStr;
-    } else if (sid.includes('bar')) {
-      const se = document.getElementById(sid); if (se) se.style.width = pct + '%';
-      const me = document.getElementById(mid); if (me) me.style.width = pct + '%';
-    } else if (sid.includes('pl')) {
-      const se = document.getElementById(sid); if (se) se.textContent = ok + '/' + tot;
-      const me = document.getElementById(mid); if (me) me.textContent = ok + '/' + tot;
-    } else if (sid.includes('pr')) {
-      const se = document.getElementById(sid); if (se) se.textContent = pct + '%';
-      const me = document.getElementById(mid); if (me) me.textContent = pct + '%';
-    }
-  });
+  const pe = document.getElementById('st-pct'); if (pe) pe.textContent = tot > 0 ? pct + '%' : '—';
+  const be = document.getElementById('st-bar'); if (be) be.style.width = pct + '%';
+  const ple = document.getElementById('st-pl'); if (ple) ple.textContent = ok + '/' + tot;
+  const pre = document.getElementById('st-pr'); if (pre) pre.textContent = pct + '%';
 }
 
 function showEnd() {
@@ -388,7 +377,6 @@ function backToSelector() {
   showQuizSelector();
 }
 
-// ── TEORIA ─────────────────────────────────────────────────────────
 function setTheory(key, el) {
   setAllNavInactive();
   if (el) el.classList.add('active');
@@ -396,11 +384,9 @@ function setTheory(key, el) {
   document.querySelectorAll('.theory-section').forEach(s => s.classList.remove('active'));
   const th = document.getElementById('th-' + key);
   if (th) th.classList.add('active');
-  setBottomNav('teoria');
   closeSidebar();
 }
 
-// ── DOCUMENTAZIONE ──────────────────────────────────────────────────
 function setDoc(key, el) {
   setAllNavInactive();
   if (el) el.classList.add('active');
@@ -408,18 +394,23 @@ function setDoc(key, el) {
   document.querySelectorAll('.doc-section').forEach(s => s.classList.remove('active'));
   const dc = document.getElementById('doc-' + key);
   if (dc) dc.classList.add('active');
-  setBottomNav('doc');
   closeSidebar();
 }
 
-// ── ESAME ───────────────────────────────────────────────────────────
+// ── Navigazione sezione Progetti ────────────────────────────────────
+function setProjects(el) {
+  setAllNavInactive();
+  if (el) el.classList.add('active');
+  showSection('projects-view');
+  closeSidebar();
+}
+
 function startExam(el) {
   if (el?.classList) { setAllNavInactive(); el.classList.add('active'); }
   showSection('exam-view');
   document.getElementById('exam-intro').style.display    = 'block';
   document.getElementById('exam-quiz-area').style.display = 'none';
   document.getElementById('exam-end').style.display      = 'none';
-  setBottomNav('esame');
   closeSidebar();
 }
 
@@ -483,7 +474,6 @@ function resetExam() {
   document.getElementById('exam-end').style.display      = 'none';
 }
 
-// ── MOBILE: SIDEBAR ─────────────────────────────────────────────────
 function toggleSidebar() {
   const sb   = document.getElementById('sidebar');
   const ov   = document.getElementById('overlay');
@@ -497,38 +487,4 @@ function closeSidebar() {
   document.getElementById('sidebar').classList.remove('open');
   document.getElementById('overlay').classList.remove('visible');
   document.getElementById('btn-hamburger').classList.remove('open');
-}
-
-// ── MOBILE: BOTTOM NAV ──────────────────────────────────────────────
-function setBottomNav(id) {
-  ['quiz', 'esame', 'teoria', 'doc', 'stats'].forEach(k => {
-    document.getElementById('bn-' + k)?.classList.remove('active');
-  });
-  document.getElementById('bn-' + id)?.classList.add('active');
-}
-
-function bnQuiz()  { setBottomNav('quiz');  showSection('quiz-view'); showQuizSelector(); }
-function bnEsame() { setBottomNav('esame'); startExam(null); }
-function bnTeoria() {
-  setBottomNav('teoria'); showSection('theory-view');
-  document.querySelectorAll('.theory-section').forEach(s => s.classList.remove('active'));
-  const first = document.querySelector('.theory-section');
-  if (first) first.classList.add('active');
-}
-function bnDoc() {
-  setBottomNav('doc'); showSection('doc-view');
-  document.querySelectorAll('.doc-section').forEach(s => s.classList.remove('active'));
-  const first = document.querySelector('.doc-section');
-  if (first) first.classList.add('active');
-}
-function bnStats() { setBottomNav('stats'); openStats(); }
-
-function openStats() {
-  const m = document.getElementById('stats-modal');
-  if (m) m.style.display = 'flex';
-}
-function closeStats() {
-  const m = document.getElementById('stats-modal');
-  if (m) m.style.display = 'none';
-  setBottomNav('quiz');
 }
