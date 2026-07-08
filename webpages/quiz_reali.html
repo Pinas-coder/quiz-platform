@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz reali — [NOME CORSO]</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/design/style.css">
+  <script src="/design/theme.js"></script>
+</head>
+<body>
+
+  <header class="site-nav">
+    <div class="site-nav-inner">
+      <div class="site-nav-brand">
+        <span class="kicker">[Quiz] · [SIGLA]</span>
+        <span class="name">[NOME CORSO]</span>
+      </div>
+      <nav class="site-nav-links">
+        <a href="index.html">Home</a>
+        <a href="documentazione.html">Documentazione</a>
+        <a href="teoria.html">Teoria</a>
+        <a href="quiz.html">Quiz</a>
+        <a href="quiz_reali.html" class="active">Quiz reali</a>
+        <a href="progetti.html">Progetti</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-main">
+
+    <!-- ══ GRIGLIA MATERIE CON QUIZ REALE ═════════════════════════ -->
+    <div id="rq-grid-wrap">
+      <div class="section-header">
+        <span class="section-badge" style="color:var(--secondary);background:var(--secondary-container)">Quiz reali</span>
+        <h1>Quiz reali</h1>
+        <p>Le domande ufficiali dei docenti. Scegli una materia per iniziare la simulazione.</p>
+      </div>
+      <div id="rq-grid" class="home-bento"></div>
+    </div>
+
+    <!-- ══ SVOLGIMENTO QUIZ REALE ══════════════════════════════════ -->
+    <div id="rq-play-wrap" style="display:none">
+      <div class="section-header">
+        <span class="section-badge" style="color:var(--secondary);background:var(--secondary-container)">Quiz reale</span>
+        <h1 id="rq-title">Quiz reale</h1>
+        <p>Esame ufficiale con le domande del docente. Rispondi a tutto e poi consegna.</p>
+      </div>
+
+      <button class="btn-restart-sec" onclick="backToRealGrid()" style="margin-bottom:1.5rem">
+        <span class="material-symbols-outlined" style="font-size:18px">arrow_back</span>
+        Torna alla scelta materia
+      </button>
+
+      <div id="rq-intro" class="intro-card">
+        <h2>Simulazione esame ufficiale</h2>
+        <p>
+          Le domande sono tratte direttamente dal documento ufficiale del docente.
+          Rispondi a tutte, poi clicca <strong>Consegna</strong> per vedere il risultato
+          e la spiegazione di ogni errore.
+        </p>
+        <button class="btn-restart" style="background:var(--secondary)" onclick="launchRealQuiz()">
+          Inizia quiz reale
+          <span class="material-symbols-outlined" style="font-size:18px">arrow_forward</span>
+        </button>
+      </div>
+
+      <div id="rq-area" style="display:none"></div>
+
+      <div class="end-card" id="rq-end" style="display:none">
+        <div class="end-score" id="rq-score">—</div>
+        <div class="end-sub" id="rq-sub2"></div>
+        <div class="end-msg" id="rq-msg"></div>
+        <div class="end-grid">
+          <div class="end-stat"><div class="end-stat-v v-ok" id="rq-ok">0</div><div class="end-stat-l">Corrette</div></div>
+          <div class="end-stat"><div class="end-stat-v v-ko" id="rq-ko">0</div><div class="end-stat-l">Errate</div></div>
+          <div class="end-stat"><div class="end-stat-v v-tot" id="rq-tot">0</div><div class="end-stat-l">Totale</div></div>
+        </div>
+        <div id="rq-review"></div>
+        <button class="btn-restart" style="background:var(--secondary);margin-top:1.5rem" onclick="launchRealQuiz()">
+          Rifai quiz
+          <span class="material-symbols-outlined" style="font-size:18px">refresh</span>
+        </button>
+        <button class="btn-restart-sec" onclick="backToRealGrid()">Cambia materia</button>
+      </div>
+    </div>
+
+  </main>
+
+  <button class="theme-toggle" id="theme-toggle" aria-label="Cambia tema" title="Cambia tema chiaro/scuro">
+    <span class="material-symbols-outlined">dark_mode</span>
+  </button>
+
+  <button class="back-to-top" id="back-to-top" aria-label="Torna in cima" title="Torna in cima">
+    <span class="material-symbols-outlined">arrow_upward</span>
+  </button>
+
+  <script src="/scripts/common.js"></script>
+  <script src="/scripts/realquiz.js"></script>
+
+</body>
+</html>

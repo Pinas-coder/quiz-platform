@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Progetti — [NOME CORSO]</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/design/style.css">
+  <script src="/design/theme.js"></script>
+</head>
+<body>
+
+  <header class="site-nav">
+    <div class="site-nav-inner">
+      <div class="site-nav-brand">
+        <span class="kicker">[Quiz] · [SIGLA]</span>
+        <span class="name">[NOME CORSO]</span>
+      </div>
+      <nav class="site-nav-links">
+        <a href="index.html">Home</a>
+        <a href="documentazione.html">Documentazione</a>
+        <a href="teoria.html">Teoria</a>
+        <a href="quiz.html">Quiz</a>
+        <a href="quiz_reali.html">Quiz reali</a>
+        <a href="progetti.html" class="active">Progetti</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-main">
+    <div class="section-header">
+      <span class="section-badge">🧩 PROGETTI</span>
+      <h1>Progetti</h1>
+      <p>Scegli un progetto dalla griglia per scorrere fino al suo dettaglio completo.</p>
+    </div>
+
+    <div id="projects-grid" class="home-bento" style="margin-bottom:2.5rem"></div>
+    <div id="projects-detail"></div>
+  </main>
+
+  <button class="theme-toggle" id="theme-toggle" aria-label="Cambia tema" title="Cambia tema chiaro/scuro">
+    <span class="material-symbols-outlined">dark_mode</span>
+  </button>
+
+  <button class="back-to-top" id="back-to-top" aria-label="Torna in cima" title="Torna in cima">
+    <span class="material-symbols-outlined">arrow_upward</span>
+  </button>
+
+  <script src="/scripts/common.js"></script>
+  <script src="/scripts/progetti.js"></script>
+
+</body>
+</html>

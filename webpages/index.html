@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Piattaforma Quiz — Progetto di fine corso</title>
+  <!-- ⚠️ Modifica il titolo qui sopra con il nome del tuo corso -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/design/style.css">
+  <script src="/design/theme.js"></script>
+</head>
+<body>
+
+  <header class="home-header">
+    <div class="brand">
+      <!-- ⚠️ Modifica: sigla ente / corso -->
+      <span class="kicker">[Quiz] · [SIGLA]</span>
+      <span class="name">[NOME CORSO]</span>
+    </div>
+    <nav class="site-nav-links">
+      <a href="documentazione.html">Documentazione</a>
+      <a href="teoria.html">Teoria</a>
+      <a href="quiz.html">Quiz</a>
+      <a href="quiz_reali.html">Quiz reali</a>
+      <a href="progetti.html">Progetti</a>
+    </nav>
+  </header>
+
+  <section class="home-hero">
+    <div class="home-hero-inner">
+      <div>
+        <span class="section-badge">Progetto di fine corso</span>
+        <!-- ⚠️ Modifica: claim principale -->
+        <h1>Documentazione, quiz e progetti in un unico posto</h1>
+        <p>
+          Consulta la documentazione ufficiale, allenati con i quiz per materia o misti,
+          ripassa in modalità apprendimento con la spiegazione di ogni errore a schermo,
+          ed esplora i progetti realizzati durante il corso.
+        </p>
+        <a href="quiz.html" class="btn-restart home-link-btn spaced">
+          Inizia un quiz rapido
+          <span class="material-symbols-outlined icon-sm">bolt</span>
+        </a>
+        <a href="documentazione.html" class="btn-restart-sec home-link-btn">
+          Esplora la documentazione
+        </a>
+      </div>
+
+      <div class="home-hero-visual">
+        <span class="material-symbols-outlined big-icon">school</span>
+        <div class="home-hero-stat">
+          <span class="num" id="home-stat-materie">0</span>
+          <span class="lbl">Materie disponibili</span>
+        </div>
+        <div class="home-hero-stat">
+          <span class="num" id="home-stat-domande">0</span>
+          <span class="lbl">Domande nel database</span>
+        </div>
+        <div class="home-hero-stat">
+          <span class="num" id="home-stat-progetti">0</span>
+          <span class="lbl">Progetti disponibili</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="home-main">
+    <h2 class="home-section-title">Cosa puoi fare</h2>
+
+    <div class="home-bento">
+
+      <a href="quiz.html" class="home-card">
+        <div class="icon-wrap tone-primary">
+          <span class="material-symbols-outlined">menu_book</span>
+        </div>
+        <h3>Quiz</h3>
+        <p>Quiz per materia, misti o in Modalità Esame — con spiegazione di ogni errore a schermo.</p>
+        <span class="go">Vai ai quiz <span class="material-symbols-outlined icon-xs">arrow_forward</span></span>
+      </a>
+
+      <a href="quiz_reali.html" class="home-card">
+        <div class="icon-wrap tone-secondary">
+          <span class="material-symbols-outlined">verified</span>
+        </div>
+        <h3>Quiz reali</h3>
+        <p>Le domande ufficiali dei docenti, in versione esame con revisione finale dettagliata.</p>
+        <span class="go">Vai ai quiz reali <span class="material-symbols-outlined icon-xs">arrow_forward</span></span>
+      </a>
+
+      <a href="teoria.html" class="home-card">
+        <div class="icon-wrap tone-tertiary">
+          <span class="material-symbols-outlined">lightbulb</span>
+        </div>
+        <h3>Teoria</h3>
+        <p>Sintesi teoriche per materia, pensate per un ripasso rapido prima del quiz o dell'esame.</p>
+        <span class="go">Studia la teoria <span class="material-symbols-outlined icon-xs">arrow_forward</span></span>
+      </a>
+
+      <a href="documentazione.html" class="home-card">
+        <div class="icon-wrap tone-primary">
+          <span class="material-symbols-outlined">description</span>
+        </div>
+        <h3>Documentazione</h3>
+        <p>Il materiale ufficiale dei docenti, integrale e organizzato per materia.</p>
+        <span class="go">Apri la documentazione <span class="material-symbols-outlined icon-xs">arrow_forward</span></span>
+      </a>
+
+      <a href="progetti.html" class="home-card">
+        <div class="icon-wrap tone-secondary">
+          <span class="material-symbols-outlined">deployed_code</span>
+        </div>
+        <h3>Progetti</h3>
+        <p>Esplora i progetti realizzati durante il corso, con descrizione e spiegazione di ciascuno.</p>
+        <span class="go">Vedi i progetti <span class="material-symbols-outlined icon-xs">arrow_forward</span></span>
+      </a>
+
+    </div>
+
+    <p class="home-footer-note">
+      Modalità apprendimento con spiegazione dell'errore a schermo · Quiz per materia e misti · Documentazione ufficiale · Progetti
+    </p>
+    <p class="home-footer-note">
+      "Tutti i diritti sul materiale originale appartengono ai rispettivi proprietari. L'utilizzo di questo materiale ha scopi esclusivamente [indicare lo scopo: es. culturali, didattici, di recensione], senza fini di lucro."
+    </p>
+  </main>
+
+  <button class="theme-toggle" id="theme-toggle" aria-label="Cambia tema" title="Cambia tema chiaro/scuro">
+    <span class="material-symbols-outlined">dark_mode</span>
+  </button>
+
+  <button class="back-to-top" id="back-to-top" aria-label="Torna in cima" title="Torna in cima">
+    <span class="material-symbols-outlined">arrow_upward</span>
+  </button>
+
+  <script>
+    fetch('/db.json')
+      .then(r => r.ok ? r.json() : Promise.reject(new Error('db.json non trovato')))
+      .then(data => {
+        const materie  = data.materie  || [];
+        const domande  = data.domande  || [];
+        const progetti = (data.progetti || []).filter(p => !p._istruzioni);
+
+        document.getElementById('home-stat-materie').textContent  = materie.length;
+        document.getElementById('home-stat-domande').textContent  = domande.length;
+        document.getElementById('home-stat-progetti').textContent = progetti.length;
+      })
+      .catch(() => {
+        // Se db.json non è raggiungibile (es. apertura senza Live Server), lascia gli zeri di default.
+      });
+  </script>
+
+</body>
+</html>

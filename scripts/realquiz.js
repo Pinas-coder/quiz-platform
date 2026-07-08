@@ -1,39 +1,72 @@
 // ═══════════════════════════════════════════════════════════════════
-// realquiz.js — Logica Quiz Reale (domande ufficiali del docente)
-// I dati vengono letti dalle variabili globali popolate da app.js
-// dopo il fetch() di db.json. Dipende da app.js caricato prima.
+// realquiz.js — Logica pagina quiz_reali.html
+// Griglia di materie con quiz reale disponibile → avvio diretto.
 // ═══════════════════════════════════════════════════════════════════
 
 let rqSubject = null;
-let rqAnswers = {};   // { questionIndex: selectedOptionIndex }
+let rqAnswers = {};
 
-// ── AVVIA QUIZ REALE ────────────────────────────────────────────────
-function startRealQuiz(subject, el) {
-  setAllNavInactive();
-  if (el) el.classList.add('active');
+document.addEventListener('DOMContentLoaded', () => {
+  loadDB(initRealQuiz);
+});
+
+function initRealQuiz() {
+  const grid = document.getElementById('rq-grid');
+  const hasReal = Object.keys(REAL_QUIZ).filter(k => Array.isArray(REAL_QUIZ[k]) && REAL_QUIZ[k].length > 0);
+
+  if (hasReal.length === 0) {
+    grid.innerHTML = `
+      <div class="empty-state">
+        <div class="empty-icon">⚠️</div>
+        <div class="empty-title">Nessun quiz reale ancora disponibile</div>
+        <div class="empty-sub">I quiz reali verranno aggiunti nelle prossime sessioni.</div>
+      </div>`;
+    return;
+  }
+
+  hasReal.forEach(key => {
+    const m = MATERIE.find(x => x.key === key);
+    if (!m) return;
+    grid.innerHTML += `
+      <a href="#" class="home-card" onclick="startRealQuiz('${key}'); return false;">
+        <div class="icon-wrap tone-secondary">
+          <span class="material-symbols-outlined">verified</span>
+        </div>
+        <h3>${m.label}</h3>
+        <p>${REAL_QUIZ[key].length} domande ufficiali del docente.</p>
+        <span class="go">Inizia quiz reale <span class="material-symbols-outlined icon-xs">arrow_forward</span></span>
+      </a>`;
+  });
+}
+
+function startRealQuiz(subject) {
   rqSubject = subject;
-
-  showSection('realquiz-view');
-
   const m = MATERIE.find(x => x.key === subject);
+
+  document.getElementById('rq-grid-wrap').style.display = 'none';
+  document.getElementById('rq-play-wrap').style.display  = 'block';
   document.getElementById('rq-title').textContent = `Quiz reale — ${m?.label || subject}`;
 
   document.getElementById('rq-intro').style.display = 'block';
   document.getElementById('rq-area').style.display  = 'none';
   document.getElementById('rq-end').style.display   = 'none';
 
-  setBottomNav('quiz');
-  closeSidebar();
+  window.scrollTo(0, 0);
 }
 
-// ── LANCIA IL QUIZ REALE ────────────────────────────────────────────
+function backToRealGrid() {
+  document.getElementById('rq-grid-wrap').style.display = 'block';
+  document.getElementById('rq-play-wrap').style.display  = 'none';
+  window.scrollTo(0, 0);
+}
+
 function launchRealQuiz() {
   rqAnswers = {};
 
   document.getElementById('rq-intro').style.display = 'none';
   document.getElementById('rq-end').style.display   = 'none';
 
-  const area      = document.getElementById('rq-area');
+  const area = document.getElementById('rq-area');
   area.style.display = 'block';
 
   const questions = REAL_QUIZ[rqSubject];
@@ -76,7 +109,7 @@ function launchRealQuiz() {
         onclick="submitRealQuiz()">
         📤 Consegna quiz
       </button>
-      <button class="btn-restart-sec" onclick="startRealQuiz('${rqSubject}',null)">
+      <button class="btn-restart-sec" onclick="startRealQuiz(rqSubject)">
         Annulla
       </button>
     </div>
@@ -86,7 +119,6 @@ function launchRealQuiz() {
   window.scrollTo(0, 0);
 }
 
-// ── SCELTA RISPOSTA ─────────────────────────────────────────────────
 function rqChoose(qi, oi) {
   rqAnswers[qi] = oi;
   const opts = document.querySelectorAll(`#rq-opts-${qi} .opt`);
@@ -96,7 +128,6 @@ function rqChoose(qi, oi) {
   });
 }
 
-// ── CONSEGNA ────────────────────────────────────────────────────────
 function submitRealQuiz() {
   const questions  = REAL_QUIZ[rqSubject] || [];
   const unanswered = questions.filter((_, i) => rqAnswers[i] === undefined).length;
@@ -108,7 +139,6 @@ function submitRealQuiz() {
     warnEl.textContent   =
       `⚠️ Hai lasciato ${unanswered} domanda/e senza risposta. Saranno conteggiate come errate.`;
 
-    // Evidenzia la prima senza risposta e scrolla
     const firstUnanswered = questions.findIndex((_, i) => rqAnswers[i] === undefined);
     if (firstUnanswered >= 0) {
       const el = document.getElementById(`rq-q-${firstUnanswered}`);
@@ -118,7 +148,6 @@ function submitRealQuiz() {
       }
     }
 
-    // Al secondo clic consegna comunque
     submitBtn.textContent = '📤 Consegna comunque';
     submitBtn.onclick     = finalizeRealQuiz;
     return;
@@ -127,7 +156,6 @@ function submitRealQuiz() {
   finalizeRealQuiz();
 }
 
-// ── MOSTRA RISULTATI ────────────────────────────────────────────────
 function finalizeRealQuiz() {
   const questions = REAL_QUIZ[rqSubject] || [];
   let correct     = 0;

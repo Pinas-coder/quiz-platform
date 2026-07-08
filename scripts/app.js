@@ -64,8 +64,6 @@ function init() {
 
 function buildSidebar() {
   const quizList  = document.getElementById('sidebar-quiz-list');
-  const theorList = document.getElementById('sidebar-theory-list');
-  const docList   = document.getElementById('sidebar-doc-list');
   const realList  = document.getElementById('sidebar-real-list');
 
   MATERIE.forEach(m => {
@@ -73,16 +71,6 @@ function buildSidebar() {
       <div class="nav-item" onclick="setQuiz('${m.key}', this)">
         <span class="nav-dot"></span>${m.label}
         <span class="nav-count" id="cnt-${m.key}">0</span>
-      </div>`;
-
-    theorList.innerHTML += `
-      <div class="nav-item" onclick="setTheory('${m.key}', this)">
-        <span class="nav-dot"></span>${m.label}
-      </div>`;
-
-    docList.innerHTML += `
-      <div class="nav-item" onclick="setDoc('${m.key}', this)">
-        <span class="nav-dot"></span>${m.label}
       </div>`;
   });
 
@@ -105,14 +93,48 @@ function buildSidebar() {
   buildProjectsSection();
 }
 
+// ── TEORIA — griglia di card per materia + dettaglio sotto (scroll) ─
 function buildTheorySections() {
   const container = document.getElementById('theory-view');
+  container.innerHTML = `
+    <div class="section-header">
+      <span class="section-badge">📖 TEORIA</span>
+      <h1>Teoria</h1>
+      <p>Scegli una materia dalla griglia per scorrere fino alla sua sintesi teorica.</p>
+    </div>
+    <div id="theory-grid" class="home-bento" style="margin-bottom:2.5rem"></div>
+    <div id="theory-detail"></div>`;
+
+  const grid   = document.getElementById('theory-grid');
+  const detail = document.getElementById('theory-detail');
+
+  if (!MATERIE.length) {
+    grid.innerHTML = `
+      <div class="empty-state">
+        <div class="empty-icon">📝</div>
+        <div class="empty-title">Nessuna materia ancora inserita</div>
+        <div class="empty-sub">Le materie verranno aggiunte nelle prossime sessioni.</div>
+      </div>`;
+    return;
+  }
+
   MATERIE.forEach(m => {
     const t    = TEORIA[m.key];
     const html = t ? t.html : '<div class="empty-state"><div class="empty-icon">📝</div><div class="empty-title">Contenuti in arrivo</div></div>';
     const desc = t ? t.desc : '';
-    container.innerHTML += `
-      <div class="theory-section" id="th-${m.key}">
+
+    grid.innerHTML += `
+      <a href="#th-${m.key}" class="home-card" onclick="scrollToSection('th-${m.key}', event)">
+        <div class="icon-wrap tone-primary">
+          <span class="material-symbols-outlined">lightbulb</span>
+        </div>
+        <h3>${m.label}</h3>
+        ${desc ? `<p>${desc}</p>` : '<p>Sintesi teorica della materia.</p>'}
+        <span class="go">Vedi teoria <span class="material-symbols-outlined icon-xs">arrow_downward</span></span>
+      </a>`;
+
+    detail.innerHTML += `
+      <div class="theory-section" id="th-${m.key}" style="scroll-margin-top:1.5rem">
         <div class="section-header">
           <span class="section-badge">📖 TEORIA</span>
           <h1>${m.label}</h1>
@@ -123,14 +145,48 @@ function buildTheorySections() {
   });
 }
 
+// ── DOCUMENTAZIONE — griglia di card per materia + dettaglio sotto ──
 function buildDocSections() {
   const container = document.getElementById('doc-view');
+  container.innerHTML = `
+    <div class="section-header">
+      <span class="section-badge">📄 DOCUMENTAZIONE</span>
+      <h1>Documentazione</h1>
+      <p>Scegli una materia dalla griglia per scorrere fino alla documentazione ufficiale.</p>
+    </div>
+    <div id="doc-grid" class="home-bento" style="margin-bottom:2.5rem"></div>
+    <div id="doc-detail"></div>`;
+
+  const grid   = document.getElementById('doc-grid');
+  const detail = document.getElementById('doc-detail');
+
+  if (!MATERIE.length) {
+    grid.innerHTML = `
+      <div class="empty-state">
+        <div class="empty-icon">📂</div>
+        <div class="empty-title">Nessuna materia ancora inserita</div>
+        <div class="empty-sub">Le materie verranno aggiunte nelle prossime sessioni.</div>
+      </div>`;
+    return;
+  }
+
   MATERIE.forEach(m => {
     const d    = DOC[m.key];
     const html = d ? d.html : '<div class="empty-state"><div class="empty-icon">📂</div><div class="empty-title">Documentazione in arrivo</div></div>';
     const desc = d ? d.desc : '';
-    container.innerHTML += `
-      <div class="doc-section" id="doc-${m.key}">
+
+    grid.innerHTML += `
+      <a href="#doc-${m.key}" class="home-card" onclick="scrollToSection('doc-${m.key}', event)">
+        <div class="icon-wrap tone-secondary">
+          <span class="material-symbols-outlined">description</span>
+        </div>
+        <h3>${m.label}</h3>
+        ${desc ? `<p>${desc}</p>` : '<p>Documentazione ufficiale della materia.</p>'}
+        <span class="go">Vedi documentazione <span class="material-symbols-outlined icon-xs">arrow_downward</span></span>
+      </a>`;
+
+    detail.innerHTML += `
+      <div class="doc-section" id="doc-${m.key}" style="scroll-margin-top:1.5rem">
         <div class="section-header">
           <span class="section-badge">📄 DOCUMENTAZIONE</span>
           <h1>${m.label}</h1>
@@ -141,7 +197,16 @@ function buildDocSections() {
   });
 }
 
+// Scroll generico usato da Teoria e Documentazione
+function scrollToSection(id, event) {
+  if (event) event.preventDefault();
+  const el = document.getElementById(id);
+  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
 // ── PROGETTI — sezione unica, lista indipendente dalle materie ─────
+// Griglia di card (stesso stile della home) + dettaglio completo sotto,
+// raggiunto tramite scroll cliccando la card corrispondente.
 function buildProjectsSection() {
   const container = document.getElementById('projects-view');
   if (!container) return;
@@ -150,14 +215,16 @@ function buildProjectsSection() {
     <div class="section-header">
       <span class="section-badge">🧩 PROGETTI</span>
       <h1>Progetti</h1>
-      <p>Elenco dei progetti realizzati durante il corso.</p>
+      <p>Scegli un progetto dalla griglia per scorrere fino al suo dettaglio completo.</p>
     </div>
-    <div id="projects-list"></div>`;
+    <div id="projects-grid" class="home-bento" style="margin-bottom:2.5rem"></div>
+    <div id="projects-detail"></div>`;
 
-  const list = document.getElementById('projects-list');
+  const grid   = document.getElementById('projects-grid');
+  const detail = document.getElementById('projects-detail');
 
   if (!PROGETTI.length) {
-    list.innerHTML = `
+    grid.innerHTML = `
       <div class="empty-state">
         <div class="empty-icon">🧩</div>
         <div class="empty-title">Nessun progetto ancora inserito</div>
@@ -167,13 +234,29 @@ function buildProjectsSection() {
   }
 
   PROGETTI.forEach(p => {
-    list.innerHTML += `
-      <div class="project-card" id="proj-${p.key}">
+    grid.innerHTML += `
+      <a href="#proj-${p.key}" class="home-card" onclick="scrollToProject('${p.key}', event)">
+        <div class="icon-wrap tone-tertiary">
+          <span class="material-symbols-outlined">deployed_code</span>
+        </div>
+        <h3>${p.title}</h3>
+        ${p.desc ? `<p>${p.desc}</p>` : ''}
+        <span class="go">Vedi dettaglio <span class="material-symbols-outlined icon-xs">arrow_downward</span></span>
+      </a>`;
+
+    detail.innerHTML += `
+      <div class="project-card" id="proj-${p.key}" style="scroll-margin-top:1.5rem">
         <h3>${p.title}</h3>
         ${p.desc ? `<p><em>${p.desc}</em></p>` : ''}
         ${p.html || ''}
       </div>`;
   });
+}
+
+function scrollToProject(key, event) {
+  if (event) event.preventDefault();
+  const el = document.getElementById('proj-' + key);
+  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
 function updateCounts() {
@@ -377,23 +460,17 @@ function backToSelector() {
   showQuizSelector();
 }
 
-function setTheory(key, el) {
+function setTheory(el) {
   setAllNavInactive();
   if (el) el.classList.add('active');
   showSection('theory-view');
-  document.querySelectorAll('.theory-section').forEach(s => s.classList.remove('active'));
-  const th = document.getElementById('th-' + key);
-  if (th) th.classList.add('active');
   closeSidebar();
 }
 
-function setDoc(key, el) {
+function setDoc(el) {
   setAllNavInactive();
   if (el) el.classList.add('active');
   showSection('doc-view');
-  document.querySelectorAll('.doc-section').forEach(s => s.classList.remove('active'));
-  const dc = document.getElementById('doc-' + key);
-  if (dc) dc.classList.add('active');
   closeSidebar();
 }
 

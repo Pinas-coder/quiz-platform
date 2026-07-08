@@ -22,8 +22,8 @@
   </button>
   <div class="topbar-brand">
     <!-- ⚠️ Modifica: sigla ente / corso -->
-    <span class="topbar-kicker">[Quiz] · [ANAP]</span>
-    <div class="topbar-title">[IFTS Tecnologie per la valorizzazione dei Beni Culturali]</div>
+    <span class="topbar-kicker">[Quiz] · [SIGLA]</span>
+    <div class="topbar-title">[NOME CORSO]</div>
   </div>
 </header>
 
@@ -35,8 +35,8 @@
 
     <div class="logo">
       <!-- ⚠️ Modifica: branding sidebar -->
-      <span class="logo-kicker">[Quiz] · [ANAP]</span>
-      <div class="logo-name">[IFTS Tecnologie per la valorizzazione dei Beni Culturali]</div>
+      <span class="logo-kicker">[Quiz] · [SIGLA]</span>
+      <div class="logo-name">[NOME CORSO]</div>
       <div class="logo-sub">📚 Piattaforma di studio e quiz</div>
     </div>
 
@@ -78,14 +78,18 @@
 
     <div class="sidebar-section">
       <span class="sidebar-label">Teoria</span>
-      <div id="sidebar-theory-list"></div>
+      <div class="nav-item" onclick="setTheory(this)">
+        <span class="nav-dot" style="background:var(--accent)"></span>Tutte le materie
+      </div>
     </div>
 
     <div class="sidebar-divider"></div>
 
     <div class="sidebar-section">
       <span class="sidebar-label">Documentazione</span>
-      <div id="sidebar-doc-list"></div>
+      <div class="nav-item" onclick="setDoc(this)">
+        <span class="nav-dot" style="background:var(--teal)"></span>Tutte le materie
+      </div>
     </div>
 
     <div class="sidebar-divider"></div>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz — [NOME CORSO]</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/design/style.css">
+  <script src="/design/theme.js"></script>
+</head>
+<body>
+
+  <header class="site-nav">
+    <div class="site-nav-inner">
+      <div class="site-nav-brand">
+        <span class="kicker">[Quiz] · [SIGLA]</span>
+        <span class="name">[NOME CORSO]</span>
+      </div>
+      <nav class="site-nav-links">
+        <a href="index.html">Home</a>
+        <a href="documentazione.html">Documentazione</a>
+        <a href="teoria.html">Teoria</a>
+        <a href="quiz.html" class="active">Quiz</a>
+        <a href="quiz_reali.html">Quiz reali</a>
+        <a href="progetti.html">Progetti</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-main">
+    <div class="section-header">
+      <span class="section-badge">Quiz</span>
+      <h1>Quiz e Modalità Esame</h1>
+      <p>Allenati per materia o con domande miste, oppure simula un esame completo.</p>
+    </div>
+
+    <!-- Tab di modalità -->
+    <div class="mode-tabs">
+      <button class="mode-tab selected" onclick="switchMode('quiz', this)">
+        📚 Quiz per materia / misto
+      </button>
+      <button class="mode-tab" onclick="switchMode('exam', this)">
+        🏆 Modalità Esame
+      </button>
+    </div>
+
+    <!-- ══ PANNELLO QUIZ ══════════════════════════════════════════ -->
+    <div id="quiz-panel">
+
+      <div class="stats-inline">
+        <div class="stat-row"><span class="stat-row-label">Domande</span><span class="stat-row-val v-tot" id="st-tot">0</span></div>
+        <div class="stat-row"><span class="stat-row-label">Corrette</span><span class="stat-row-val v-ok" id="st-ok">0</span></div>
+        <div class="stat-row"><span class="stat-row-label">Errate</span><span class="stat-row-val v-ko" id="st-ko">0</span></div>
+        <div class="stat-row"><span class="stat-row-label">Successo</span><span class="stat-row-val v-pct" id="st-pct">—</span></div>
+        <div class="prog-track"><div class="prog-fill" id="st-bar" style="width:0%"></div></div>
+      </div>
+
+      <div id="quiz-selector" style="display:block">
+        <select id="materia-select" class="select-materia" onchange="onMateriaChange(this)">
+          <option value="all">Tutte le materie</option>
+        </select>
+
+        <div class="quiz-mode-selector">
+          <button class="btn-mode selected" onclick="selectLen(20, this)">
+            <span class="material-symbols-outlined btn-mode-icon">bolt</span>
+            <span class="btn-mode-label">Quiz rapido</span>
+            <span class="btn-mode-sub">20 domande</span>
+          </button>
+          <button class="btn-mode" onclick="selectLen(40, this)">
+            <span class="material-symbols-outlined btn-mode-icon">menu_book</span>
+            <span class="btn-mode-label">Quiz medio</span>
+            <span class="btn-mode-sub">40 domande</span>
+          </button>
+          <button class="btn-mode" onclick="selectLen(60, this)">
+            <span class="material-symbols-outlined btn-mode-icon">emoji_events</span>
+            <span class="btn-mode-label">Quiz completo</span>
+            <span class="btn-mode-sub">60 domande</span>
+          </button>
+        </div>
+      </div>
+
+      <div id="q-card" class="q-card" style="display:none"></div>
+
+      <div class="end-card" id="end-card">
+        <div class="end-score" id="end-score">—</div>
+        <div class="end-sub" id="end-sub"></div>
+        <div class="end-msg" id="end-msg"></div>
+        <div class="end-grid">
+          <div class="end-stat"><div class="end-stat-v v-ok" id="ef-ok">0</div><div class="end-stat-l">Corrette</div></div>
+          <div class="end-stat"><div class="end-stat-v v-ko" id="ef-ko">0</div><div class="end-stat-l">Errate</div></div>
+          <div class="end-stat"><div class="end-stat-v v-tot" id="ef-tot">0</div><div class="end-stat-l">Totale</div></div>
+        </div>
+        <button class="btn-restart" onclick="restartQuiz()">Ricomincia
+          <span class="material-symbols-outlined" style="font-size:18px">refresh</span>
+        </button>
+        <button class="btn-restart-sec" onclick="backToSelector()">Cambia modalità</button>
+      </div>
+    </div>
+
+    <!-- ══ PANNELLO ESAME ═════════════════════════════════════════ -->
+    <div id="exam-panel" style="display:none">
+
+      <div id="exam-intro" class="intro-card">
+        <div class="warn-banner">
+          <span class="material-symbols-outlined">warning</span>
+          <div>
+            <div class="warn-banner-title">Simulazione d'esame</div>
+            <div class="warn-banner-text">Le domande vengono estratte casualmente da tutte le materie e mescolate. La soglia di superamento è 70%.</div>
+          </div>
+        </div>
+        <h2>Seleziona la modalità esame</h2>
+        <div class="quiz-mode-selector" style="margin-top:1.25rem">
+          <button class="btn-mode selected" onclick="selectExamLen(20, this)">
+            <span class="material-symbols-outlined btn-mode-icon">bolt</span>
+            <span class="btn-mode-label">Rapido</span>
+            <span class="btn-mode-sub">20 domande</span>
+          </button>
+          <button class="btn-mode" onclick="selectExamLen(40, this)">
+            <span class="material-symbols-outlined btn-mode-icon">menu_book</span>
+            <span class="btn-mode-label">Medio</span>
+            <span class="btn-mode-sub">40 domande</span>
+          </button>
+          <button class="btn-mode" onclick="selectExamLen(60, this)">
+            <span class="material-symbols-outlined btn-mode-icon">emoji_events</span>
+            <span class="btn-mode-label">Completo</span>
+            <span class="btn-mode-sub">60 domande</span>
+          </button>
+        </div>
+        <button class="btn-restart" onclick="launchExam()" style="background:var(--tertiary);margin-top:1.5rem">
+          Inizia esame
+          <span class="material-symbols-outlined" style="font-size:18px">arrow_forward</span>
+        </button>
+      </div>
+
+      <div id="exam-quiz-area" style="display:none"></div>
+
+      <div class="end-card" id="exam-end" style="display:none">
+        <div class="end-score" id="ex-score">—</div>
+        <div class="end-sub" id="ex-sub"></div>
+        <div class="end-msg" id="ex-msg"></div>
+        <div class="end-grid">
+          <div class="end-stat"><div class="end-stat-v v-ok" id="ex-ok">0</div><div class="end-stat-l">Corrette</div></div>
+          <div class="end-stat"><div class="end-stat-v v-ko" id="ex-ko">0</div><div class="end-stat-l">Errate</div></div>
+          <div class="end-stat"><div class="end-stat-v v-tot" id="ex-tot">0</div><div class="end-stat-l">Totale</div></div>
+        </div>
+        <button class="btn-restart" onclick="resetExam()" style="background:var(--tertiary)">
+          Rifai esame
+          <span class="material-symbols-outlined" style="font-size:18px">refresh</span>
+        </button>
+      </div>
+    </div>
+
+  </main>
+
+  <button class="theme-toggle" id="theme-toggle" aria-label="Cambia tema" title="Cambia tema chiaro/scuro">
+    <span class="material-symbols-outlined">dark_mode</span>
+  </button>
+
+  <button class="back-to-top" id="back-to-top" aria-label="Torna in cima" title="Torna in cima">
+    <span class="material-symbols-outlined">arrow_upward</span>
+  </button>
+
+  <script src="/scripts/common.js"></script>
+  <script src="/scripts/quiz.js"></script>
+
+</body>
+</html>
