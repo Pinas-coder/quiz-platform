@@ -4,6 +4,17 @@
 
 /* Font unico: Inter, già caricato tramite <link> in ogni pagina HTML */
 
+/* ── Scala tipografica ufficiale (design system Stitch — QuizMaster) ── */
+:root {
+  --fs-display-lg:    40px; --lh-display-lg:    48px; --ls-display-lg:    -0.02em; --fw-display-lg: 800;
+  --fs-display-lg-m:  32px; --lh-display-lg-m:  40px; /* variante mobile */
+  --fs-headline-md:   24px; --lh-headline-md:   32px; --ls-headline-md:   -0.01em; --fw-headline-md: 700;
+  --fs-stat-lg:       32px; --lh-stat-lg:       40px; --ls-stat-lg:       -0.02em; --fw-stat-lg: 700;
+  --fs-body-base:     16px; --lh-body-base:     24px; --fw-body-base: 400;
+  --fs-body-bold:     16px; --lh-body-bold:     24px; --fw-body-bold: 600;
+  --fs-label-caps:    12px; --lh-label-caps:    16px; --ls-label-caps:    0.05em; --fw-label-caps: 700;
+}
+
 :root {
   --bg:       #080a0e;
   --surface:  #0f1117;
@@ -62,7 +73,9 @@ body {
   background: var(--bg);
   color: var(--text);
   min-height: 100vh;
-  line-height: 1.6;
+  font-size: var(--fs-body-base);
+  font-weight: var(--fw-body-base);
+  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -98,7 +111,12 @@ body {
 .logo-sub  { font-size: 11px; color: var(--text3); margin-top: 4px; }
 
 .sidebar-section { padding: .75rem 0 .25rem; }
-.sidebar-label { font-family: var(--mono); font-size: 9px; color: var(--text3); letter-spacing: .13em; text-transform: uppercase; padding: 0 1.1rem; margin-bottom: 3px; display: block; }
+.sidebar-label {
+  font-size: var(--fs-label-caps); font-weight: var(--fw-label-caps);
+  line-height: var(--lh-label-caps); letter-spacing: var(--ls-label-caps);
+  text-transform: uppercase; color: var(--text3);
+  padding: 0 1.1rem; margin-bottom: 3px; display: block;
+}
 .sidebar-divider { height: 1px; background: var(--border); margin: .4rem 0; }
 
 .nav-item { display: flex; align-items: center; gap: 9px; padding: 8px 1.1rem; cursor: pointer; font-size: 12.5px; color: var(--text2); transition: color .12s, background .12s; border-left: 2px solid transparent; user-select: none; -webkit-tap-highlight-color: transparent; position: relative; }
@@ -129,8 +147,19 @@ body {
 .bottom-nav { display: none; }
 
 .section-header { margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
-.section-badge { display: inline-flex; align-items: center; gap: 6px; font-family: var(--mono); font-size: 9.5px; color: var(--accent); background: var(--accent-dim); padding: 3px 10px; border-radius: 20px; margin-bottom: 12px; letter-spacing: .06em; border: 1px solid rgba(79,142,247,.2); }
-.section-header h1 { font-size: 24px; font-weight: 700; margin-bottom: 5px; letter-spacing: -.3px; }
+.section-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: var(--fs-label-caps); font-weight: var(--fw-label-caps);
+  line-height: var(--lh-label-caps); letter-spacing: var(--ls-label-caps);
+  text-transform: uppercase;
+  color: var(--accent); background: var(--accent-dim); padding: 3px 10px;
+  border-radius: 20px; margin-bottom: 12px; border: 1px solid rgba(79,142,247,.2);
+}
+.section-header h1 {
+  font-size: var(--fs-headline-md); font-weight: var(--fw-headline-md);
+  line-height: var(--lh-headline-md); letter-spacing: var(--ls-headline-md);
+  margin-bottom: 5px;
+}
 .section-header p  { font-size: 13.5px; color: var(--text2); line-height: 1.6; }
 
 .warn-banner { display: flex; gap: 12px; align-items: flex-start; background: var(--yellow-dim); border: 1px solid rgba(251,191,36,.25); border-radius: var(--radius-sm); padding: 14px 16px; margin-bottom: 1.25rem; color: var(--yellow); }
@@ -191,7 +220,7 @@ body {
 
 .end-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 3rem 2rem; text-align: center; display: none; position: relative; overflow: hidden; }
 .end-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--accent), var(--teal)); }
-.end-score { font-size: 72px; font-weight: 700; font-family: var(--mono); line-height: 1; margin-bottom: 6px; letter-spacing: -2px; }
+.end-score { font-size: 72px; font-weight: var(--fw-display-lg); line-height: 1; margin-bottom: 6px; letter-spacing: -2px; }
 .score-ottimo { color: var(--green);  }
 .score-medio  { color: var(--yellow); }
 .score-basso  { color: var(--red);    }
@@ -199,7 +228,10 @@ body {
 .end-msg { font-size: 13.5px; color: var(--text3); margin-bottom: 2rem; max-width: 360px; margin-left: auto; margin-right: auto; }
 .end-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; margin-bottom: 2rem; max-width: 380px; margin-left: auto; margin-right: auto; }
 .end-stat { background: var(--surface2); border-radius: var(--radius-sm); padding: 14px; border: 1px solid var(--border); }
-.end-stat-v { font-size: 24px; font-weight: 600; font-family: var(--mono); }
+.end-stat-v {
+  font-size: var(--fs-stat-lg); font-weight: var(--fw-stat-lg);
+  line-height: var(--lh-stat-lg); letter-spacing: var(--ls-stat-lg);
+}
 .end-stat-l { font-size: 10.5px; color: var(--text3); margin-top: 2px; }
 
 .btn-restart { padding: 12px 28px; background: var(--accent); color: #fff; border: none; border-radius: var(--radius-sm); font-family: var(--sans); font-size: 14px; font-weight: 500; cursor: pointer; margin-right: 8px; transition: opacity .15s; -webkit-tap-highlight-color: transparent; display: inline-flex; align-items: center; gap: 6px; }
@@ -282,19 +314,26 @@ body {
 
 /* ── HOME (index.html) ────────────────────────────────────────────── */
 .home-header { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 3rem; border-bottom: 1px solid var(--border); }
-.home-header .brand .kicker { font-family: var(--mono); font-size: 9px; color: var(--teal); letter-spacing: .12em; text-transform: uppercase; display: block; margin-bottom: 2px; }
 .home-header .brand .name { font-size: 15px; font-weight: 700; }
 .home-link-btn { text-decoration: none; }
 .home-link-btn.spaced { margin-right: 10px; }
 
 .home-hero { padding: 3.5rem 3rem; }
 .home-hero-inner { display: grid; grid-template-columns: 1.2fr 1fr; gap: 3rem; max-width: 1200px; margin: 0 auto; align-items: center; }
-.home-hero h1 { font-size: 34px; font-weight: 700; line-height: 1.25; margin: 12px 0 14px; letter-spacing: -.5px; }
+.home-hero h1 {
+  font-size: var(--fs-display-lg); font-weight: var(--fw-display-lg);
+  line-height: var(--lh-display-lg); letter-spacing: var(--ls-display-lg);
+  margin: 12px 0 14px;
+}
 .home-hero p { font-size: 14.5px; color: var(--text2); line-height: 1.7; margin-bottom: 1.75rem; max-width: 480px; }
 .home-hero-visual { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 2rem; text-align: center; position: relative; }
 .big-icon { font-size: 52px; color: var(--accent); opacity: .8; margin-bottom: 1rem; }
 .home-hero-stat { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-top: 1px solid var(--border); }
-.home-hero-stat .num { font-family: var(--mono); font-size: 22px; font-weight: 700; color: var(--accent); }
+.home-hero-stat .num {
+  font-size: var(--fs-stat-lg); font-weight: var(--fw-stat-lg);
+  line-height: var(--lh-stat-lg); letter-spacing: var(--ls-stat-lg);
+  color: var(--accent);
+}
 .home-hero-stat .lbl { font-size: 12px; color: var(--text2); }
 
 .home-main { padding: 1rem 3rem 4rem; max-width: 1200px; margin: 0 auto; }
@@ -317,6 +356,7 @@ body {
   .home-hero-inner { grid-template-columns: 1fr; }
   .home-bento { grid-template-columns: 1fr; }
   .home-header, .home-hero, .home-main { padding-left: 1.25rem; padding-right: 1.25rem; }
+  .home-hero h1 { font-size: var(--fs-display-lg-m); line-height: var(--lh-display-lg-m); }
 }
 
 /* ═══════════════════════════════════════════════════════════════════
@@ -333,8 +373,9 @@ body {
 }
 .site-nav-brand, .home-header .brand { display: flex; flex-direction: column; }
 .site-nav-brand .kicker, .home-header .brand .kicker {
-  font-family: var(--mono); font-size: 9px; color: var(--teal);
-  letter-spacing: .12em; text-transform: uppercase; display: block; margin-bottom: 2px;
+  font-size: var(--fs-label-caps); font-weight: var(--fw-label-caps);
+  line-height: var(--lh-label-caps); letter-spacing: var(--ls-label-caps);
+  color: var(--teal); text-transform: uppercase; display: block; margin-bottom: 2px;
 }
 .site-nav-brand .name, .home-header .brand .name { font-size: 15px; font-weight: 700; }
 
