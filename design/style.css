@@ -275,11 +275,11 @@ body {
 .intro-card h2 { font-size: 18px; font-weight: 600; margin-bottom: .75rem; }
 .intro-card p  { font-size: 13px; color: var(--text2); margin-bottom: 1.5rem; line-height: 1.7; }
 
-.theme-toggle { position: fixed; bottom: 20px; right: 20px; width: 44px; height: 44px; border-radius: 50%; background: var(--surface); border: 1px solid var(--border); color: var(--text2); cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 300; }
+.theme-toggle { position: fixed; bottom: 80px; right: 20px; width: 44px; height: 44px; border-radius: 50%; background: var(--surface); border: 1px solid var(--border); color: var(--text2); cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 300; }
 .theme-toggle:hover { color: var(--accent); border-color: var(--accent); }
 
 .back-to-top {
-  position: fixed; bottom: 20px; right: 74px;
+  position: fixed; bottom: 80px; right: 74px;
   width: 44px; height: 44px; border-radius: 50%;
   background: var(--surface); border: 1px solid var(--border); color: var(--text2);
   cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 300;
@@ -290,7 +290,7 @@ body {
 .back-to-top:hover { color: var(--accent); border-color: var(--accent); }
 
 @media (max-width: 780px) {
-  .back-to-top { bottom: 20px; right: 74px; }
+  .back-to-top { bottom: 80px; right: 74px; }
 }
 
 @media (max-width: 780px) {
@@ -418,4 +418,58 @@ body {
 @media (max-width: 700px) {
   .site-nav-inner { flex-direction: column; align-items: flex-start; gap: .6rem; }
   .site-nav-links { width: 100%; }
+}
+/* ═══════════════════════════════════════════════════════════════════
+   BOTTOM NAV MOBILE — sostituisce il menu header sotto i 700px
+   ═══════════════════════════════════════════════════════════════════ */
+.mobile-bottom-nav {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  /* Nasconde i link nell'header, resta solo il brand */
+  .site-nav-links,
+  .home-header nav.site-nav-links {
+    display: none;
+  }
+
+  .mobile-bottom-nav {
+    display: flex;
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    z-index: 300;
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    padding: 6px 4px calc(6px + env(safe-area-inset-bottom));
+    justify-content: space-between;
+  }
+  .mobile-bottom-nav a {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    padding: 6px 2px;
+    text-decoration: none;
+    color: var(--text3);
+    font-size: 9.5px;
+    border-radius: var(--radius-sm);
+    transition: color .12s, background .12s;
+  }
+  .mobile-bottom-nav a .material-symbols-outlined {
+    font-size: 20px;
+  }
+  .mobile-bottom-nav a:active {
+    background: var(--glass);
+  }
+  .mobile-bottom-nav a.active {
+    color: var(--accent);
+  }
+
+  /* Evita che il contenuto finisca sotto la bottom bar */
+  .page-main,
+  .home-main,
+  .home-hero {
+    padding-bottom: 5.5rem;
+  }
 }
